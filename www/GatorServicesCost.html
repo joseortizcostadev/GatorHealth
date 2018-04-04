@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jQuery.min.js"></script>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <script src="js/bootstrap.min.js"></script>
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #2b0080;  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #1e0059;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
+br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
+}
+/* Style the tab */
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #2b0080;
+    width: 20%;
+    height: 300px;
+    margin-bottom: 300px;}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #1e0059;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+height: auto;
+    margin-bottom: 300px;}
+#back{
+        float: right;
+        background-color:gold;
+        color: white;
+
+    }
+</style>
+
+</head>
+<body>
+<form action="GatorResources.html">
+    <input type="submit" id="back" value="Go Back" />
+</form>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Medical Care')">Medical Care</button>
+  <button class="tablinks" onclick="openTab(event, 'Laboratory')">Laboratory</button>
+  <button class="tablinks" onclick="openTab(event, 'X Ray')">X Ray</button>
+    <button class="tablinks" onclick="openTab(event, 'Nutrition')">Nutrition</button>
+        <button class="tablinks" onclick="openTab(event, 'Vaccinations and Immunizations')">Vaccinations and Immunizations</button>
+     <button class="tablinks" onclick="openTab(event, 'Mental Health Services')">Mental Health Services</button>
+       <button class="tablinks" onclick="openTab(event, 'Rehabilitation Services')">Rehabilitation Services </button>
+     <button class="tablinks" onclick="openTab(event, 'Gynecological and Reproductive Health')">Gynecological and Reproductive Health</button>
+     <button class="tablinks" onclick="openTab(event, 'Emergency')">Emergency</button>
+    
+</div>
+
+<div id="Medical Care" class="tabcontent">
+  <h3>Medical Care</h3>
+    <p>Medical Care services includes meeting with a healthcare provider to talk about your health issues or concerns. These services are covered by the Student Health Fee ($157 per semester) and includes:</p>
+    <br>
+
+    <p>Doctor's appointments</p>
+    <p>X-Ray Services performed at Student Health Services</p>
+    <p>Laboratory work performed at Student Health Services</p>
+<p>Appointments with the Registered Dietitian/Nutritionist</p>
+    <p>Mental Health Services including psychiatry</p>
+    <p>Counseling and Psychological Services for individual, couples, and group counseling</p>
+    <p>Health Promotion and Wellness for health education services</p>
+ 
+    <br>
+    <p>There is no co-payment for your appointment.</p>
+    <br>
+ 
+
+<p>An additional fee is charged for Specialty Services, including:
+
+Laboratory work sent to an outside laboratory for processing
+Pharmacy Services
+Podiatry Clinic
+Rehabilitation Services
+Vaccinations and Immunizations</p>
+</div>
+
+<div id="Laboratory" class="tabcontent">
+  <h3>Laboratory</h3>
+  <p>All laboratory tests done at Student Health Services are provided at cost to registered students. Our laboratory can also process outside provider requests for a fee. Check with the laboratory staff for a current price list for laboratory tests. You can view your lab results by logging into myHealth. </p>
+
+ 
+
+    <h3>Fall and Spring Semester Hours</h3>
+
+ <table style="width:100%">
+  <tr>
+    <th>Day of the Week
+</th>
+    <th>Laboratory Hours
+</th> 
+    <th>Blood Draw Hours
+</th>
+  </tr>
+  <tr>
+    <td>Monday and Tuesday</td>
+    <td>8:15 am - 4:45 pm</td> 
+    <td>8:15 am - 4:00 pm</td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>10:00 am - 4:45 pm</td> 
+    <td>10:00 am - 4:00 pm</td>
+  </tr>
+    <tr>
+    <td>Thursday and Friday</td>
+    <td>8:15 am - 4:45 pm</td> 
+    <td>8:15 am - 4:00 pm</td>
+  </tr>   
+</table>
+<br>
+    <h3>On-site Laboratory Tests</h3>
+    <p>All laboratory work performed at SHS as part of basic care, such as urinalysis, urine pregnancy test (UCG), rapid strep, monospot test, and occult (stool) blood test are NO CHARGE</p>
+    <br>
+    <h3>Off-site Laboratory Test (does not include lab processing fee)</h3>
+     <table style="width:100%">
+  <tr>
+    <th>Lab Type
+</th>
+    <th>Cost
+</th> 
+  </tr>
+  <tr>
+    <td>Chlamydia</td>
+    <td>$40 per test or culture
+</td> 
+  </tr>
+  <tr>
+    <td>Comprehensive Metabolic Panel	</td>
+    <td>$5
+</td> 
+  </tr>
+    <tr>
+    <td>Gonorrhea</td>
+    <td>$40 per test or culture
+</td> 
+  </tr>
+    <tr>
+    <td>Hepatitis B Core Antibody only</td>
+    <td>$8
+</td> 
+  </tr>
+    <tr>
+    <td>Hepatitis B Surface Antibody	</td>
+    <td>$5
+</td> 
+  </tr> 
+     <tr>
+    <td>Hepatitis B Surface Antigen	</td>
+    <td>$6</td> 
+  </tr> 
+     <tr>
+    <td>Herpes Simplex I Blood Test	</td>
+    <td>$3
+</td> 
+  </tr> 
+    <tr>
+    <td>Herpes Simplex II Blood Test</td>
+    <td>$3
+</td> 
+  </tr> 
+    <tr>
+    <td>Herpes Simplex Culture	</td>
+    <td>$10
+</td> 
+  </tr> 
+    <tr>
+    <td>HIV Testing Blood Test	</td>
+    <td>$8
+</td> 
+  </tr> 
+    <tr>
+    <td>Lipid Panel	</td>
+    <td>$8
+</td> 
+  </tr> 
+    <tr>
+    <td>Liver (Hepatic) Function</td>
+    <td>$4
+
+</td> 
+  </tr> 
+    <tr>
+    <td>Measles Titer</td>
+    <td>$18
+</td> 
+  </tr> 
+    <tr>
+    <td>Mumps (IgG) Titer	</td>
+    <td>$9
+</td> 
+  </tr> 
+    <tr>
+    <td>Pap Smear (SurePath)</td>
+    <td>$22
+</td> 
+  </tr> 
+    <tr>
+    <td>Rubella Titer		</td>
+    <td>$12
+</td> 
+  </tr> 
+    <tr>
+    <td>TB Gold - Quantiferon	</td>
+    <td>$50
+</td> 
+  </tr> 
+    <tr>
+    <td>Thyroid Stimulating Hormone (TSH)	</td>
+    <td>$6
+</td> 
+  </tr> 
+    <tr>
+    <td>Chickenpox (Varicella) Titer	</td>
+    <td>$4 
+  </tr> 
+</table>
+    <p>Lab processing fee: $10</p>
+    <br>
+<br>
+<p>Laboratory Services
+Blood Draws - Phlebotomy (blood sent to Quest Diagnostics for testing)
+Urine Test - Urinalysis
+Urine Culture (urine sent to Quest Diagnostics for testing)
+Pregnancy Test - UCG
+Rapid Strep
+Monospot Test
+Stool Test - Occult Blood
+Provider performed microscopy</p> 
+</div>
+
+<div id="X Ray" class="tabcontent">
+  <h3>X Ray</h3>
+    <p>X-Rays performed at Student Health Services as part of a treatment plan are provided at no charge to registered students.</p>
+    <br>
+      
+    <h3>Fall and Spring Semester X-Ray Hours</h3>
+
+ 
+ <table style="width:100%">
+  <tr>
+    <th>Day of the Week
+</th>
+    <th>Time
+</th> 
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>8:30 am - 1:30 pm</td> 
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>8:30 am - 11:30 am</td> 
+  </tr>
+    <tr>
+    <td>Wednesday</td>
+    <td>10:00 am - 3:00 pm</td> 
+  </tr>
+    <tr>
+    <td>Thursday</td>
+    <td>Closed</td> 
+  </tr>
+    <tr>
+    <td>Friday</td>
+    <td>8:30 am - 1:30 pm</td> 
+  </tr>   
+</table>
+    <br
+    
+<p>Summer X-Ray Hours
+X-Ray is closed each summer from late June to early September. Exact dates of closure will be posted in June.</p>
+ 
+<br>
+<p>X-Ray Resources
+    Discount X-Ray Services in San Francisco for SF State students (with a prescription).</p>
+
+ 
+
+<p>RADNET - Medical Imaging
+
+      3440 California Street
+
+      San Francisco, CA 94118
+
+      Phone: (415) 922-6767
+
+      Fax: (415) 563-0468</p>
+</div>
+<div id="Nutrition" class="tabcontent">
+  <h3>Nutrition</h3>
+    <p>Our Registered Dietitian Nutritionist, Lauren Muckley, is available for free, private appointments. Lauren practices the Intuitive Eating philosophy with patients, which focuses on consistent eating practices rather than weight. This model emphasizes:
+
+Decreasing chaotic eating and worry about food choices
+You as the expert of your own body and needs
+Tuning in to your hunger and fullness as the drive for eating
+Increase in variety and satisfaction with food
+She is available for appointments relating to:
+
+Nutrition assessment
+Blood pressure management
+Cholesterol education
+Diabetes
+Digestive disorders
+Disordered eating
+Vegetarian diet
+Weight management
+        Other nutrition-related topics and goals</p>
+
+ <table style="width:100%">
+  <tr>
+    <th>Day of the Week
+</th>
+    <th>Time
+</th> 
+  </tr>
+                   <tr>
+    <td>Tuesday</td>
+    <td>1:00pm -  4:45pm
+</td> 
+  </tr>
+           <tr>
+    <td>Thursday</td>
+    <td>8:20am - 12:00pm</td> 
+  </tr>   
+</table>
+
+    <h3>Appointments</h3>
+    <p>Appointments are held at Student Health Services. Please arrive 15 minutes before your scheduled appointment. If you fail to keep your appointment or do not cancel it prior to your visit, you will be billed the $20 no-show fee.</p>
+
+    <h3>Initial Appointments</h3>
+
+<p>These are for students who have never seen the nutritionist or have not seen the nutritionist in one year.
+You must fill out the online nutrition questionnaire before your appointment. You have 40 minutes to fill out the questionnaire and cannot return a second time to add more information.
+Initial appointments last 40 minutes.
+    To make an appointment, login to myHealth and click on "Appointments" in the left side menu.</p>
+    <br>
+    <h3>Follow-up Appointments</h3>
+
+<p>Follow-up appointments are for students who have seen the nutritionist in the last year.
+Follow up appointments last 20 minutes
+To make an appointment, login to myHealth and click on "Appointments" in the left side menu.</p>
+    </div>
+    <div id="Vaccinations and Immunizations" class="tabcontent">
+  <h3>Vaccinations and Immunizations</h3>
+        <p>Alert: Student Health now has flu vaccine.
+
+Flu shot costs $10. Schedule an immunization clinic appointment online.
+
+Or Click here for a list of nearby pharmacies where you can get a flu shot.
+
+ 
+
+Student Health Services gives vaccines to students and can check their immunization to certain diseases.</p>
+        <br>
+        <p>Students can receive vaccines and check their immunization during our Vaccination and Immunization Clinic.
+
+</p>
+         <table style="width:100%">
+  <tr>
+    <th>Day of the Week
+</th>
+    <th>Time
+</th> 
+  </tr>
+                   <tr>
+    <td>Tuesday</td>
+    <td>8:30 - 11:30 am and 2:00 - 4:00 pm
+</td> 
+  </tr>
+           <tr>
+    <td>Wednesday</td>
+    <td>10:00 - 11:30 am</td> 
+  </tr>   
+</table>
+        <p>The following vaccinations are available at cost at SHS Vaccination and Immunization Clinic:</p>
+        <table style="width:100%">
+  <tr>
+    <th>Vaccine Type
+</th>
+    <th>Cost
+</th> 
+  </tr>
+  <tr>
+    <td>Hepatitis A	</td>
+    <td>$61 per dose
+</td> 
+  </tr>
+  <tr>
+    <td>Hepatitis B	</td>
+    <td>$69 per dose
+</td> 
+  </tr>
+    <tr>
+    <td>HPV - Gardasil</td>
+    <td>$248 per dose
+
+</td> 
+  </tr> 
+    <tr>
+    <td>Influenza (flu) - Seasonal Inactivated	</td>
+    <td>$10
+</td> 
+  </tr> 
+    <tr>
+    <td>MMR (Measles, Mumps, and Rubella)</td>
+    <td>$100
+</td> 
+  </tr> 
+    <tr>
+    <td>Meningococcal (Meningitis)	</td>
+    <td>$137-$172
+</td> 
+  </tr> 
+    <tr>
+    <td>TB Skin Test	</td>
+    <td>$30
+
+
+</td> 
+  </tr> 
+    <tr>
+    <td>Tetanus-diphtheria	</td>
+    <td>$53
+</td> 
+  </tr> 
+    <tr>
+    <td>Tetanus-diphtheria Pertussis (Tdap)	</td>
+    <td>$60
+</td> 
+  </tr>
+   <tr>
+    <td>Varicella (Chicken Pox)</td>
+    <td>$159 per dose
+
+</td> 
+  </tr> 
+</table>
+        
+    </div>
+        <div id="Mental Health Services" class="tabcontent">
+  <h3>Mental Health Services</h3>
+            <img src="shs/meditate.png" alt="meditate" style="width:400px;height:400px;">
+     <p>University life can be stressful for many reasons, and it is not uncommon for students to experience emotional problems during this period of time. Many disturbances in emotional health, including depression, anxiety, self-destructive or suicidal thoughts, have a physical component. And some physical symptoms, (e.g. sleep or appetite disturbance, chest pain, stomach upset) can be caused by emotional distress.
+
+ 
+
+If you have any concerns related to your mental health, an evaluation by a medical professional can shed light on the cause of your symptoms and provide direction in how to treat them.  At Student Health Services, we have two psychiatrists on staff to provide necessary care and medication management.  For psychotherapy services offered on campus, click the link below.</p> 
+            
+    </div>
+        <div id="Rehabilitation Services" class="tabcontent">
+  <h3>Rehabilitation Services</h3>
+            <p>A number of rehabilitation services are available to all students by referral from a physician. The services are designed to serve the needs of students active in recreational sports, musicians, dancers, theatre artists, and BECA majors. Any musculoskeletal condition which interferes with, or is the result of these activities warrants a referral.
+
+ 
+
+                The Rehabilitation Clinic is available for SF State students who can benefit from exercise based therapy programs to recover from muscular-skeletal injuries. The programs are individually tailored to each student's needs. The clinic is staffed by a certified athletic trainer. There is a charge for this clinic; $10 for the 1st visit and $5 for follow-up visits.. Please be advised this is not a fitness center or personal training clinic. For questions please call Jeff McCurtain, Athletic Trainer, at (415) 338-1402. </p>
+
+ 
+
+            <h3>Rehabilitation Services Staff</h3>
+            <h4>Athletic Trainer - Jeff McCurtain, A.T.C.</h4>
+
+<p>Jeff McCurtain had been an athletic trainer since 1991 and has many years of experience with SF State's performing arts majors. He also has particular expertise in designing rehabilitation programs for injured students that fit individual schedules.</p>
+
+ 
+
+            <h4>Orthopedic Surgeons</h4>
+
+<p>On a case by case basis, orthopedic injures will be referred to local orthopedic surgeons who sub-specialize in sports injuries.</p>
+    </div>
+        <div id="Gynecological and Reproductive Health" class="tabcontent">
+  <h3>Gynecological and Reproductive Health</h3>
+    </div>
+        <div id="Emergency" class="tabcontent">
+  <h3>Emergency</h3>
+    </div>
+    
+<br>  
+<div class="navbar" id="myNavbar">
+  <a href="GatorHome.php">Home</a>
+  <a href="GatorMap.html">Map</a>
+  <a href="GatorPharmacy.html">Pharmacy</a>
+  <a href="GatorResources.html" class="active">Resources</a>
+  <a href="GatorSearch.php">Search</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myNavbar");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
+}
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
