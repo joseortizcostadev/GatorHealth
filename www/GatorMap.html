@@ -6,6 +6,7 @@
 <script src="jQuery.min.js"></script>
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
+          <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <style>
 body {
     margin:0;
@@ -87,43 +88,175 @@ body {
        }
 </style>
 </head>
-<body>
+<body onload = "locate()">
 
  <div id="map"></div>
 
-<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <div class="navbar" id="myNavbar">
-  <a href="GatorHome.php">Home</a>
+  <a href="GatorHome.html">Home</a>
   <a href="GatorMap.html">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
   <a href="GatorResources.html">Resources</a>
-  <a href="GatorSearch.php">Search</a>
+  <a href="GatorSearch.html">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <script>
+            var glblmap = null;
+            var glblmarker = null;
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
-      var map, infoWindow;
+    var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
+    
+    function locate(){
+        navigator.geolocation.getCurrentPosition(initialize,fail);
+    }
+
+    function initialize(position) {
+        var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+        map.setCenter(pos);
+        
+        
+        var userMarker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            icon: im
+        });
+      }
+
+     function fail(){
+         alert('navigator.geolocation failed, may not be supported');
+     }
+    
+    
+    var map, infoWindow;
+    
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 37.7223889, lng: -122.4791221},
           zoom: 18
         });
-          // Sample Marker on Psychology building
+          infoWindow = new google.maps.InfoWindow;
           
-          var marker1 = new google.maps.Marker({
-    position: {lat: 37.72355, lng: -122.47924},
-    map: map,
-    title: 'Center Stage' 
-              });
-          var infoWindow = new google.maps.InfoWindow({
-             content: '<h1>Psychology Building</h1>' 
+          
+          
+          if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('You are here');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
           });
-          marker1.addListener('click', function(){
-                             infoWindow.open(map,marker1);
-                             });
+        }
+    
+
+      
+      var markers = [
+        {
+          coords:{lat: 37.72355, lng: -122.47924},
+          content:'<img src="ethnic_psych.jpg"><h1>Psychology Building</h1>'
+        },
+        {
+          coords:{lat:37.72385, lng: -122.47692},
+          content:'<img src="thorton.jpg"> <h1>Thorton Hall</h1>'
+        },
+        {
+          coords:{lat: 37.72355, lng: -122.47611},
+            content:'<img src="hensil.jpg"> <h1>Hensil Hall</h1>'
+        },
+          {
+             coords:{lat: 37.72296, lng: -122.47616},
+          content:'<img src="science building.jpg"> <h1>Science Building</h1>' 
+          },
+          {
+             coords:{lat: 37.72207, lng: -122.47672},
+          content:'<img src="business.jpg"><h1>Business Building</h1>' 
+          },
+          {
+             coords:{lat: 37.72202, lng: -122.47602},
+          content:'<img src="hss.jpeg"><h1>HSS Building</h1>' 
+          },
+          {
+             coords:{lat: 37.72127, lng: -122.47666},
+          content:'<img src="admission.jpg"><h1>Admission Building</h1>' 
+          },
+          {
+             coords:{lat: 37.72232, lng: -122.47861},
+          content:'<img src="Cesar Chavez.jpg"><h1>Cesar Chavez Student Center</h1>' 
+          },
+          {
+             coords:{lat: 37.72134, lng: -122.47816},
+          content:'<img src="library.jpg"><h1>J. Paul Leonard Library</h1>' 
+          },
+          {
+             coords:{lat: 37.72303, lng: -122.47948},
+          content:'<img src="burk.jpg"><h1>Burk Hall</h1>' 
+          },
+          {
+             coords:{lat: 37.7234, lng: -122.48074},
+          content:'<img src="student services.jpg"><h1>Student Services Building</h1>' 
+          },
+          {
+             coords:{lat: 37.72334, lng: -122.47989},
+          content:'<img src="student health center.jpeg"><h1>Student Health Center</h1>' 
+          },
+          {
+             coords:{lat: 37.72223, lng: -122.47983},
+          content:'<img src="fine arts.jpg"><h1>Fine Arts Building</h1>' 
+          },
+          {
+             coords:{lat: 37.72148, lng: -122.47985},
+          content:'<img src="creative arts.jpg"><h1>Creative Arts Building</h1>' 
+          },
+          {
+             coords:{lat: 37.72243, lng: -122.48097},
+          content:'<img src="humanities.jpg"><h1>Humanities Building</h1>' 
+          }
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          icon: 'max.png',
+        });
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+            
+          
+          marker.addListener('click', function(){
+            //infoWindow.close(glblmap,glblmarker);
+            infoWindow.open(map, marker);
+            //glblmarker = marker;
+            //glblmap = map;
+            
+          });
+            
+        }
+      }
       }
          
     </script>
