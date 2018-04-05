@@ -10,3 +10,5 @@ In your browser, open the file:
     /www/index.html
 
 ### Database Objects Usage
+Insert:
+    
