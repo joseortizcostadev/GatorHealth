@@ -147,9 +147,21 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
                 while ($attribute = $fields->fetch_assoc())
                 {
                     // show results in trending div
-                    echo $attribute['category'] . '<br>'; // show category field data
-                    echo $attribute['text'] . '<br>'; // show text field data
+                    $category = $attribute['category'];
+                    $text = $attribute['text'];
+                    echo $category . '<br>'; // show category field data
+                    echo $text . '<br>'; // show text field data
                     echo '<br>';
+                    $table = "hot";
+                    $field = "count";
+                    $where_field = "category";
+                    // if the category searched exist in the hot table, update counter (old_value + 1). Otherwise,
+                    // insert the category and add 1 to the counter
+                    if (!$data->update_increment($table, $field, $where_field, $category)) {
+                        $data->insert("hot", ['category', 'count'], [$category, 1]);
+                    }
+
+
                 }
             }
         }
