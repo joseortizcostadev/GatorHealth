@@ -67,49 +67,64 @@ br {
   margin:2.5em 0;/* FF for instance */
   line-height:5em;/* chrome for instance */
 }
+/* Style the tab */
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #2b0080;
+    width: 20%;
+    height: 300px;
+    margin-bottom: 300px;}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #1e0059;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+height: auto;
+    margin-bottom: 300px;}
+#back{
+        float: right;
+        background-color:gold;
+        color: white;
+
+    }
 </style>
+
 </head>
 <body>
-    <p>Welcome to the GatorHealth Resources Page where we have displayed a vast collection on Health and Wellness resources that can be found on and off campus!</p>
-<div>
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorServicesCost.html">
-    <input type="submit" value="Student Health Center Services" />
+<form action="GatorHPW.html">
+    <input type="submit" id="back" value="Go Back" />
 </form>
-&emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorDietetics.html">
-    <input type="submit" value="Dietetics/Nutrition" />
-</form>
-<br>
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorHolistic.html">
-    <input type="submit" value="Holistic Health" />
-</form>
-&emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorMashouf.html">
-    <input type="submit" value="Mashouf Wellness" />
-</form>
-<br>
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorVeteran.html">
-    <input type="submit" value="Veteran Resources" />
-</form>
-&emsp;
-   <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorAccess.html">
-    <input type="submit" value="Disability Programs" />
-</form>
-    <br>
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorMental.html">
-    <input type="submit" value="Counseling and Mental Services" />
-</form>
-&emsp;
-    <br>
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorHPW.html">
-    <input type="submit" value="Health Promotion and Wellness" />
-</form>
-&emsp;
-    
-</div>
-<br>  
+
+
 <div class="navbar" id="myNavbar">
-    <a href="GatorHome.php">Home</a>
+  <a href="GatorHome.php">Home</a>
   <a href="GatorMap.html">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
   <a href="GatorResources.html" class="active">Resources</a>
@@ -126,6 +141,7 @@ function myFunction() {
         x.className = "navbar";
     }
 }
+
 </script>
 
 </body>

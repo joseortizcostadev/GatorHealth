@@ -117,6 +117,17 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
             padding-left: 10px;
             margin-top: 10px;
         }
+        .results {
+            background: #FFDC62;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .results .end {
+            color: #000;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -128,13 +139,12 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
     <input type="text" name="query" value='<?php echo $search_val; ?>' placeholder="Search.."/>
     <input type="submit" value="Search"/>
 </form>
-<div class="trending">
-    <font size="5" style="color: #000;">Trending</font>
-    <div class="trends">
-
-        <?php
+    <div class="results">
+        <font size="6" style="color:#000;">Results</font>
+        <div class="end">
+         <?php
         /**
-         * This PHP script is in charge of populating the trend div when a string in the search bar matches a text
+         * This PHP script is in charge of populating the results div when a string in the search bar matches a text
          * in the database.
          */
         if (isset($_POST['query']) && $_POST['query'] != null and $_POST['query'] != "") {
@@ -148,6 +158,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
                 {
                     // show results in trending div
                     $category = $attribute['category'];
+                    $true_category = mysqli_real_escape_string($data->get_connection(), $category);
                     $text = $attribute['text'];
                     echo $category . '<br>'; // show category field data
                     echo $text . '<br>'; // show text field data
@@ -157,16 +168,29 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
                     $where_field = "category";
                     // if the category searched exist in the hot table, update counter (old_value + 1). Otherwise,
                     // insert the category and add 1 to the counter
-                    if (!$data->update_increment($table, $field, $where_field, $category)) {
-                        $data->insert("hot", ['category', 'count'], [$category, 1]);
+                    if (!$data->update_increment($table, $field, $where_field, $true_category)) {
+                        $data->insert("hot", ['category', 'count'], [$true_category, 1]);
                     }
 
 
                 }
             }
         }
-
+        
         ?>
+        </div>
+    </div>
+<div class="trending">
+    <font size="5" style="color: #000;">Trending</font>
+    <div class="trends">
+
+        <?$trends = "SELECT category FROM hot ORDER BY count DESC LIMIT 9";
+    $results = $data->select($trends);
+        if ($results->num_rows > 0){
+            while($row = $results->fetch_assoc()){
+                echo $row["category"]."<br>";
+            }
+        }?>
 
     </div>
 </div>

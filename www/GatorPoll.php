@@ -1,6 +1,7 @@
-//from w3school tutorial ajax php poll
 
 <?php
+//from w3school tutorial ajax php poll
+
 $vote = $_REQUEST['vote'];
 
 //get content of textfile
