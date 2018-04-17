@@ -20,9 +20,8 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 <head>
          <link rel="stylesheet" href="css/jquery-ui.css">
 
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>        
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="jQuery.min.js"></script>
@@ -138,12 +137,13 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 <body>
 
 <p>Animated search form:</p>
-
-<form class="ui-widget" method="post">
+<div class="ui-widget">
+<form method="post">
     <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="Search.."/>
-    <input type="submit" id="category" value="Search"/>
+    <input type="submit" value="Search"/>
   
 </form>
+    </div>
     <div class="results">
         <font size="6" style="color:#000;">Results</font>
         <div class="end">
@@ -223,15 +223,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
     $(function() {
     $( "#category" ).autocomplete({
         minlength: 0,
-        source: 'Suggest.php',
-        focus: function(event, ui) {
-            $("#category").val(ui.item.category);
-            return false;
-        },
-        select: function(event, ui) {
-                $("category").val(ui.item.category);
-                return false;
-            }
+        source: 'Suggest.php'  
     });
 });
 
