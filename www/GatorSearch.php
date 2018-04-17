@@ -134,10 +134,10 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 
 <p>Animated search form:</p>
 
-
 <form method="post">
-    <input type="text" name="query" value='<?php echo $search_val; ?>' placeholder="Search.."/>
-    <input type="submit" value="Search"/>
+    <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="Search.."/>
+    <input type="submit" id="category" value="Search"/>
+  
 </form>
     <div class="results">
         <font size="6" style="color:#000;">Results</font>
@@ -175,6 +175,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 
                 }
             }
+ 
         }
         
         ?>
@@ -204,7 +205,8 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
     function myFunction() {
         var x = document.getElementById("myNavbar");
@@ -214,7 +216,14 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
             x.className = "navbar";
         }
     }
+    $(function() {
+    $( "#category" ).autocomplete({
+        source: 'Suggest.php'
+    });
+});
+
 </script>
+    
 </body>
 
 
