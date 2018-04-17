@@ -18,6 +18,11 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 <!DOCTYPE html>
 <html>
 <head>
+         <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>        
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="jQuery.min.js"></script>
@@ -134,7 +139,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 
 <p>Animated search form:</p>
 
-<form method="post">
+<form class="ui-widget" method="post">
     <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="Search.."/>
     <input type="submit" id="category" value="Search"/>
   
@@ -205,8 +210,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 <script>
     function myFunction() {
         var x = document.getElementById("myNavbar");
@@ -218,7 +222,16 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
     }
     $(function() {
     $( "#category" ).autocomplete({
-        source: 'Suggest.php'
+        minlength: 0,
+        source: 'Suggest.php',
+        focus: function(event, ui) {
+            $("#category").val(ui.item.category);
+            return false;
+        },
+        select: function(event, ui) {
+                $("category").val(ui.item.category);
+                return false;
+            }
     });
 });
 
