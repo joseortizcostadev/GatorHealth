@@ -4,9 +4,14 @@
 
 
 define("DB_HOST", "localhost");
-define("DB_USERNAME", "root");
-define("DB_PASSWORD", "root");
+define("DB_USERNAME", "Stuart");
+<<<<<<< HEAD
+define("DB_PASSWORD", "maple1714");
 define("DATABASE", "GatorHealthDB");
+=======
+define("DB_PASSWORD", "");
+define("DATABASE", "searchResults");
+>>>>>>> 4e2826edb217f00e312b08e467770fe410108de1
 //mysqli_connect(DB_HOST , DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE) or die("Connection error to database:  ".mysqli_error());
 // mysqli_connect("localhost", "root", "YES") or die("Connection error to database:  ".mysqli_error());
 

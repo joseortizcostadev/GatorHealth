@@ -157,12 +157,33 @@ class DBData
         if ($conn != null) {
 
             $query = "UPDATE $table SET $field_to_update='$new_value' WHERE $where_field='$where_value'";
-            if ($conn->query($query) === TRUE) {
+            if ($conn->query($query) === TRUE and $conn->affected_rows > 0) {
                 $conn->close();
                 return true;
             }
-            else {
-                echo $conn->error;
+        }
+        $conn->close();
+        return false;
+
+    }
+
+
+
+
+    /**
+     * Updates a field or table in the database
+     * @param $query
+     * @return bool
+     */
+    public function update_increment($table, $field_to_update, $where_field, $where_value)
+    {
+        $conn = $this->get_connection();
+        if ($conn != null) {
+
+            $query = "UPDATE $table SET $field_to_update = $field_to_update + 1 WHERE $where_field='$where_value'";
+            if ($conn->query($query) === TRUE and $conn->affected_rows >0) {
+                $conn->close();
+                return true;
             }
         }
         $conn->close();
@@ -177,12 +198,12 @@ class DBData
      * @param $value_to_delete
      * @return bool
      */
-    public function delete($table, $field_to_delete, $value_to_delete)
+    public function delete($table, $where_field, $where_value)
     {
         $conn = $this->get_connection();
         if ($conn != null) {
 
-            $query = "DELETE FROM $table WHERE $field_to_delete='$value_to_delete'";
+            $query = "DELETE FROM $table WHERE $where_field='$where_value'";
             if ($conn->query($query) === TRUE) {
                 $conn->close();
                 return true;
