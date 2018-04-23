@@ -62,7 +62,7 @@ body {margin:0;}
     }
 .img-fluid{
     width: 100%;
-    height: 90px;
+    height: auto;
 }
     #wrapper {
   width: 100%;
@@ -76,19 +76,7 @@ body {margin:0;}
         background-color: #2b0080;
         color: white;
     }
-    .user {
-  display: inline-flex;
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
 
-.one {
-  background-image:url(BLANK_Profile-Picture.jpg);
-}
 .center-block {  
   display: block;  
   margin-right: auto;
@@ -103,20 +91,6 @@ margin-left: 10%;
     padding: 10px;
     text-align: center
 }   
-    .message{
-        display: inline-block;
-        width: 150px;
-        height: 150px;
-        position: relative;
-        left: 125%;
-        top: 10%;
-    }
-    .profile{
-        display: inline-block;
-        position: relative;
-        left: 125%;
-        top: -60%;
-    }
     .center{
         margin: auto;
     }
@@ -125,7 +99,10 @@ margin-left: 10%;
 </style>
 </head>
 <body>
-<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+<div class="text-center">
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
+</div>
+
 <br>
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
