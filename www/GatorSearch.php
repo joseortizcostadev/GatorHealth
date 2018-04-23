@@ -203,7 +203,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 
 <div class="navbar" id="myNavbar">
     <a href="GatorHome.php">Home</a>
-    <a href="GatorMap.html">Map</a>
+    <a href="GatorMap.php">Map</a>
     <a href="GatorPharmacy.html">Pharmacy</a>
     <a href="GatorResources.html">Resources</a>
     <a href="GatorSearch.php" class="active">Search</a>

@@ -176,7 +176,7 @@ Yes:
 
 <div class="navbar" id="myNavbar">
   <a href="GatorHome.php" class="active">Home</a>
-  <a href="GatorMap.html">Map</a>
+  <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
   <a href="GatorResources.html">Resources</a>
   <a href="GatorSearch.php">Search</a>
