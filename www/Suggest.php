@@ -9,15 +9,21 @@ include_once dirname(__FILE__) . '/Database/DBData.php';
 $data = new DBData(); // creates an object of class DBData
 
 
-    $search_val = $_GET['term'];
-    
-    //get matched data from skills table
-    $query = $db->query("SELECT category FROM hot WHERE category LIKE '%".$search_val."%'");
-    while ($row = $query->fetch_assoc()) {
-        $data[] = $row['category'];
-        
-    }
-    //return json data
-    echo json_encode($data);
+if (isset($_GET['term'])){
+    $return_arr = array();
 
+    $conn = new mysqli(DB_SERVER,DB_USER,DB_PASSWORD,DB_NAME);
+    $stmt =  $conn->stmt_init();
+    $term = '%'.$_GET['term'].'%';
+    $stmt = $conn->prepare("SELECT category FROM hot WHERE category like ?");
+    $stmt->bind_param("s", $term);
+    $stmt->execute();
+    $stmt->bind_result($name);
+    while ($stmt->fetch()) {
+    $return_arr[] = $name;
+}
+    echo json_encode($return_arr);
+}  
 ?>
+
+

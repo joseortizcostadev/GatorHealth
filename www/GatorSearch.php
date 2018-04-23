@@ -220,12 +220,16 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
             x.className = "navbar";
         }
     }
-    $(function() {
-    $( "#category" ).autocomplete({
-        minlength: 0,
-        source: 'Suggest.php'  
+   $(function() {
+        var availableTags = <?php include('Suggest.php'); ?>;
+        $("#category").autocomplete({
+            source: availableTags,
+            autoFocus:true,
+            select: function( event, ui ) { 
+        window.location.href = ui.item.value;
+    }
+        });
     });
-});
 
 </script>
     
