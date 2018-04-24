@@ -7,7 +7,7 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
-body {margin:0; background-image: url(mashouf/mashouflobby.jpg); background-size:cover; background-position: center;}
+/*body {margin:0; background-image: url(mashouf/mashouflobby.jpg); background-size:cover; background-position: center;}*/
 
 .navbar {
   overflow: hidden;
@@ -114,18 +114,164 @@ height: auto;
         color: white;
 
     }
+/*.img-fluid {
+    width: 100%;
+    height: 90px;*/
+}
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
 </style>
 
 </head>
 <body>
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <form action="GatorResources.html">
     <input type="submit" id="back" value="Go Back" />
 </form>
- <img src="mashouf/mashoufwelcome.jpg"alt="exercise" style="width:500px;height:300px;align-content: center;" hspace="20" vspace="20";>
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+          <h3>Vision Statement</h3>
+          <p>We inspire the lifelong holistic well-being and success of every student within our community.</p>
+          <h3>Mission Statement</h3>
+          <p>
+The Mashouf Wellness Center is a student-driven wellness center guiding development through transformative activities, creating a sense of belonging within our community, and being a key partner in integrating health and wellness across the University.</p>
+           
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Services</h3>
+           <p>Massage - Outdoor Resource Center - Personal Training - Swimming Lessons</p>
+           <h4> REGULAR BUILDING HOURS:</h4>
+
+<p>Note :
+
+Tuesday April 24 lap pool closed for maintenance. Activity pool, spa and sauna remain open.
+
+Climbing wall and Natatorium will close early at 6 p.m. on May 11.
+
+Mashouf Wellness Center :
+
+Monday to Thursday: 6am-12midnight
+
+Friday: 6am-11pm
+
+Saturday: 11am-9pm
+
+Sunday: 11am-11pm
+
+Natatorium :
+
+Monday to Friday: 7am to 10pm
+
+Saturday and Sunday: 12pm-8pm
+
+Climbing Wall: Climbing Wall hours have changed!! We're adjusting our hours so that our Route Setters can spend more time crafting the quality routes that you love to send.
+
+Monday to Friday : 2pm - 10pm
+
+Saturday: Closed for Setting
+
+    Sunday: 4pm-8pm </p>
+          <img src="mashouf/mashoufwelcome.jpg"alt="exercise" style="width:500px;height:300px;align-content: center;" hspace="20" vspace="20";>
     <br>
  <img src="mashouf/exercise.png"alt="exercise" style="width:400px;height:400px;" hspace="20" vspace="20">
 <br>
 <img src="mashouf/groupx.png"alt="groupx" style="width:600px;height:700px;"  hspace="20" vspace="20">
+        
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Hours:</b> Monday-Friday, 8am - 5pm <br>
+<b>Phone:</b> (415) 405-9355<br>
+<b>Fax:</b> (415) 338-2172<br>
+<b>Email:</b> recsfsu@sfsu.edu <br>
+
+755 Font Blvd., San Francisco, CA - 94132
+
+
+
+</p>
+  <a href="https://www.facebook.com/SFSUcampusrec/">
+        <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
+    <a href="https://www.instagram.com/sfsu_campusrec/"> 
+        <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+    <a href="https://twitter.com/sfsu_campusrec?lang=en"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+    <a href="https://www.youtube.com/channel/UCXpRwbNhFOJyy_j377WKWHA">
+        <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>       
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+
 
 
 <div class="navbar" id="myNavbar">
@@ -138,6 +284,7 @@ height: auto;
 </div>
 
 <script>
+src="js/bootstrap.min.js"  
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
@@ -148,6 +295,8 @@ function myFunction() {
 }
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -6,9 +6,11 @@
 <script src="jQuery.min.js"></script>
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <style>
 body {margin:0;}
-
+.w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
@@ -67,52 +69,66 @@ br {
   margin:2.5em 0;/* FF for instance */
   line-height:5em;/* chrome for instance */
 }
+.button{
+    display: inline-block;
+  border-radius: 4px;
+  background-color: goldenrod;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 </style>
 </head>
 <body>
+    <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
     <p>Welcome to the GatorHealth Resources Page where we have displayed a vast collection on Health and Wellness resources that can be found on and off campus!</p>
 <div>
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorServicesCost.html">
-    <input type="submit" value="Student Health Center Services" />
-</form>
-&emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorDietetics.html">
-    <input type="submit" value="Dietetics/Nutrition" />
-</form>
-&emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorHolistic.html">
-    <input type="submit" value="Holistic Health" />
-</form>
-&emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorMashouf.html">
-    <input type="submit" value="Mashouf Wellness" />
-</form>
-&emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorVeteran.html">
-    <input type="submit" value="Veteran Resources" />
-</form>
-&emsp;
-   <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorAccess.html">
-    <input type="submit" value="Disability Programs" />
-</form>
-    &emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorMental.html">
-    <input type="submit" value="Counseling and Mental Services" />
-</form>
     
-&emsp;
-    <form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorHPW.html">
-    <input type="submit" value="Health Promotion and Wellness" />
-</form>
-&emsp;
 
-<form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorQTRC.html">
-    <input type="submit" value="Queer and Trans Resource Center" />
-</form>
-&emsp;
-<form class="btn-button btn-circle btn-white btn-border btn-border-blue" action="GatorEROS.html">
-    <input type="submit" value="Educational Referral Organization for Sexuality" />
-</form>
+    <a href="GatorServicesCost.html" class="button"style="vertical-align:middle"><span>Student Health Center</span></a>
+    <a href="GatorDietetics.html" class="button"style="vertical-align:middle"><span>Dietetics/Nutrition</span></a>
+    <a href="GatorHolistic.html" class="button"style="vertical-align:middle"><span>Holistic Health</span></a>
+    <a href="GatorMashouf.html" class="button"style="vertical-align:middle"><span>Mashouf Wellness</span></a>
+    <a href="GatorVeteran.html" class="button"style="vertical-align:middle"><span>Veteran Resources</span></a>
+    <a href="GatorAccess.html" class="button"style="vertical-align:middle"><span>Disability Program</span></a>
+    <a href="GatorMental.html" class="button"style="vertical-align:middle"><span>Counseling and Mental Services</span></a>
+    <a href="GatorHPW.html" class="button"style="vertical-align:middle"><span>Health Promotion and Wellness</span></a>
+    <a href="GatorQTRC.html" class="button"style="vertical-align:middle"><span>Queer and Trans Resource Center</span></a>
+    <a href="GatorEROS.html" class="button"style="vertical-align:middle"><span>Educational Referral Organization for Sexuality</span></a>
+    <a href="Clinica'S.html" class="button"style="vertical-align:middle"><span>Clinica Martin-Baro</span></a>
+
 </div>
 <br>  
 <div class="navbar" id="myNavbar">

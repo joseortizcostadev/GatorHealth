@@ -7,8 +7,8 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
-body {margin:0;
-    background-image: url(dietetics/dietetics2.jpg); background-size: cover; background-position: center;}
+/*body {margin:0;
+    background-image: url(dietetics/dietetics2.jpg); background-size: cover; background-position: center;}*/
 
 .navbar {
   overflow: hidden;
@@ -115,15 +115,92 @@ height: auto;
         color: white;
 
     }
+/*.img-fluid {
+    width: 100%;
+    height: 90px;
+}*/
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
 </style>
 
 </head>
 <body>
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <form action="GatorResources.html">
     <input type="submit" id="back" value="Go Back" />
 </form>
-
-   <img src="dietetics/associations.png"alt="associations" style="width:200px;height:300px;" align="middle" hspace="55" vspace="60">
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+          <h3>Mission Statement</h3>
+          <p>
+           Our objective, as a student organization, is to promote an awareness of dietetics, health care, food and nutrition related issues, and to prepare members for their post graduate endeavors. Our association serves as a knowledge base offering guidance and support for students’ concerns and questions.</p>
+           
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Dietetic Sub-Committees</h3>
+          <p>
+         <img src="dietetics/associations.png"alt="associations" style="width:200px;height:300px;" align="middle" hspace="55" vspace="60">
     <br>
     <img src="dietetics/subcommittees.png"alt="subcommittees" style="width:300px;height:400px;" align="middle" hspace="55" vspace="60"> 
      <img src="dietetics/farmersmarket.png"alt="farmersmarket" style="width:300px;height:200px;" align="middle">
@@ -131,6 +208,38 @@ height: auto;
      <img src="dietetics/cookingclass.png"alt="cookingclasses" style="width:300px;height:300px;" align="middle" hspace="55" vspace="60">
      <img src="dietetics/foodpantry.png"alt="foodpantry" style="width:300px;height:200px;" align="middle">
      <img src="dietetics/unplug.png"alt="unplug" style="width:300px;height:300px;" align="middle"hspace="55" vspace="60">
+        
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact Information</h3>
+          <p>
+<b>Email:</b> sda.sfstate@gmail.com<br>
+<b>Website:</b>http://www.sfsu-sda.com<br>
+
+ <a href="https://orgsync.com/14883/chapter">
+        <img class = "icons" src="icons/orgsync.png"alt="orgsync" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
+    <a href="https://www.facebook.com/SFSU-Student-Dietetic-Association-82827862506/">
+        <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
+    <a href="https://www.instagram.com/sfsu.sda/?hl=en"> 
+        <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+   
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+   
 
 
 <div class="navbar" id="myNavbar">
@@ -143,6 +252,7 @@ height: auto;
 </div>
 
 <script>
+src="js/bootstrap.min.js"
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
@@ -153,6 +263,8 @@ function myFunction() {
 }
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

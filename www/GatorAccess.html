@@ -114,25 +114,134 @@ height: auto;
         color: white;
 
     }
+/*.img-fluid {
+    width: 100%;
+    height: 90px;*/
+}
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
 </style>
 
 </head>
 <body>
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <form action="GatorResources.html">
     <input type="submit" id="back" value="Go Back" />
 </form>
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+          <h3>Mission Statement</h3>
+          <p>
+           The DPRC collaborates with SF State's diverse community to ensure that all aspects of campus life - learning, working and living - are universally accessible. The DPRC provides the University with resources, education and direct services in order that people with disabilities may have a greater opportunity to achieve social justice and equity. </p>
+           
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Services</h3>
+          <p>
+          Support At Home <br>
+          Prioroity Registration<br>
+          Academic Accomodations<br>
+          Assistive Technology <br>
+          Paid Internships <br>
+              <a href="https://access.sfsu.edu/sites/default/files/DPRC_Brochure.pdf">Click here to read the DPRC Brochure!</a>
+          
+           </p>
+        
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Hours:</b> Monday through Friday:
 
- <img src="access/dprc.png"alt="dprc">
-    <br>
-    <img src="access/dprcintro.png"alt="dprcIntro">
-    <br>
-    <img src="access/genresources.png"alt="general resources">
-    <br>
-    <img src="access/studentEmployee.png"alt="student and employee resources">
-    <br>
-    <img src="access/instructional.png"alt="instructional resources">
-    <br>
-    <img src="access/contactus.png"alt="contact">
+8:00am to 5:00pm phones open
+
+8:30am to 5:00pm office open <br>
+<b>Phone:</b>(415) 338-2472 <br>
+<b>Video Phone:</b> (415) 335-7210 <br>
+<b>Fax:</b> (415) 338-1041 <br>
+<b>Email:</b> dprc@sfsu.edu<br>
+
+1600 Holloway Avenue,
+Student Services Building Room 110, 
+San Francisco, CA 94132
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+ 
 
 
 <div class="navbar" id="myNavbar">
@@ -145,6 +254,7 @@ height: auto;
 </div>
 
 <script>
+src="js/bootstrap.min.js"
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
@@ -155,6 +265,8 @@ function myFunction() {
 }
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

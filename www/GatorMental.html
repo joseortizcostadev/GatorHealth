@@ -73,7 +73,7 @@ div.tab {
     border: 1px solid #ccc;
     background-color: #2b0080;
     width: 20%;
-    height: 300px;
+    height: 100%;
     margin-bottom: 300px;}
 
 /* Style the buttons inside the tab */
@@ -114,22 +114,269 @@ height: auto;
         color: white;
 
     }
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+   /* border-left: none;*/
+    height: 100%;
+    padding-bottom: 20px;
+.img-fluid {
+    width: 100%;
+    height: 90px;
+}
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
 </style>
 
 </head>
 <body>
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <form action="GatorResources.html">
     <input type="submit" id="back" value="Go Back" />
 </form>
-For life-threatening emergencies:
 
-On-campus, dial 8-2222
-Off-campus, dial 911
-    <p>Spring and Fall semester office hours are 8AM to 7PM Monday through Thursday and until 5PM on Friday. Intake appointments (first appointment) for the current academic year must be made in person at </p><h3>Student Services Building Room 208</h3> <p>. Follow-up appointments may be made and cancelled by phone (415) 338-2208 or in person. We require 24-hour notice for cancellation of appointments. Failure to do so will result in a $20 charge. Please call (415) 338-2208 to cancel your appointment. Emails are not accepted.</p>
+
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="openTab(event, 'Student Services Building Room 208')">Student Services Building Room 208</button>
+  <button class="tablinks" onclick="openTab(event, 'Peggy H. Smith Counseling Clinic')">Peggy H. Smith Counseling Clinic</button>
+  <button class="tablinks" onclick="openTab(event, 'SF State Psychology Training Clinic')">SF State Psychology Training Clinic</button>
+  <button class="tablinks" onclick="openTab(event, 'The SAFE Place')">The SAFE Place</button>
+  <button class="tablinks" onclick="openTab(event, 'Empty')">Empty</button>
+  <button class="tablinks" onclick="openTab(event, 'Empty 2')">Empty 2</button>
+
+
+</div>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+    <p>For life-threatening emergencies:</p>
+
+    <p>On-campus, dial 8-2222</p>
+    <p>Off-campus, dial 911</p>
+    <div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+          <h3>Mission Statement</h3>
+          <p>
+           The mission of Counseling & Psychological Services is to enhance the psychological well-being of the entire campus community and thereby facilitate the retention and successful educational experience of students, faculty, and staff.
+
+This mission includes the understanding that the educational process is more than a purely intellectual one, and that the ability of persons to learn and do their work is connected to their psychosocial development and emotional well-being.
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h4>Student Health Services</h4>
+ <p>University life can be stressful for many reasons, and it is not uncommon for students to experience emotional problems during this period of time. Many disturbances in emotional health, including depression, anxiety, self-destructive or suicidal thoughts, have a physical component. And some physical symptoms, (e.g. sleep or appetite disturbance, chest pain, stomach upset) can be caused by emotional distress.
+
+ 
+
+If you have any concerns related to your mental health, an evaluation by a medical professional can shed light on the cause of your symptoms and provide direction in how to treat them.  At Student Health Services, we have two psychiatrists on staff to provide necessary care and medication management.  For psychotherapy services offered on campus, click the link below.</p>
+           <a href="http://psyservs.sfsu.edu/Resources/Resources">On Campus Resources</a>
+           <h3>Other Resources</h3>
     
     <a href="http://psyservs.sfsu.edu/Resources/Resources">Click here for a list of off-campus individual or paired mental/emotional counseling resources.</a>
     <br>
    <a href="https://health.sfsu.edu/content/psychiatric-services">Or click here for a list of off campus psychiatric resources.</a>
+        
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Hours:</b> Monday-Thursday
+8:00 am - 7:00 pm
+Fridays
+8:00 am - 5:00 pm<br>
+<b>Contact:</b> (415) 338-2208<br>
+<b>TDD:</b> (415) 338-4321<br>
+<b>Fax:</b>  (415) 338-6149 <br>
+
+Counseling and Psychological Services
+Student Services Bldg Room 208
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+   
+</div>
+    
+<div id="Student Services Building Room 208" class="tabcontent">
+  <h3>Student Services Building Room 208</h3>
+    <p>Spring and Fall semester office hours are 8AM to 7PM Monday through Thursday and until 5PM on Friday. Intake appointments (first appointment) for the current academic year must be made in person at Student Services Building Room 208. Follow-up appointments may be made and cancelled by phone (415) 338-2208 or in person. We require 24-hour notice for cancellation of appointments. Failure to do so will result in a $20 charge. Please call (415) 338-2208 to cancel your appointment. Emails are not accepted.</p>
+    
+</div>
+
+<div id="Peggy H. Smith Counseling Clinic" class="tabcontent">
+  <h3>Peggy H. Smith Counseling Clinic</h3>
+  <p>The Peggy H. Smith Counseling Clinic provides free individual, couple, or group counseling to registered San Francisco State University students during the Fall and Spring Semester. The clinic operates from September to May and is closed during the winter break and during the summer.
+
+SF State students can make an appointment for an intake by calling (415) 338-1024. Students may be seen for weekly counseling sessions during the Fall and Spring semester.
+
+The Peggy H. Smith Counseling Clinic is a graduate training clinic sponsored by Counseling & Psychological Services and the Department of Counseling and is staffed by second year trainees from the masters program in the Department of Counseling. All the trainees are supervised by licensed clinical counselors from Counseling & Psychological Services.
+
+The clinical coordinator of the Peggy H. Smith Counseling Clinic is Yolanda Gamboa, PhD., Clinical Counselor with Counseling & Psychological Services.
+
+For more information or to make an appointment, call the Peggy H. Smith Counseling Clinic:
+(415) 338-1024
+Burk Hall, Room 117</p> 
+</div>
+
+<div id="SF State Psychology Training Clinic" class="tabcontent">
+  <h3>SF State Psychology Training Clinic</h3>
+  <p>The Psychology Clinic at San Francisco State University offers low-fee individual, couple, family, and group psychotherapy to SF State students and members of the Bay Area community. The clinic is staffed by graduate students in clinical psychology, working under the supervision of licensed clinicians. You do not need to be a student to come to the SF State Psychology Clinic for services.
+
+To set an appointment call us at 415-338-2856.
+
+ 
+
+To read more on the process of getting started in therapy at the SF State Psychology Clinic, click here.
+      <a href="http://psychology.sfsu.edu/clinical/intake.htm">Intake Information</a>
+
+ 
+
+For additional referral options click here.</p>
+    <a href="http://psychology.sfsu.edu/clinical/refferals.htm">Referrals</a>
+</div>
+<div id="The SAFE Place" class="tabcontent">
+  <h3>The SAFE Place</h3>
+  <p>The SAFE Place provides crisis intervention, advocacy, and confidential Title IX support for Survivors dealing with past or recent incidents of sexual assault, dating or domestic violence, sexual harassment and/or stalking.
+
+ If you or someone you know thinks they have been sexually assaulted, you have options:
+
+Call 911, University Police Department at (415) 338-2222, or Counseling & Psychological Services at (415) 338-2208
+Go to The SAFE Place Monday thru Friday 9:00 AM to 5:00 PM
+Go to the Student Health Service
+Go to SFWAR for more options
+      To find out more about Title IX, click on <a href="http://titleix.sfsu.edu/">SF State's Title IX : Promoting Gender Equity & Preventing Sexual Harassment/Sexual Violence website.</a></p>
+    <h4>The SAFE Place Crisis Counseling and Advocacy</h4>
+    <p>The SAFE Place offers Crisis Counseling and Victim/ Survivor Advocacy Monday- Friday 9-5pm (closed 12-1pm). Just walk into our office in SSB 208 and ask for a SAFE Place Counselor, or call Laurene Dominguez. If offices are closed look at our <a href="http://psyservs.sfsu.edu/content/safe-place-resources"> resource list</a> for help available 24 hours a day, 7 days a week. 
+
+The SAFE Place recognizes that sexual violence not only affects women but also men. Men who have been sexually violated are less likely to report due to stigma as well as many other reasons.  Male survivors are encouraged to use any of the services available at The SAFE Place and there is a male crisis counselor on staff if services from a male counselor are preferred. </p>
+</div>
+<div id="Empty" class="tabcontent">
+  <h3>Empty</h3>
+  <p>Extra Resource Here</p>
+</div>
+<div id="Empty 2" class="tabcontent">
+  <h3>Empty 2</h3>
+  <p>Second Extra Resource Here</p>
+</div>
+
+
+
+
 <div class="navbar" id="myNavbar">
   <a href="GatorHome.php">Home</a>
   <a href="GatorMap.html">Map</a>
@@ -140,6 +387,7 @@ Off-campus, dial 911
 </div>
 
 <script>
+src="js/bootstrap.min.js"
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
@@ -148,8 +396,27 @@ function myFunction() {
         x.className = "navbar";
     }
 }
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
