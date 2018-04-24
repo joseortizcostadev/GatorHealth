@@ -73,7 +73,7 @@ div.tab {
     border: 1px solid #ccc;
     background-color: #2b0080;
     width: 20%;
-    height: 300px;
+    height: 100%;
     margin-bottom: 300px;}
 
 /* Style the buttons inside the tab */
@@ -114,6 +114,113 @@ height: auto;
         color: white;
 
     }
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+   /* border-left: none;*/
+    height: 100%;
+    padding-bottom: 20px;
+.img-fluid {
+    width: 100%;
+    height: 90px;
+}
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
 </style>
 
 </head>
@@ -122,22 +229,133 @@ height: auto;
     <input type="submit" id="back" value="Go Back" />
 </form>
 
+
+    <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Medical Care')">Medical Care</button>
-  <button class="tablinks" onclick="openTab(event, 'Laboratory')">Laboratory</button>
-  <button class="tablinks" onclick="openTab(event, 'X Ray')">X Ray</button>
-    <button class="tablinks" onclick="openTab(event, 'Nutrition')">Nutrition</button>
-        <button class="tablinks" onclick="openTab(event, 'Vaccinations and Immunizations')">Vaccinations and Immunizations</button>
-     <button class="tablinks" onclick="openTab(event, 'Mental Health Services')">Mental Health Services</button>
-       <button class="tablinks" onclick="openTab(event, 'Rehabilitation Services')">Rehabilitation Services </button>
-     <button class="tablinks" onclick="openTab(event, 'Gynecological and Reproductive Health')">Gynecological and Reproductive Health</button>
-     <button class="tablinks" onclick="openTab(event, 'Emergency')">Emergency</button>
+  <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="openCity(event, 'Medical Care')">Medical Care</button>
+  <button class="tablinks" onclick="openCity(event, 'Laboratory')">Laboratory</button>
+  <button class="tablinks" onclick="openCity(event, 'X Ray')">X Ray</button>
+  <button class="tablinks" onclick="openCity(event, 'Nutrition')">Nutrition</button>
+  <button class="tablinks" onclick="openCity(event, 'Vaccinations and Immunizations')">Vaccinations and Immunizations</button>
+  <button class="tablinks" onclick="openCity(event, 'Mental Health Services')">Mental Health Services</button>
+  <button class="tablinks" onclick="openCity(event, 'Rehabilitation Services')">Rehabilitation Services</button>
+ <button class="tablinks" onclick="openCity(event, 'Gynecological and Reproductive Health')">Gynecological and Reproductive Health</button>   
+ <button class="tablinks" onclick="openCity(event,'Extra')">Extra</button> 
+</div>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+    <p>For life-threatening emergencies:</p>
+
+    <p>On-campus, dial 8-2222</p>
+    <p>Off-campus, dial 911</p>
+
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+          <h3>Appointments</h3>
+          <p>
+           Types of Appointments:
+
+Online -- PREFERRED
+Phone - except after 4:45 pm
+In-person
+NOTE:  The Student Health Service prioritizes students with scheduled appointments. 
+
+If you choose to walk in to SHS without an appointment, we will do our best to fit you into the schedule.  There may be lengthy wait times and there is no guarantee that we can see you the same day.
+
+If you have an urgent medical concern and need to be seen the same day, please come to SHS to speak with a Nurse.
+
+We encourage you to schedule your appointment online to expedite your services.
+
+Due to high patient demand and the limited availability of appointments, Student Health Services has a $20 no show fee. You must give advance notice to cancel an appointment or you will be charged the no show fee.It is preferred that you cancel appointments online at myHealth to ensure a timely cancellation and to avoid a no-show fee. No shows for appointments will result in an automatic $20.00 bill to your Bursar’s account.  The charge will appear on your account the day after your missed appointment.
+You may pay this charge at the Bursar Cashier’s.  No payments can be accepted at Student Health Services.
+If you have a significant reason(s) for having missed your appointment you can petition to have the no show fee waived.</p><a href="https://health.sfsu.edu/content/appointments" target="_blank">Click here for more information about the petition process.</a>
+           <br>
+        <p>The following types of appointments CANNOT be booked online. Please call the Student Health Service at 415-338-1251 for assistance.
+
+Advice about colds, coughs
+Asthma attack
+Athletic Trainer appts
+Blood pressure checks
+Depo injection
+Dressing/Bandages changed
+Ear wax removal
+Emergency contraception
+Head injury
+Insect bites or stings
+IUD/Implant insertions or removals
+Mental health appts (such as depression, anxiety, sleep issues)
+Pregnancy test
+Recent injury
+Suture/Stitches/Staples removed
+Urinary tract infections</p>
+           <h4>Alert: Student Health no longer has flu vaccine.</h4>
+           <h3>Appointment By Phone</h3>
+           <p>Call (415) 338-1719 between 8:10 am - 4:45 pm, Mon, Tue, Thu and Friday.
+
+on Wed 10:00 am - 4:45 pm
+
+The busiest call times are 8:10 - 9:00 am and 12-1 pm.
+
+You may experience longer wait times on the phone during these hours.SS</p>
+           
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Hours</h3>
+          
+           <h4>Weekdays (except Wednesdays)</h4>
+
+<p>8:10am – 4:45pm
+Extremely Urgent Services
+    4:45pm – 5:00pm</p>
+
+           <h4>Wednesdays</h4>
+
+<p>10:00am – 4:45pm
+Extremely Urgent Services
+8:10am – 10:00am and 4:45pm – 5:00pm
+
+</p>
+        
+           <a href="https://idp.sfsu.edu/idp/profile/SAML2/Redirect/SSO?execution=e1s1" target="_blank">Click here to log in and schedule an appointment online from your myHealth account</a>       
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Phone:</b> (415) 338-1251 <br>
+<b>Fax:</b> 415) 338-2278 <br>
+
+Student Health Services
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+
     
+   
 </div>
 
 <div id="Medical Care" class="tabcontent">
   <h3>Medical Care</h3>
-    <p>Medical Care services includes meeting with a healthcare provider to talk about your health issues or concerns. These services are covered by the Student Health Fee ($157 per semester) and includes:</p>
+      <p>Medical Care services includes meeting with a healthcare provider to talk about your health issues or concerns. These services are covered by the Student Health Fee ($157 per semester) and includes:</p>
     <br>
 
     <p>Doctor's appointments</p>
@@ -160,6 +378,7 @@ Pharmacy Services
 Podiatry Clinic
 Rehabilitation Services
 Vaccinations and Immunizations</p>
+
 </div>
 
 <div id="Laboratory" class="tabcontent">
@@ -314,11 +533,12 @@ Rapid Strep
 Monospot Test
 Stool Test - Occult Blood
 Provider performed microscopy</p> 
+
 </div>
 
 <div id="X Ray" class="tabcontent">
   <h3>X Ray</h3>
-    <p>X-Rays performed at Student Health Services as part of a treatment plan are provided at no charge to registered students.</p>
+  <p>X-Rays performed at Student Health Services as part of a treatment plan are provided at no charge to registered students.</p>
     <br>
       
     <h3>Fall and Spring Semester X-Ray Hours</h3>
@@ -353,7 +573,7 @@ Provider performed microscopy</p>
   </tr>   
 </table>
     <br
-    
+
 <p>Summer X-Ray Hours
 X-Ray is closed each summer from late June to early September. Exact dates of closure will be posted in June.</p>
  
@@ -372,10 +592,12 @@ X-Ray is closed each summer from late June to early September. Exact dates of cl
       Phone: (415) 922-6767
 
       Fax: (415) 563-0468</p>
+
 </div>
+    
 <div id="Nutrition" class="tabcontent">
   <h3>Nutrition</h3>
-    <p>Our Registered Dietitian Nutritionist, Lauren Muckley, is available for free, private appointments. Lauren practices the Intuitive Eating philosophy with patients, which focuses on consistent eating practices rather than weight. This model emphasizes:
+      <p>Our Registered Dietitian Nutritionist, Lauren Muckley, is available for free, private appointments. Lauren practices the Intuitive Eating philosophy with patients, which focuses on consistent eating practices rather than weight. This model emphasizes:
 
 Decreasing chaotic eating and worry about food choices
 You as the expert of your own body and needs
@@ -426,10 +648,12 @@ Initial appointments last 40 minutes.
 <p>Follow-up appointments are for students who have seen the nutritionist in the last year.
 Follow up appointments last 20 minutes
 To make an appointment, login to myHealth and click on "Appointments" in the left side menu.</p>
-    </div>
-    <div id="Vaccinations and Immunizations" class="tabcontent">
+
+</div>
+    
+<div id="Vaccinations and Immunizations" class="tabcontent">
   <h3>Vaccinations and Immunizations</h3>
-        <p>Alert: Student Health now has flu vaccine.
+          <p>Alert: Student Health now has flu vaccine.
 
 Flu shot costs $10. Schedule an immunization clinic appointment online.
 
@@ -522,21 +746,24 @@ Student Health Services gives vaccines to students and can check their immunizat
 </td> 
   </tr> 
 </table>
-        
-    </div>
-        <div id="Mental Health Services" class="tabcontent">
+
+</div>
+    
+<div id="Mental Health Services" class="tabcontent">
   <h3>Mental Health Services</h3>
-            <img src="shs/meditate.png" alt="meditate" style="width:400px;height:400px;">
+              <img src="shs/meditate.png" alt="meditate" style="width:400px;height:400px;">
      <p>University life can be stressful for many reasons, and it is not uncommon for students to experience emotional problems during this period of time. Many disturbances in emotional health, including depression, anxiety, self-destructive or suicidal thoughts, have a physical component. And some physical symptoms, (e.g. sleep or appetite disturbance, chest pain, stomach upset) can be caused by emotional distress.
 
  
 
 If you have any concerns related to your mental health, an evaluation by a medical professional can shed light on the cause of your symptoms and provide direction in how to treat them.  At Student Health Services, we have two psychiatrists on staff to provide necessary care and medication management.  For psychotherapy services offered on campus, click the link below.</p> 
             
-    </div>
-        <div id="Rehabilitation Services" class="tabcontent">
+
+</div>
+    
+<div id="Rehabilitation Services" class="tabcontent">
   <h3>Rehabilitation Services</h3>
-            <p>A number of rehabilitation services are available to all students by referral from a physician. The services are designed to serve the needs of students active in recreational sports, musicians, dancers, theatre artists, and BECA majors. Any musculoskeletal condition which interferes with, or is the result of these activities warrants a referral.
+ <p>A number of rehabilitation services are available to all students by referral from a physician. The services are designed to serve the needs of students active in recreational sports, musicians, dancers, theatre artists, and BECA majors. Any musculoskeletal condition which interferes with, or is the result of these activities warrants a referral.
 
  
 
@@ -554,20 +781,83 @@ If you have any concerns related to your mental health, an evaluation by a medic
             <h4>Orthopedic Surgeons</h4>
 
 <p>On a case by case basis, orthopedic injures will be referred to local orthopedic surgeons who sub-specialize in sports injuries.</p>
-    </div>
-        <div id="Gynecological and Reproductive Health" class="tabcontent">
-  <h3>Gynecological and Reproductive Health</h3>
-    </div>
-        <div id="Emergency" class="tabcontent">
-  <h3>Emergency</h3>
+
     </div>
     
-<br>  
+<div id="Gynecological and Reproductive Health" class="tabcontent">
+  <h3>Gynecological and Reproductive Health</h3>
+  <p>All registered female-bodied students may access the following gynecological and reproductive health services at SHS. These services are provided by SHS physicians (MD), nurse practitioners (NP), registered nurses (RN) and clinical or medical assistants.
+
+Birth Control
+Emergency Contraception (morning after pill)
+Gynecological medical evaluations, care and treatment
+Pregnancy tests and options
+Preventive health care
+Online Resources</p>
+ <h3>Birth Control Refill Drop-in clinics</h3>
+<p>If you are satisfied with your current birth control method (Pill, Ring, Patch or Depo-Provera) and need a refill OR if you want to re-start a birth control method you had previously been satisfied with, then the Mini-Clinic is a good option. If you have questions or problems with your birth control method, please make a "women’s health appointment" through myHealth.
+
+FIRST check if you have any remaining refills at the Student Health Service Pharmacy.
+If no refills or your prescription has expired, this clinic is FOR YOU! Limited to first come, first served.  Arrive early to be seen.</p>
+    <h4>Mini-Clinic Hours</h4>
+
+ <table style="width:100%">
+  <tr>
+    <th>Day of the Week
+</th>
+    <th>Time
+</th>   
+      <th>Area
+</th> 
+  </tr>
+                   <tr>
+    <td>Wednesday</td>
+    <td>2:10  -  3:10 PM</td>
+    <td>Clinic A</td> 
+  </tr>
+           <tr>
+    <td>Thursday</td>
+    <td>2:30  -  3:30 PM</td> 
+    <td>Clinic C</td> 
+  </tr>   
+</table>
+<h3>Emergency Contraception ("morning after pill")</h3>
+<p>Emergency Contraception is available at the Student Health Services Pharmacy after you see one of our providers or nurses for a prescription. Emergency contraception is also known as the ‘morning after pill," Plan B, Next Choice, or Ella. If you are enrolled in Family PACT, the cost of emergency contraception will be covered.
+
+Resources for emergency contraception when the health center is closed:
+
+You can purchase it at most pharmacies without a prescription.
+www.Not-2-late.com for listings of pharmacies near you
+SF City Clinic online prescription click on Plan B and follow instructions to send a prescription to a nearby pharmacy. You can use your FamilyPACT card to receive Plan B at no cost to you.
+</p>
+<h3>Gynecological medical evaluations, care, and treatment</h3>
+<p>Gynecological evaluations, exams, and treatments are available. Make a "women’s health appointment" through myHealth.
+
+Vaginal bumps, unusual discharge or other symptoms
+Menstrual or vaginal bleeding issues
+Breast issues
+Sexually transmitted infection (STI) or exposure –we can screen you!
+Menopausal symptoms
+Pap smears after age 21 and abnormal Pap smear follow-up   (NOTE:  you must call the clinic at 415-338-1251 to set up a Pap smear appointment)</p>
+<h3>Family PACT Program Overview</h3>
+<p>The Family Planning, Access, Care, Treatment (Family PACT) is a federally funded program that helps people avoid getting pregnant or causing a pregnancy when they are not ready.  You must be a California resident and meet eligibility criteria. All Family PACT information is confidential and program enrollment is completely voluntary. Students are free to withdraw from the program at any time or to refuse any service. Eligible students will receive a Health Access Program (HAP) card when they enroll in the program. The card can be used at any provider that offers Family PACT in California.
+
+To sign up for Family PACT, make a medical appointment with an SHS provider for family planning services.  At your appointment, your SHS provider will discuss whether enrolling in Family PACT is a good option for you.  If you are eligible for Family PACT you may be able to receive free testing, diagnosis, and treatment of sexually transmitted infections (STIs) and vaginal infections as well as free birth control methods.
+
+ </p>
+</div>
+    
+<div id="Extra" class="tabcontent">
+  <h3>Extra</h3>
+  <p>Extra Resource Here.</p>
+</div>
+
+
 <div class="navbar" id="myNavbar">
-  <a href="GatorHome.php">Home</a>
-  <a href="GatorMap.html">Map</a>
+  <a href="GatorHome.php" class="active">Home</a>
+  <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html" class="active">Resources</a>
+  <a href="GatorResources.html">Resources</a>
   <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
@@ -581,27 +871,27 @@ function myFunction() {
         x.className = "navbar";
     }
 }
-function openTab(evt, tabName) {
-    // Declare all variables
+function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-
-    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
 </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 </body>
 </html>

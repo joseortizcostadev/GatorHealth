@@ -114,46 +114,156 @@ height: auto;
         color: white;
 
     }
+/*.img-fluid {
+    width: 100%;
+    height: 90px;*/
+}
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
 </style>
 
 </head>
 <body>
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <form action="GatorResources.html">
     <input type="submit" id="back" value="Go Back" />
 </form>
-<a href="http://sfstate.orgsync.com/org/vets/home">
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>   <a href="http://sfstate.orgsync.com/org/vets/home" target="_blank">
      <img src="veterans/sfsuvets.png"alt="sfsuvets"  hspace="20" vspace="20"></a>
-
-<br>
+          <h3>Mission Statement</h3>
+          <p>
+           V.E.T.S.@SFSU exists to provide military veterans, their families, and our community of concern with the advocacy, resources, and fellowship to support successful transitions into and through the academic rigors of San Francisco State University.</p>
+           <h3>Purpose</h3>
+           <p>The V.E.T.S.@SFSU Organization is a student led organization dedicated to supporting veterans and dependents, ensuring academic success. We are a social organization committed to enhancing the transition from military lifestyles to that of the collegiate, furthering professional development, and availing future opportunities while acknowledging and fostering those leadership skills unique to our community. Throughout each semester, to enrich our academic experiences, we encourage peer mentorship via community events and key networking opportunities.</p>
+           
      <img src="veterans/vetscorner.png"alt="vetscorner"  hspace="20" vspace="20">
-<br>
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Objectives</h3>
+          <p>
+          1) To provide mentoring programs through our One on One buddy support system. <br>
+2) To provide academic networking and support. <br>
+3) To provide social and family support by giving Student Veterans a place where they can meet other Student Veterans in a friendly atmosphere. <br>
+4) To provide professional support and career opportunities.<br> 
+5) To continue serving our community, through volunteering, fundraising, and involvement with the general public.</p>
+           <h3>Confidential Online Support</h3>
+     
+
      <img src="veterans/solidersproject.png"alt="soldiersproject" hspace="20" vspace="20">
 <br>
-    <a href="https://www.thesoldiersproject.org">
+    <a href="https://www.thesoldiersproject.org" target="_blank">
 <img src="veterans/soldiersprojectlink.png"alt="soldiersprojectlink" hspace="20" vspace="20">
 </a>
 
 <br>
-    <a href="http://operationcomfort.org">
+    <a href="http://operationcomfort.org" target="_blank">
         <img src="veterans/opcomfort.png"alt="opcomfort" hspace="20" vspace="20"> </a>
 <br>
-    <a href="https://giveanhour.org">
+    <a href="https://giveanhour.org" target="_blank">
         <img src="veterans/giveanhr.png"alt="giveanhr" hspace="20" vspace="20"></a>
 <br>
-    <a href="http://cominghomeproject.net"> <img src="veterans/cominghome.png"alt="cominghome" hspace="20" vspace="20"></a>
+    <a href="http://cominghomeproject.net" target="_blank"> <img src="veterans/cominghome.png"alt="cominghome" hspace="20" vspace="20"></a>
     
 <br>
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Contact:</b> (415)338-7702 <br>
+<b>Email:</b> vets.sfsu@gmail.com <br>
+
+Burke Hall 153 and 155
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+
 
 <div class="navbar" id="myNavbar">
-  <a href="GatorHome.php">Home</a>
-  <a href="GatorMap.html">Map</a>
+  <a href="GatorHome.php" class="active">Home</a>
+  <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html" class="active">Resources</a>
+  <a href="GatorResources.html">Resources</a>
   <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <script>
+src="js/bootstrap.min.js"
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
@@ -164,6 +274,8 @@ function myFunction() {
 }
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

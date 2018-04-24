@@ -7,7 +7,7 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
-body {margin:0; background-image: url(holistichealth/greenholistic.jpg); background-size:cover; background-position: center;}
+/*body {margin:0; background-image: url(holistichealth/greenholistic.jpg); background-size:cover; background-position: center;}*/
 
 .navbar {
   overflow: hidden;
@@ -114,27 +114,135 @@ height: auto;
         color: white;
 
     }
+/*.img-fluid {
+    width: 100%;
+    height: 90px;*/
+}
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
 </style>
 
 </head>
 <body>
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
 <form action="GatorResources.html">
     <input type="submit" id="back" value="Go Back" />
 </form>
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+          <h3>Mission Statement</h3>
+          <p>
+           The goal of the Holistic Health Network is to build a co-creative community where people can come together to explore health, healing, and wellness. The network supports undergraduate students in the Holistic Health department with their studies by providing a living library, a safe space for project collaboration, and academic advising in HSS 329. 
 
- <img src="holistichealth/learningcenter.png"alt="learningcenter" style="width:350px;height:300px; position: relative; top: 10px;">
+Meeting will be held in HSS 329 on Wednesday from 11:00 am-12:00 pm on October 4th.
+Stop by and join us for a hot cup of tea and snacks.......</p>
+           
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Services</h3>
+         <p>Come find out more about the Holistic Health Network and the Holistic Health Program, at San Francisco State University. Gain access to a library of books, films and audio-files at the Holistic Health Community/Learning Center, located in HSS 329.</p>  
+        <img src="holistichealth/learningcenter.png"alt="learningcenter" style="width:350px;height:300px; position: relative; top: 10px;">
+        
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Contact:</b> (415) 338-6416 <br>
+<b>Email:</b> holistichealthnetwork.sfsu@gmail.com<br>
+<b>Website:</b>http://online.sfsu.edu/hhnet/<br>
+HSS 329
+
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+
 
 
 <div class="navbar" id="myNavbar">
-  <a href="GatorHome.php">Home</a>
-  <a href="GatorMap.html">Map</a>
+  <a href="GatorHome.php" class="active">Home</a>
+  <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html" class="active">Resources</a>
+  <a href="GatorResources.html">Resources</a>
   <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <script>
+src="js/bootstrap.min.js"
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
@@ -145,6 +253,8 @@ function myFunction() {
 }
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

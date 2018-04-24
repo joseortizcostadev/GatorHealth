@@ -132,7 +132,67 @@ margin-left: 10%;
     top: 0px;
     padding-bottom: 80px;}
 
-    
+/*.img-fluid {
+    width: 100%;
+    height: 90px;
+}*/ 
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+   
 </style>
 </head>
 <body>
@@ -151,10 +211,24 @@ margin-left: 10%;
         </div>
     </div>
 <br>
-<form action="GatorHPW.html">
+<form action="GatorResources.html">
     <input type="submit" id="back" value="Go Back" />
 </form>
- <img src="hpw/tips.png" class ="map" alt="categories" usemap="#categories">
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+          <h3>Mission Statement</h3>
+          <p>
+          Health Promotion & Wellness is a unit within Student Affairs & Enrollment Management that provides health education for the SF State community through campus health initiatives and programming. Our focus areas include alcohol, tobacco and other drugs, mental health, nutrition, men's health, sexual health, and sexual violence prevention. We work to achieve health equity and enhanced academic, personal, and professional success for all members of the campus community.  </p>
+           
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Services</h3>
+           <img src="hpw/tips.png" class ="map" alt="categories" usemap="#categories">
 
 <map name="categories">
   <area target="" alt="mental" title="" href="HPWmental.html" coords="101,191,10,105" shape="rect">
@@ -166,20 +240,49 @@ margin-left: 10%;
     <area target="" alt="enviornment" title="" href="HPWenviornment.html" coords="253,225,341,315" shape="0">
     <area target="" alt="spiritual" title="" href="HPWspiritual.html" coords="372,226,462,314" shape="0">
 </map>
+        
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Email:</b> hpw@sfsu.edu <br>
+
+San Francisco State University
+Health Promotion & Wellness
+Village at Centennial Square
+750 Font Blvd., Building A, Room 1
+San Francisco, CA 94132
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+
     
 
-    <a href="https://www.facebook.com/SFStateCares">
+    <a href="https://www.facebook.com/SFStateCares" target="_blank">
         <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
-    <a href="https://www.instagram.com/SFStateCares/"> 
+    <a href="https://www.instagram.com/SFStateCares/" target="_blank"> 
         <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
-    <a href="https://twitter.com/SFStateCares"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+    <a href="https://twitter.com/SFStateCares" target="_blank"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
    
 
 
 
 <div class="navbar" id="myNavbar">
   <a href="GatorHome.php" class="active">Home</a>
-  <a href="GatorMap.html">Map</a>
+  <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
   <a href="GatorResources.html">Resources</a>
   <a href="GatorSearch.php">Search</a>
@@ -201,5 +304,8 @@ document.getElementById("date").innerHTML = Date();
 
 
 </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
