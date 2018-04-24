@@ -141,12 +141,12 @@ Yes:
 </div>
 
     
-    <a href="https://www.facebook.com/sanfranciscostate/">
+    <a href="https://www.facebook.com/sanfranciscostate/" target="_blank">
         <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
-    <a href="https://www.instagram.com/sanfranciscostate/?hl=en"> 
+    <a href="https://www.instagram.com/sanfranciscostate/?hl=en" target="_blank"> 
         <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
-    <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
-    <a href="https://www.youtube.com/user/sanfranciscostate">
+    <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+    <a href="https://www.youtube.com/user/sanfranciscostate" target="_blank">
         <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
 
 
