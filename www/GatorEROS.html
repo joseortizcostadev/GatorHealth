@@ -98,7 +98,7 @@ margin-left: 10%;
     display: block;
     margin: auto;
     width: 85%;
-    height: 150px;
+    height: 100%;
     border: 10px solid gold;
     padding: 10px;
     text-align: center
@@ -107,18 +107,24 @@ margin-left: 10%;
         display: inline-block;
         width: 150px;
         height: 150px;
-        position: relative;
-        left: 125%;
-        top: 10%;
+        position: absolute;
+        left: 50%;
+        top: 30%;
     }
     .profile{
         display: inline-block;
-        position: relative;
-        left: 125%;
-        top: -60%;
+        position: absolute;
+        left: 50%;
+        top: 40%;
     }
     .center{
         margin: auto;
+    }
+#back{
+        float: right;
+        background-color:gold;
+        color: white;
+
     }
 </style>
 </head>
@@ -126,38 +132,67 @@ margin-left: 10%;
 <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
 <br>
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
-  <button type="button" class="btn btn-primary dry">Non-Emergency Hotline</button>
+ 
     </div>
     <br>
-    <div class="container">
-  <div class="row">
-    <div class="col-sm-4 user one center-block" rotate="90">
-    </div>
-    <div class="col center-block">
-      <p>Good Afternoon, <br> Stuart!</p>
-      <button type="button" class="btn btn-primary dry">Edit Profile</button>
-    </div>
-        </div>
-    </div>
+<div class="user one center-block" rotate="90">
+
+
+</div>
 <br>
+<form action="GatorResources.html">
+    <input type="submit" id="back" value="Go Back" />
+</form>
 <div class="truecenter-block">
    <table class="center">
    <tr>
        <td>
-           Inbox
+          <h3>Mission Statement</h3>
+          <p>
+           EROS is dedicated to promoting a healthy and respectful understanding of sexuality and gender through judgment-free peer education. </p>
+           
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Services</h3>
+          <p>
+          Free safer sex materials and judgment-free peer education to prevent sexually transmitted infections. A regularly updated lending library of academic, pornographic, fictional, and instructional books and DVDs. Hands on workshops and events that nurture curiosity and allow students to explore alternative types of sexuality and find pleasure in their sexual and romantic experiences in a judgment-free environment. A local on and off-campus referral database to help students access the many community resources around them.</p>
+        
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Contact:</b> (415) 338-2457 <br>
+<b>Email:</b> eros@asi.sfsu.edu <br>
+
+Mezzanine Level of the
+Cesar Chavez Student Center, T-138
+
+
+</p>
+           
+           
        </td>
    </tr>
    </table>
+
 </div>
+       <br>
+   <br>
+   <br>
 
     
 <div class="navbar" id="myNavbar">
-  <a href="GatorHome.html" class="active">Home</a>
-  <a href="GatorMap.html">Map</a>
+    <a href="GatorHome.php">Home</a>
+  <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html">Resources</a>
-  <a href="GatorSearch.html">Search</a>
+  <a href="GatorResources.html" class="active">Resources</a>
+  <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
@@ -172,5 +207,8 @@ function myFunction() {
     }
 }
 </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

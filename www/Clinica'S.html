@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jQuery.min.js"></script>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <script src="js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 16px Arial;  
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+#back{
+        float: right;
+        background-color:gold;
+        color: white;
+
+    }
+/*.img-fluid {
+    width: 100%;
+    height: 90px;
+}*/
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    .dry{
+        border-color: #2b0080;
+        background-color: #2b0080;
+        color: white;
+    }
+    .user {
+  display: inline-flex;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image:url(BLANK_Profile-Picture.jpg);
+}
+.center-block {  
+  display: block;  
+  margin-right: auto;
+margin-left: 10%;
+}
+.truecenter-block { 
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
+}   
+    .message{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+    }
+    .profile{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .center{
+        margin: auto;
+    }
+
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 30%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 90%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+    .container{  float: left;
+  width: 90%;
+  padding: 0 20px;
+  overflow: hidden;}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+ /* .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }*/
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+ /* .menu, .main, .right {
+    width: 100%;*/
+  }
+}
+     
+</style>
+</head>     
+
+<body>
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+
+<form action="GatorResources.html">
+    <input type="submit" id="back" value="Go Back" />
+</form>
+<div class="truecenter-block">
+   <table class="center">
+   <tr>
+       <td>
+         <img src="CMB%20header.jpg" alt="MBC">
+
+
+
+  <div class="main">
+      <h2>Clinica's Martin Baro Mission </h2><br>
+      
+
+    <p>Clínica Martín-Baró's mission is to provide a preferential option for the poor in health care. We strive to promote wellness and address the health care needs of the underserved and economically disadvantaged Spanish-speaking community of the Mission District of San Francisco. We provide access to free health care, psychotherapy, and health education in Spanish and in a culturally sensitive manner.</p>
+ 
+    
+
+    <p>La misión de la Clínica Martín-Baró es proporcionar una opción preferencial para los pobres en el cuidado de la salud. Nos esforzamos por promover el bienestar y atender las necesidades de atención médica de la comunidad de habla hispana desatendida y económicamente desfavorecida del Distrito de la Misión de San Francisco. Brindamos acceso a atención de salud gratuita, psicoterapia y educación para la salud en español y de una manera culturalmente sensible.</p>
+ 
+      <center><img src="download.jpg" alt="MBC" style="width:300px;height:400px;"></center>
+           
+       </td>
+   </tr>
+   <tr>
+       <td>
+ <div class="container">
+  <h2>Services</h2>
+  <p><strong>Note:</strong> Clinica Martin Baro is now located at <strong>3013 24th St. (at Harrison) </strong>in the Mission Girls building. We are open Saturdays starting at 8am. We do ask that patients come at 8am so that they can be seen as quickly as possible and can get the full benefits of the clinic.</p><br>
+    
+    <strong><p2>Questions? </p2></strong>
+    Call our voicemail: (415) 933-1198
+  <h2>Servicios</h2>
+  <p><strong>Note:</strong> Clinica Martin Baro esta localisada <strong>3013 24th St. (at Harrison) </strong>en el edificio de Mission Girls. Estamos abiertos los sábados a partir de las 8 AM. Pedimos que los pacientes lleguen a las 8 a. M. Para que puedan verlos lo más rápido posible y puedan obtener todos los beneficios de la clínica.</p><br>
+    
+    <strong><p2>Si tienen mas preguntas</p2></strong>
+    Tel: (415) 933-1198
+    
+    
+  
+
+    
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Primary Care</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">Clínica Martín-Baró is a student-organized free clinic operating Saturdays out of the Mission Neighborhood Centers, Inc. It is a collaboration between medical students and faculty from the UCSF School of Medicine, and undergraduates from the SFSU Latin@ Studies Department. We work together to serve while learning about the social and medical conditions facing immigrants. We provide a space for student volunteers to develop and strengthen a socio-economic analysis of the state of healthcare in the U.S, and an educational environment to create life-long advocates for underserved communities. We encourage, support and empower low-income students of color to pursue higher education (including but not limited to medical school) and a career that will benefit the needs of such communities</div>
+<h4>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Atención primaria</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">Clínica Martín-Baró es una clínica gratuita organizada por los estudiantes que funciona los sábados de Mission Neighborhood Centers, Inc. Es una colaboración entre estudiantes de medicina y profesores de la Facultad de Medicina de UCSF, y estudiantes del Departamento de Estudios Latinos de SFSU. Trabajamos juntos para servir mientras aprendemos sobre las condiciones sociales y médicas que enfrentan los inmigrantes. Proporcionamos un espacio para estudiantes voluntarios para desarrollar y fortalecer un análisis socioeconómico del estado de la atención médica en los EE. UU. Y un entorno educativo para crear defensores de por vida para las comunidades marginadas. Alentamos, apoyamos y capacitamos a los estudiantes de color de bajos ingresos para que cursen estudios superiores (que incluyen, entre otros, la facultad de medicina) y una carrera que beneficiará las necesidades de dichas comunidades</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Dental Care</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">Dental care is given on the basis of first come first served. If you are interested in a consultation please come visit us Sunturdays</div>
+          <h4>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Cuidado dental</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">La atención deltal se brinda sobre la base del primer coem atendido por primera vez. Si está interesado en una consulta, por favor visítenos el sábado</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Vision Care</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Clínica Martin Baro has referral services for various needs ranging from women's health to mental health, etc. throughout the bay area.</div>
+<h4>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Cuidado de la visión</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Clínica Martin Baro tiene servicios de referencia para diversas necesidades que van desde la salud de la mujer a la salud mental, etc. en toda el área de la bahía</div>
+      </div>  </div><br>
+      
+      
+        
+    
+        <a href="https://clinicamb.blogspot.com">Click here to know more about Clinica</a>  
+        
+        
+        
+        
+        
+     
+  
+        
+        <a href="https://clinicamb.blogspot.com" target="_blank">Haga click aquí para saber más sobre Clinica!</a><br>
+        
+        
+           
+       </td>
+   </tr>
+       </td>
+       </tr>
+
+   <tr>
+       <td>
+         <h3>Contact & Location</h3>
+          <p>
+<b>Contact:</b> Tel: (415) 933-1198 <br>
+<b>Email:</b> laclinicamb@gmail.com<br>
+<b>Website:</b>https://clinicamb.blogspot.com<br>
+3013 24th St. (at Harrison)
+
+
+</p>
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+
+    
+
+    <br>
+
+
+<button onclick="myFunction()">Click here to display the when this was last modified</button>
+
+<p id="demo"></p>
+
+<script>
+src="js/bootstrap.min.js"
+function myFunction() {
+    var x = document.lastModified;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">//MC js</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">//MC js</script>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">//Stuart js</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">//Stuart js</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">//Stuart js</script>       
+    
+    
+</body>
+</html>
+
+
+
+ 
+
+
+    
+

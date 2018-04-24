@@ -62,7 +62,7 @@ body {margin:0;}
     }
 .img-fluid{
     width: 100%;
-    height: 90px;
+    height: auto;
 }
     #wrapper {
   width: 100%;
@@ -76,19 +76,7 @@ body {margin:0;}
         background-color: #2b0080;
         color: white;
     }
-    .user {
-  display: inline-flex;
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
 
-.one {
-  background-image:url(BLANK_Profile-Picture.jpg);
-}
 .center-block {  
   display: block;  
   margin-right: auto;
@@ -103,20 +91,6 @@ margin-left: 10%;
     padding: 10px;
     text-align: center
 }   
-    .message{
-        display: inline-block;
-        width: 150px;
-        height: 150px;
-        position: relative;
-        left: 125%;
-        top: 10%;
-    }
-    .profile{
-        display: inline-block;
-        position: relative;
-        left: 125%;
-        top: -60%;
-    }
     .center{
         margin: auto;
     }
@@ -125,7 +99,10 @@ margin-left: 10%;
 </style>
 </head>
 <body>
-<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
+<div class="text-center">
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
+</div>
+
 <br>
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
@@ -164,19 +141,19 @@ Yes:
 </div>
 
     
-    <a href="https://www.facebook.com/sanfranciscostate/">
+    <a href="https://www.facebook.com/sanfranciscostate/" target="_blank">
         <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
-    <a href="https://www.instagram.com/sanfranciscostate/?hl=en"> 
+    <a href="https://www.instagram.com/sanfranciscostate/?hl=en" target="_blank"> 
         <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
-    <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
-    <a href="https://www.youtube.com/user/sanfranciscostate">
+    <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+    <a href="https://www.youtube.com/user/sanfranciscostate" target="_blank">
         <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
 
 
 
 <div class="navbar" id="myNavbar">
   <a href="GatorHome.php" class="active">Home</a>
-  <a href="GatorMap.html">Map</a>
+  <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
   <a href="GatorResources.html">Resources</a>
   <a href="GatorSearch.php">Search</a>
