@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php		
 
 if (isset($_POST['submit']) && $_POST['submit'] != null)
@@ -30,11 +30,10 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
 {
     $email = $_POST['email'];
     $lastname = $_POST['lastname'];
-    $name = ""; // edit
-    $organization=""; // edit
-    $description = ""; // edit
+    $name = "org_name"; // edit
+    $description = "org_description"; // edit
     $organization_type = array(); //edit
-    $location = ""; // edit
+    $location = "r_number"; // edit
     $buildings = ""; // edit
     $hours = ""; // edit
 
@@ -84,6 +83,4 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
      header("location: " . $submission_form_page . "/error=" . $error_status);
 }
 
-
->>>>>>> b91249b6a2323765765e7dd6c1e28f880d01a19e
 ?>
