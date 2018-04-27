@@ -8,6 +8,7 @@ define("DB_USERNAME", "Stuart");
 define("DB_PASSWORD", "maple1714");
 define("DATABASE", "GatorHealthDB");
 
+
 //mysqli_connect(DB_HOST , DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE) or die("Connection error to database:  ".mysqli_error());
 // mysqli_connect("localhost", "root", "YES") or die("Connection error to database:  ".mysqli_error());
 
