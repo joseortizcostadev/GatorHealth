@@ -70,7 +70,11 @@ input[type=submit]:hover {
 <center><h2>Welcome to Gator Health!</h2></center>
     <center><h3>Please fill out the required fields to registrate your organization</h3></center>
 
+<<<<<<< HEAD
   <form action="Submissionform.php">
+=======
+  <form action="Submissionform.php" method="post">
+>>>>>>> b91249b6a2323765765e7dd6c1e28f880d01a19e
        
 	<div class="bgcolor">
 		<label for="fname" class="demo-label">Organization Name</label><br/> <input type="text" name="txtOrg" id="txtOrg" class="typeahead"/>
@@ -119,7 +123,11 @@ input[type=submit]:hover {
                 <input type="text" id="lname" name="email" placeholder="Enter">
     
            
+<<<<<<< HEAD
     <input type="submit" value="Submit">
+=======
+    <input type="submit" name="submit" value="Submit">
+>>>>>>> b91249b6a2323765765e7dd6c1e28f880d01a19e
   
     
     </form>

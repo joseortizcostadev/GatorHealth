@@ -171,7 +171,7 @@ class DBData
 
 
     /**
-     * Updates a field or table in the database
+     * Updates a field or table in the database by auto incrementing the value of the field to be updated
      * @param $query
      * @return bool
      */
