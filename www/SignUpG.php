@@ -71,30 +71,32 @@ input[type=submit]:hover {
     <center><h3>Please fill out the required fields to registrate your organization</h3></center>
 
 
-  <form action="Submissionform.php">
+
 
   <form action="Submissionform.php" method="post">
       
 	<div class="bgcolor">
-		<label for="fname" class="demo-label">Organization Name</label><br/> <input type="text" name="txtOrg" id="txtOrg" class="typeahead"/>
+		<label for="fname" class="demo-label">Organization Name</label><br/> <input type="text" name="org_name" id="txtOrg" class="typeahead"/>
 	</div>
        <label for="subject">Organization's Discription:</label>
-    <textarea id="subject" name="subject" placeholder="250 words limit" style="height:150px"></textarea>
+    <textarea id="subject" name="org_description" placeholder="250 words limit" style="height:150px"></textarea>
  <h4>Please check all that apply to your organization</h4>
-      <input id="checkBox" type="checkbox"><label for="lname">Mental Health</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Primary Care</label><br/>
+      <input id="checkBox" name="p_checkbox" type="checkbox"><label for="lname">Mental Health</label><br/>
+      <!--
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Primary Care</label><br/>
       <input id="checkBox" type="checkbox"><label for="lname">Food Resouces</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Vaccinations</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Holitic Health</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Free</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">On campus</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Off campus</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">New organization</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Other
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Vaccinations</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Holitic Health</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Free</label><br/>
+      <input id="checkBox"   name="p_checkbox" type="checkbox"><label for="lname">On campus</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Off campus</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">New organization</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Other
+      -->
       
       
             <label for="Place">Organizations Location</label>
-            <select id="Place" name="Organizations Location">
+            <select id="Place" name="or_location">
             <option value="HH">Hensal Hall (HH)</option>
             <option value="TH">Thortan Hall(TH)</option>
             <option value="TH">Hummanities</option>
@@ -109,25 +111,22 @@ input[type=submit]:hover {
                 
                 <label for="fname">Room</label>
         
-                <input type="text" id="fname" name="firstname" placeholder="Enter">
+                <input type="text" id="fname" name="r_number" placeholder="Enter">
       
                 <label for="lname">Open Hours</label>
                 
                 
                 
-                <input type="text" id="lname" name="lastname" placeholder="Enter">
+                <input type="text" id="lname" name="o_hours" placeholder="Enter">
 
         
                 <label for="lname">Submitted By</label>
-                <input type="text" id="lname" name="email" placeholder="Enter">
+                <input type="text"  name="s_byName" placeholder="Enter">
     
-           
 
-    <input type="submit" value="Submit">
+    <input type="button" value="Cancel">
     <input type="submit" name="submit" value="Submit">
-    
-    </form>
-    </body>
+                <\form> 
 <script>
     $(document).ready(function () {
         $('#txtOrg').typeahead({
@@ -147,4 +146,3 @@ input[type=submit]:hover {
         });
     });
 </script>
-</html>
