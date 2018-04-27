@@ -32,15 +32,16 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
     $lastname = $_POST['lastname'];
     $name = "org_name"; // edit
     $description = "org_description"; // edit
-    $organization_type = array(); //edit
-    $location = "r_number"; // edit
-    $buildings = ""; // edit
-    $hours = ""; // edit
+    $organization_type = "p_checkbox" array(); //edit
+    $location = "or_location"; // edit
+    $room = "r_number"; // edit
+    $hours = "o_hours"; // edit
+    $Submitted = "s_byName"; //edit
 
 
     $url = $validation_page . "email=" . $email;
-    $subject = "Hi, "; // edit
-    $message = "your message " . $url . " ksksk"; // edit
+    $subject = "GatorHeath confirmation, "; // edit
+    $message = "GatorHealth would like to thank you for submitting your organization, please Clink on the link to confirm your organizatation" . $url . " Thank you!"; // edit
 
 
     if (mail($email, $subject, $message))
