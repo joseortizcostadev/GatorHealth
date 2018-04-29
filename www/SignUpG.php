@@ -68,21 +68,21 @@ input[type=submit]:hover {
 <body>
 
 <center><h2>Welcome to Gator Health!</h2></center>
-    <center><h3>Please fill out the required fields to registrate your organization</h3></center>
+    <center><h3>Please fill out the required fields to register your organization</h3></center>
 
   <form action="/action_page.php">
        
 	<div class="bgcolor">
 		<label for="fname" class="demo-label">Organization Name</label><br/> <input type="text" name="txtOrg" id="txtOrg" class="typeahead"/>
 	</div>
-       <label for="subject">Organization's Discription:</label>
+       <label for="subject">Organization's Description:</label>
     <textarea id="subject" name="subject" placeholder="250 words limit" style="height:150px"></textarea>
  <h4>Please check all that apply to your organization</h4>
       <input id="checkBox" type="checkbox"><label for="lname">Mental Health</label><br/>
       <input id="checkBox" type="checkbox"><label for="lname">Primary Care</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Food Resouces</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Food Resources</label><br/>
       <input id="checkBox" type="checkbox"><label for="lname">Vaccinations</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Holitic Health</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Holistic Health</label><br/>
       <input id="checkBox" type="checkbox"><label for="lname">Free</label><br/>
       <input id="checkBox" type="checkbox"><label for="lname">On campus</label><br/>
       <input id="checkBox" type="checkbox"><label for="lname">Off campus</label><br/>
@@ -92,12 +92,12 @@ input[type=submit]:hover {
       
             <label for="Place">Organizations Location</label>
             <select id="Place" name="Organizations Location">
-            <option value="HH">Hensal Hall (HH)</option>
-            <option value="TH">Thortan Hall(TH)</option>
-            <option value="TH">Hummanities</option>
+            <option value="HH">Hensil Hall (HH)</option>
+            <option value="TH">Thorton Hall(TH)</option>
+            <option value="TH">Humanities</option>
             <option value="TH">Fine Arts</option>
             <option value="TH">Trailers</option>
-            <option value="TH">Cesar Chaves</option>
+            <option value="TH">Cesar Chavez</option>
             <option value="TH">Burk Hall</option>
             <option value="TH">Ethnic Studies</option>
       
