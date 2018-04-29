@@ -70,11 +70,15 @@ input[type=submit]:hover {
 <center><h2>Welcome to Gator Health!</h2></center>
     <center><h3>Please fill out the required fields to register your organization</h3></center>
 
-  <form action="/action_page.php">
-       
+
+
+
+  <form action="Submissionform.php" method="post">
+      
 	<div class="bgcolor">
-		<label for="fname" class="demo-label">Organization Name</label><br/> <input type="text" name="txtOrg" id="txtOrg" class="typeahead"/>
+		<label for="fname" class="demo-label">Organization Name</label><br/> <input type="text" name="org_name" id="txtOrg" class="typeahead"/>
 	</div>
+<<<<<<< HEAD
        <label for="subject">Organization's Description:</label>
     <textarea id="subject" name="subject" placeholder="250 words limit" style="height:150px"></textarea>
  <h4>Please check all that apply to your organization</h4>
@@ -95,6 +99,30 @@ input[type=submit]:hover {
             <option value="HH">Hensil Hall (HH)</option>
             <option value="TH">Thorton Hall(TH)</option>
             <option value="TH">Humanities</option>
+=======
+       <label for="subject">Organization's Discription:</label>
+    <textarea id="subject" name="org_description" placeholder="250 words limit" style="height:150px"></textarea>
+ <h4>Please check all that apply to your organization</h4>
+      <input id="checkBox" name="p_checkbox" type="checkbox"><label for="lname">Mental Health</label><br/>
+      <!--
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Primary Care</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Food Resouces</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Vaccinations</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Holitic Health</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Free</label><br/>
+      <input id="checkBox"   name="p_checkbox" type="checkbox"><label for="lname">On campus</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Off campus</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">New organization</label><br/>
+      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Other
+      -->
+      
+      
+            <label for="Place">Organizations Location</label>
+            <select id="Place" name="or_location">
+            <option value="HH">Hensal Hall (HH)</option>
+            <option value="TH">Thortan Hall(TH)</option>
+            <option value="TH">Hummanities</option>
+>>>>>>> e765bf9db7ec059c88a966548eafe354677fb151
             <option value="TH">Fine Arts</option>
             <option value="TH">Trailers</option>
             <option value="TH">Cesar Chavez</option>
@@ -103,28 +131,25 @@ input[type=submit]:hover {
       
      
         <div>
-                <label for="lname">Room</label>
+                
+                <label for="fname">Room</label>
         
-                <input type="text" id="fname" name="firstname" placeholder="Enter">
-                </div>
+                <input type="text" id="fname" name="r_number" placeholder="Enter">
       
                 <label for="lname">Open Hours</label>
                 
                 
                 
-                <input type="text" id="lname" name="lastname" placeholder="Enter">
+                <input type="text" id="lname" name="o_hours" placeholder="Enter">
 
         
                 <label for="lname">Submitted By</label>
-                <input type="text" id="lname" name="lastname" placeholder="Enter">
+                <input type="text"  name="s_byName" placeholder="Enter">
     
-                </select>
 
-    <input type="submit" value="Submit">
-  
-    
-    </form>
-    </body>
+    <input type="button" value="Cancel">
+    <input type="submit" name="submit" value="Submit">
+                <\form> 
 <script>
     $(document).ready(function () {
         $('#txtOrg').typeahead({
@@ -144,4 +169,3 @@ input[type=submit]:hover {
         });
     });
 </script>
-</html>

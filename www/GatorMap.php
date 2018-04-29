@@ -4,6 +4,7 @@
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
+
 //include 'mapinfo.php';
 
 
@@ -12,7 +13,23 @@
 include_once dirname(__FILE__) . '/Database/DBData.php';
 $data = new DBData(); // creates an object of class DBData
 $query = "SELECT r_name, location, hyperlink FROM GatorMap";
-$results = $data->select($query); 
+$results = $data->select($query);
+
+$a = array();
+$b = array();
+$c = array();
+$d = array();
+$e = array();
+$f = array();
+$g = array();
+$h = array();
+$i = array();
+$j = array();
+$k = array();
+$l = array();
+$m = array();
+$n = array();
+$o = array();
 
 $deku1 = 0;
 $deku2 = 0;
@@ -96,9 +113,12 @@ while($field = $results->fetch_assoc())
 }
 }
 
+
 ?>
 
 
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -266,6 +286,7 @@ body {
 
       
       var markers = [
+
         {
           coords:{lat: 37.72355, lng: -122.47924},
           content:'<img src="ethnic_psych.jpg"> <h1>Psychology Building</h1><?php
@@ -477,6 +498,7 @@ body {
             }
             ?>'
               //var loci = 15;
+
           }
       ];
 
@@ -502,6 +524,7 @@ body {
             
           
           marker.addListener('click', function(){
+
               // add ajax code call that uses location variable
             //infoWindow.close(glblmap,glblmarker);
             infoWindow.open(map, marker);
@@ -530,4 +553,6 @@ function myFunction() {
 </script>
 
 </body>
+
 </html>
+
