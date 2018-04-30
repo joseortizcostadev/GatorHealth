@@ -8,7 +8,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include_once dirname(__FILE__) . '/Database/DBData.php';
 $error_status = 0;
-$local_homepage = dirname(__FILE__) . "/www/";
+$local_homepage = "GatorHome.php";
 $server_homepage = "";
 $submission_form_page = $_SERVER['DOCUMENT_ROOT'] . '/www/SignUpG.php';
 $validation_page = "http://localhost:8080/GatorHealth/www/email_validation.php";
@@ -33,13 +33,17 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
         }
     }
 
-
+    $headers = array("From: from@example.com",
+        "Reply-To: replyto@example.com",
+        "X-Mailer: PHP/" . PHP_VERSION
+    );
+    $headers = implode("\r\n", $headers);
     $url = $validation_page . "?email=" . $s_byName;
     $subject = "GatorHeath confirmation email, "; // edit
     $message = "GatorHealth would like to thank you for submitting your organization, please Clink on the link to confirm your organizatations participation in GatorHealth" . $url . " Thank you!"; // edit
 
    
-    if (mail($s_byName, $subject, $message)) {
+    if (mail($s_byName, $subject, $message, $headers)) {
         //echo $s_byName . " "  . " " . $subject . " " . $message;
         // insert in database id, email, timestamp, status=[0=not_validated, 1=validated, 2=invalid]
         $date = new DateTime();
@@ -80,9 +84,9 @@ else {
 
 if  ($error_status == 0) // everything went as expected then redirect to home page
 {
-    header("location: " . $local_homepage . "?error=" . $error_status);
+    header("location: GatorHome.php" . "?error=" . $error_status);
 }
 else{
-    header("location: " . "http://localhost:8888/GatorHealth/www/SignUpG.php" . "?error=" . $error_status);
+    header("location: SignUpG.php" . "?error=" . $error_status);
 }
 
