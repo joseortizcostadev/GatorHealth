@@ -27,6 +27,8 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
     <script src="jQuery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <style>
       .trending {
             background: #f2f2f2;
@@ -45,6 +47,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
             padding: 15px;}
         .resultsbox{
             padding-bottom: 20px;
+            padding-top: 20px;
         }
 
         .results .end {
@@ -54,14 +57,15 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
         }
 
         input[type=text] {
-            width: 130px;
+            width: 140px;
             box-sizing: border-box;
             border: 2px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
             background-color: white;
-            background-image: url('searchicon.png');
-            background-position: 10px 10px;
+            background-image: url('searchicon.jpg');
+            background-position: left;
+            background-size: contain;
             background-repeat: no-repeat;
             padding: 12px 20px 12px 40px;
             -webkit-transition: width 0.4s ease-in-out;
@@ -131,45 +135,7 @@ br {
   margin:2.5em 0;/* FF for instance */
   line-height:5em;/* chrome for instance */
 }
-.button{
-    display: inline-block;
-  border-radius: 4px;
-  background-color: goldenrod;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 16px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 <<<<<<< HEAD
 .img-fluid{ 
 max-width: 8%; }
@@ -192,6 +158,8 @@ background: white;
             padding-bottom: 200px;
         }
 >>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
+
+
 </style>
 </head>
 <head>
@@ -201,8 +169,9 @@ background: white;
 <p>Disclaimer: Our searchbar is populated with data from our database. The information reflected is currently accurate but subject to change. Thanks for testing!</p>
 <div class="ui-widget">
 <form method="post">
-    <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="Search.."/>
-    <input type="submit" value="Search"/>
+  
+    <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="  Search..">
+
   
 </form>
     </div>
