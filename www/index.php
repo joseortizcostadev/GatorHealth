@@ -1,1 +1,3 @@
-<?php include_once("GatorHome.php"); ?>
+<?php
+include_once('GatorHome.php');
+?>
