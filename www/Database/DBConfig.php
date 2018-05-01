@@ -5,6 +5,7 @@
 
 define("DB_HOST", "localhost");
 <<<<<<< HEAD
+<<<<<<< HEAD
 define("DB_USERNAME", "root");
 define("DB_PASSWORD", "");
 define("DATABASE", "searchResults");
@@ -12,6 +13,11 @@ define("DATABASE", "searchResults");
 define("DB_USERNAME", "Stuart");
 define("DB_PASSWORD", "maple1714");
 define("DATABASE", "GatorHealthDB");
+=======
+define("DB_USERNAME", "root");
+define("DB_PASSWORD", "");
+define("DATABASE", "searchResults");
+>>>>>>> 76ff6481ee674124053476d28c9884ee5abcf55d
 
 >>>>>>> e765bf9db7ec059c88a966548eafe354677fb151
 

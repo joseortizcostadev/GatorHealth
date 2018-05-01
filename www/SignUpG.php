@@ -63,9 +63,19 @@ input[type=submit]:hover {
     background-color:  #989898;
     padding: 20px;
 }
+#back{
+        float: right;
+        background-color:gold;
+        color: white;
+
+    }
 </style>
+
 </head>
 <body>
+<form action="GatorHPW.html">
+    <input type="submit" id="back" value="Go Back" />
+</form>
 
 <center><h2>Welcome to Gator Health!</h2></center>
     <center><h3>Please fill out the required fields to register your organization</h3></center>
@@ -103,22 +113,22 @@ input[type=submit]:hover {
        <label for="subject">Organization's Discription:</label>
     <textarea id="subject" name="org_description" placeholder="250 words limit" style="height:150px"></textarea>
  <h4>Please check all that apply to your organization</h4>
-      <input id="checkBox" name="p_checkbox" type="checkbox"><label for="lname">Mental Health</label><br/>
-      <!--
-      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Primary Care</label><br/>
-      <input id="checkBox" type="checkbox"><label for="lname">Food Resouces</label><br/>
-      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Vaccinations</label><br/>
-      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Holitic Health</label><br/>
-      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Free</label><br/>
-      <input id="checkBox"   name="p_checkbox" type="checkbox"><label for="lname">On campus</label><br/>
-      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Off campus</label><br/>
-      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">New organization</label><br/>
-      <input id="checkBox"  name="p_checkbox" type="checkbox"><label for="lname">Other
-      -->
+      <input  name="check_list[]" id="check_list" type="checkbox" value="Mental Health"><label for="lname">Mental Health</label><br/>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Primary Care"><label for="lname">Primary Care</label><br/>
+      <input  name="check_list[]" id="check_list" type="checkbox" value="Food Resouces"><label for="lname">Food Resouces</label><br/>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Vaccinations"><label for="lname">Vaccinations</label><br/>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Holitic Health"><label for="lname">Holitic Health</label><br/>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Free"><label for="lname">Free</label><br/>
+      <input    name="check_list[]" id="check_list"type="checkbox" value="On campus"><label for="lname">On campus</label><br/>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Off campus"><label for="lname">Off campus</label><br/>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="New organization"><label for="lname">New organization</label><br/>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Other"><label for="lname">Other
+
       
       
             <label for="Place">Organizations Location</label>
             <select id="Place" name="or_location">
+<<<<<<< HEAD
             <option value="HH">Hensal Hall (HH)</option>
             <option value="TH">Thortan Hall(TH)</option>
             <option value="TH">Hummanities</option>
@@ -128,6 +138,17 @@ input[type=submit]:hover {
             <option value="TH">Cesar Chavez</option>
             <option value="TH">Burk Hall</option>
             <option value="TH">Ethnic Studies</option>
+=======
+            <option value="Hensal Hall (HH)">Hensal Hall (HH)</option>
+            <option value="Thortan Hall(TH)">Thortan Hall(TH)</option>
+            <option value="Hummanities">Hummanities</option>
+            <option value="Fine Arts">Fine Arts</option>
+            <option value="Trailers">Trailers</option>
+            <option value="Cesar Chaves">Cesar Chaves</option>
+            <option value="Burk Hall">Burk Hall</option>
+            <option value="Ethnic Studies">Ethnic Studies</option>
+            </select>
+>>>>>>> 76ff6481ee674124053476d28c9884ee5abcf55d
       
      
         <div>

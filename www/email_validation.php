@@ -5,12 +5,15 @@
  * Date: 4/24/18
  * Time: 5:11 PM
  */
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include_once dirname(__FILE__) . '/Database/DBData.php';
-$homepage = $_SERVER['DOCUMENT_ROOT'] . '/www/';
+$homepage = dirname(__FILE__) . '/www/';
 if (isset($_GET['email']))
 {
     $email = $_GET['email'];
-    $table = "submission_form"; // edit
+    $table = "email_validation"; // edit
     $field_to_update = "status";
     $status = 1;
     $email_field = "email";
@@ -27,4 +30,7 @@ else { // email was modified in url. Error status=2
     $error_status=2;
 }
 
-header("location: " . $homepage . "?error=" . $error_status);
+if ($error_status == 0)
+    echo "<h1> Email Successfully Validated </h1>";
+else
+    echo "<h1> Email not Validated </h1>";
