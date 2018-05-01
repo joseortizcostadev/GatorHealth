@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #9542f4;
+    color: white;
+    padding: 6px 26px;
+    border: none;
+    border-radius:8px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #9542f4;
+}
+
+.container {
+    border-radius: 5px;
+    background-color:  #989898;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<center><h2>Welcome to Gator Health!</h2></center>
+    <center><h3>Please fill out the required fields to registrate your organization</h3></center>
+
+<div class="container">
+  <form action="file:///Users/mariacontreras/Desktop/Submissionform.php", method="post">
+    <label for="fname">Organization Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Enter">
+
+       <label for="subject">Organization's Discription:</label>
+    <textarea id="subject" name="subject" placeholder="250 words limit" style="height:150px"></textarea>
+ <h4>Please check all that apply to your organization</h4>
+      <input id="checkBox" type="checkbox"><label for="lname">Mental Health</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Primary Care</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Food Resouces</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Vaccinations</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Holitic Health</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Free</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">On campus</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Off campus</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">New organization</label><br/>
+      <input id="checkBox" type="checkbox"><label for="lname">Other
+      
+      
+            <label for="Place">Organizations Location</label>
+            <select id="Place" name="Organizations Location">
+            <option value="HH">Hensal Hall (HH)</option>
+            <option value="TH">Thortan Hall(TH)</option>
+            <option value="TH">Hummanities</option>
+            <option value="TH">Fine Arts</option>
+            <option value="TH">Trailers</option>
+            <option value="TH">Cesar Chaves</option>
+            <option value="TH">Burk Hall</option>
+            <option value="TH">Ethnic Studies</option>
+      
+     
+        
+                <label for="fname">Room</label>
+        
+                <input type="text" id="fname" name="firstname" placeholder="Enter">
+      
+                <label for="Ohours">Open Hours</label>
+                
+                
+                
+                <input type="text" name="last_name" id="lname" name="lastname" placeholder="Enter">
+
+        
+                <label for="lname">Submitted By "name@email.com"</label>
+                  <input type="email" name="email" value="" placeholder="name@email.com" required />
+    
+                </select>
+      
+
+      
+      
+      
+      
+
+    <input type="submit" name="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

@@ -98,14 +98,40 @@ margin-left: 10%;
     .center{
         margin: auto;
     }
-    .textarea{float: left; width: 400px; height: 200px; padding: 10px;}
     .icons{ bottom: 10;}
+    
+    .panicindisco{
+        width:400px;
+        height:300px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .marginal-screen{
+    margin-right: 25%;
+    margin-left: 25%;  
+        text-align: center;
+        border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
+    }
+    
 </style>
 </head>
+<<<<<<< HEAD
 <body>
 
 
 <br>
+=======
+<body style="background:#ABAAD4;">
+<div class="text-center">
+<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
+</div>
+<div class="marginal-screen">
+>>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
   <button type="button" class="btn btn-primary dry">Non-Emergency Hotline</button>
@@ -122,34 +148,60 @@ margin-left: 10%;
 
     <div class="textarea" style="padding-top: 100px;">Welcome! Today is <p id="date"></p>
         <p>GatorHealth is a platform that contains a collection of many health and wellness resources that can be found on and off San Francisco State University's campus.</p> 
+<<<<<<< HEAD
         <br>
        
+=======
+        <h4>Understanding Social Determinants of Health</h4>
         
-        <p style="padding-bottom: 60px;">Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
-
+        <p>"Social determinants of health are conditions in the environments in which people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks. Conditions (e.g., social, economic, and physical) in these various environments and settings (e.g., school, church, workplace, and neighborhood) have been referred to as “place.” In addition to the more material attributes of “place,” the patterns of social engagement and sense of security and well-being are also affected by where people live. Resources that enhance quality of life can have a significant influence on population health outcomes. Examples of these resources include safe and affordable housing, access to education, public safety, availability of healthy foods, local emergency/health services, and environments free of life-threatening toxins."</p>  
+>>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
         
+        <p>Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
     </div>
+<<<<<<< HEAD
     <img src="home/SDOH.png"alt="sdoh" style="width:400px;height:300px;" hspace="20" vspace="20">
     <div id="poll" style="float: right; width: 400px; height: 200px; padding: 10px;padding-top: 100px;">
+=======
+    <div>
+    <img src="home/SDOH.png"alt="sdoh" class="panicindisco">
+    </div>
+    <div id="poll" >
+>>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 <h3>Do you feel you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
-<form style="float: right; width: 400px; height: 200px; padding: 10px;padding-bottom: 100px;">
+<form>
 Yes:
 <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
 <br>No:
 <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 </form>
 </div>
+<<<<<<< HEAD
 
     <div style="padding-top: 100px;">
+=======
+   <br>
+   </div>
+    <div>
+>>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
     <a href="https://www.facebook.com/sanfranciscostate/" target="_blank">
-        <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
+        <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px;"></a>
     <a href="https://www.instagram.com/sanfranciscostate/?hl=en" target="_blank"> 
-        <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
-    <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+        <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px;"></a>
+    <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px;"></a>
     <a href="https://www.youtube.com/user/sanfranciscostate" target="_blank">
+<<<<<<< HEAD
         <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
 
     </div>
+=======
+        <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px;"></a>
+        </div>
+
+<br>
+<br>
+<br>
+>>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 
 <div class="navbar" id="myNavbar">
     <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
