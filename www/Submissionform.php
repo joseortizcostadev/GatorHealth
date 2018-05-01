@@ -15,6 +15,7 @@ $validation_page = "http://localhost:8080/GatorHealth/www/email_validation.php";
 
 if (isset($_POST['submit']) && $_POST['submit'] != null)
 {
+  
     
     
     $org_name = $_POST["org_name"]; // edit
@@ -32,18 +33,21 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
             $orgs_selected .= ", " . $organization;
         }
     }
-
+    /*
     $headers = array("From: from@example.com",
         "Reply-To: replyto@example.com",
         "X-Mailer: PHP/" . PHP_VERSION
     );
+    
     $headers = implode("\r\n", $headers);
+    */
     $url = $validation_page . "?email=" . $s_byName;
     $subject = "GatorHeath confirmation email, "; // edit
     $message = "GatorHealth would like to thank you for submitting your organization, please Clink on the link to confirm your organizatations participation in GatorHealth" . $url . " Thank you!"; // edit
-
-   
-    if (mail($s_byName, $subject, $message, $headers)) {
+    
+    
+  if (1){//mail($s_byName, $subject, $message)) {
+    
         //echo $s_byName . " "  . " " . $subject . " " . $message;
         // insert in database id, email, timestamp, status=[0=not_validated, 1=validated, 2=invalid]
         $date = new DateTime();
@@ -57,7 +61,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
         if ($database->insert($table, $fields, $values))
         {
             // insert in database submission form values
-            $table = "SubmissionForm";
+            $table = "submission_form";
             $fields = array("org_name", "org_description", "r_number", "o_hours", "s_by", "p_checkbox", "or_location"); // edit. fields same as table fields
             $values = array($org_name, $org_description, $r_number, $o_hours, $s_byName,  $orgs_selected, $or_location); // edit accordenly to the fields above
 

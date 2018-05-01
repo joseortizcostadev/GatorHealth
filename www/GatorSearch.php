@@ -31,9 +31,18 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 
     <style>
       .trending {
-            background: #f2f2f2;
             border-radius: 10px;
             padding: 15px;
+          width: 300px;
+          text-align: center;
+        border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
+          position: relative;
+  top: 50%;
+  left: 40%;
+          margin: 10px;
         }
 
         .trending .trends {
@@ -42,9 +51,20 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
             margin-top: 10px;
         }
         .results {
-            background: #FFDC62;
             border-radius: 10px;
-            padding: 15px;}
+            padding: 15px;
+        width: 600px;
+        border-radius: 10px;
+            padding: 15px;
+          text-align: center;
+        border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
+          position: relative;
+  top: 50%;
+  left: 30%;
+          margin: 5px;}
         .resultsbox{
             padding-bottom: 20px;
             padding-top: 20px;
@@ -57,7 +77,11 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
         }
 
         input[type=text] {
-            width: 140px;
+position: relative;
+  top: 50%;
+  left: 40%;
+                width: 250px;
+            margin-bottom: 50px;
             box-sizing: border-box;
             border: 2px solid #ccc;
             border-radius: 4px;
@@ -73,41 +97,80 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
         }
 
         input[type=text]:focus {
-            width: 100%;
+            width: 300px;
         }
 
-body {margin:0;}
+
+@-webkit-keyframes GatorColor {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-moz-keyframes GatorColor {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-o-keyframes GatorColor {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@keyframes GatorColor { 
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+body {margin:0;
+    background: linear-gradient(300deg, #2c0074, #f3ae00);
+background-size: 400% 400%;
+
+-webkit-animation: GatorColor 13s ease infinite;
+-moz-animation: GatorColor 13s ease infinite;
+-o-animation: GatorColor 13s ease infinite;
+animation: GatorColor 13s ease infinite;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
-  background-color: #2b0080;  
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+  position: static;
+  width: 1250px;
+    height: 100px;
+       border: 2px inset azure ;
+    border-radius: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
 
-.navbar a {
+  
+}
+    #navbox{
+    margin: 30px;
+     width: 300px;
+    padding: 25px;
+        position: relative;
+
+        
+    }.navbar a {
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 5px 40px;
+  padding: 30px 70px;
   text-decoration: none;
   font-size: 17px;
+        height: 80px;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  color: white;
 }
 .navbar a.active {
-  background-color: #1e0059;
   color: white;
 }
 
 .navbar .icon {
   display: none;
 }
+
 
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
@@ -154,28 +217,47 @@ border-color:goldenrod;
 background: white;
     }
         .undernav{
-            padding-top: 200px;
             padding-bottom: 200px;
         }
+        td {
+    padding-right: 50px;
+}
+         #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;}
 >>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 
 
 </style>
+     <div id="navbox">
+<div class="navbar" id="myNavbar">
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
+          
+  <a href="GatorMap.php">Map</a>
+  <a href="GatorPharmacy.html">Pharmacy</a>
+  <a href="GatorResources.html">Resources</a>
+  <a href="GatorSearch.php" class="active">Search</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+    </div> 
 </head>
 <head>
-           
+         
 <body class="undernav">
 
-<p>Disclaimer: Our searchbar is populated with data from our database. The information reflected is currently accurate but subject to change. Thanks for testing!</p>
 <div class="ui-widget">
-<form method="post">
+    <form method="post">
   
     <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="  Search..">
 
   
 </form>
     </div>
-    <div class="resultsbox">
+    <table>
+  <tr>
+    <td> <div class="resultsbox">
+    
     <div class="results">
         <font size="6" style="color:#000;">Results</font>
         <div class="end">
@@ -200,6 +282,8 @@ background: white;
                     echo $category . '<br>'; // show category field data
                     echo $text . '<br>'; // show text field data
                     echo '<br>';
+                    echo '<p>Disclaimer: Our searchbar is populated with data from our database. The information reflected is currently accurate but subject to change. Thanks for testing!</p>';
+                    
                     $table = "hot";
                     $field = "count";
                     $where_field = "category";
@@ -218,8 +302,9 @@ background: white;
         ?>
         </div>
     </div>
-    </div>
-<div class="trending">
+    </div></td>
+      <td></td>
+    <td><div class="trending">
     <font size="5" style="color: #000;">Trending</font>
     <div class="trends">
 
@@ -232,17 +317,12 @@ background: white;
         }?>
 
     </div>
-</div>
+</div>   
+</td>
+  </tr>
+</table>
+ 
 
-<div class="navbar" id="myNavbar">
-      <a href="GatorHome.php"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
-          
-  <a href="GatorMap.php">Map</a>
-  <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html">Resources</a>
-  <a href="GatorSearch.php" class="active">Search</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
 
 
 <script>
