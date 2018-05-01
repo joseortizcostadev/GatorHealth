@@ -9,69 +9,34 @@
 <style>
 
 
-@-webkit-keyframes GatorColor {
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
-@-moz-keyframes GatorColor {
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
-@-o-keyframes GatorColor {
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
-@keyframes GatorColor { 
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
 body {margin:0;
-    background:#FFF;;
-
--webkit-animation: GatorColor 13s ease infinite;
--moz-animation: GatorColor 13s ease infinite;
--o-animation: GatorColor 13s ease infinite;
-animation: GatorColor 13s ease infinite;}
+    background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
-  position: static;
-  width: 1250px;
-    height: 100px;
-       border: 2px inset gray ;
-    border-radius: 8px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-  
+  background-color: #2b0080;  
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-    #navbox{
-    margin: 30px;
-     width: 300px;
-    padding: 25px;
-        position: relative;
 
-        
-    }.navbar a {
+.navbar a {
   float: left;
   display: block;
-  color: #000;
+  color: #f2f2f2;
   text-align: center;
-  padding: 30px 70px;
+  padding: 8px 40px;
   text-decoration: none;
   font-size: 17px;
-        height: 80px;
 }
 
 .navbar a:hover {
-  color: #000;
+  background-color: #ddd;
+  color: black;
 }
 .navbar a.active {
-  color: #000;
+  background-color: #1e0059;
+  color: white;
 }
 
 .navbar .icon {
@@ -88,7 +53,7 @@ animation: GatorColor 13s ease infinite;}
 
 @media screen and (max-width: 600px) {
   .navbar.responsive .icon {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom:0;
   }
@@ -143,14 +108,14 @@ br {
   opacity: 1;
   right: 0;
 }
-<<<<<<< HEAD
+
 .img-fluid{ 
 max-width: 8%; }
     .gatorpic{
         width: 8%;
         height: 8%;
     }
-=======
+
     .marginal-screen{
     margin-right: 25%;
     margin-left: 25%;  
@@ -160,6 +125,27 @@ border-style:solid;
 border-color:goldenrod;
 background: white;
     }
+            .undernav{
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+
+        .space{
+    margin: 50px;
+        
+}
+    table{
+                  position: relative;
+  top: 50%;
+  left: 20%;
+          margin: 10px;
+    }
+    #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+    font-size: 20px;}
+   
     #wrapper {
   width: 100%;
   display: flex;
@@ -201,22 +187,7 @@ margin-left: 10%;
         z-index: 1;
     }
     
-    .marginal-screen{
-    margin-right: 25%;
-    margin-left: 25%;  
-        text-align: center;
-        border-width:5px;
-border-style:solid;
-border-color:goldenrod;
-background: white;
-    }
-            .undernav{
-            padding-bottom: 200px;
-        }
-     #main{background-image: url('gatorRon.png');
-            background-position: left;
-            background-size: contain;
-            background-repeat: no-repeat;}
+   
 </style>
 </head>
 <div id="navbox">

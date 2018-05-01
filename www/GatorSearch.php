@@ -101,76 +101,39 @@ position: relative;
         }
 
 
-@-webkit-keyframes GatorColor {
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
-@-moz-keyframes GatorColor {
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
-@-o-keyframes GatorColor {
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
-@keyframes GatorColor { 
-    0%{background-position:0% 19%}
-    50%{background-position:100% 82%}
-    100%{background-position:0% 19%}
-}
 body {margin:0;
-    background: linear-gradient(300deg, #2c0074, #f3ae00);
-background-size: 400% 400%;
-
--webkit-animation: GatorColor 13s ease infinite;
--moz-animation: GatorColor 13s ease infinite;
--o-animation: GatorColor 13s ease infinite;
-animation: GatorColor 13s ease infinite;}
+    background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
-  position: static;
-  width: 1250px;
-    height: 100px;
-       border: 2px inset azure ;
-    border-radius: 8px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-  
+  background-color: #2b0080;  
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-    #navbox{
-    margin: 30px;
-     width: 300px;
-    padding: 25px;
-        position: relative;
 
-        
-    }.navbar a {
+.navbar a {
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 30px 70px;
+  padding: 8px 40px;
   text-decoration: none;
   font-size: 17px;
-        height: 80px;
 }
 
 .navbar a:hover {
-  color: white;
+  background-color: #ddd;
+  color: black;
 }
 .navbar a.active {
+  background-color: #1e0059;
   color: white;
 }
 
 .navbar .icon {
   display: none;
 }
-
 
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
@@ -198,15 +161,53 @@ br {
   margin:2.5em 0;/* FF for instance */
   line-height:5em;/* chrome for instance */
 }
+.button{
+    display: inline-block;
+  border-radius: 4px;
+  background-color: goldenrod;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
 
-<<<<<<< HEAD
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 .img-fluid{ 
 max-width: 8%; }
     .gatorpic{
         width: 8%;
         height: 8%;
     }
-=======
+
     .marginal-screen{
     margin-right: 25%;
     margin-left: 25%;  
@@ -216,18 +217,30 @@ border-style:solid;
 border-color:goldenrod;
 background: white;
     }
-        .undernav{
+            .undernav{
+            padding-top: 200px;
             padding-bottom: 200px;
         }
+
+        .space{
+    margin: 50px;
+        
+}
+    table{
+                  position: relative;
+  top: 50%;
+  left: -5%;
+          margin: 10px;
+    }
+    #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+    font-size: 20px;}
         td {
     padding-right: 50px;
 }
-         #main{background-image: url('gatorRon.png');
-            background-position: left;
-            background-size: contain;
-            background-repeat: no-repeat;}
->>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
-
+         
 
 </style>
      <div id="navbox">
