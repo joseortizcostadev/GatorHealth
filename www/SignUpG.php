@@ -17,22 +17,11 @@ $data = new DBData(); // creates an object of class DBData
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="typeahead.js"></script>
-	<style>
-	.typeahead { border: 2px solid #FFF;border-radius: 4px;padding: 8px 12px;max-width: 300px;min-width: 290px;background: rgba(66, 52, 52, 0.5);color: #000;}
-	.tt-menu { width:300px; }
-	ul.typeahead{margin:0px;padding:10px 0px;}
-	ul.typeahead.dropdown-menu li a {padding: 10px !important;	border-bottom:#000 1px solid;color:#000;}
-	ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
 	
-	.demo-label {font-size:1.5em;color: #686868;font-weight: 500;color:#000;}
-	.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
-		text-decoration: none;
-		background-color: #1f3f41;
-		outline: 0;
-	}
+    <style>
 	
 
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Times, Helvetica, sans-serif;}
 
 input[type=text], select, textarea {
     width: 100%;
@@ -90,7 +79,7 @@ input[type=submit]:hover {
       <input    name="check_list[]" id="check_list"type="checkbox" value="On campus"><label for="lname">On campus</label><br/>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Off campus"><label for="lname">Off campus</label><br/>
       <input   name="check_list[]" id="check_list" type="checkbox" value="New organization"><label for="lname">New organization</label><br/>
-      <input   name="check_list[]" id="check_list" type="checkbox" value="Other"><label for="lname">Other
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Other"><label for="lname">Other</label>
 
       
       
@@ -122,11 +111,14 @@ input[type=submit]:hover {
         
                 <label for="lname">Submitted By</label>
                 <input type="text"  name="s_byName" placeholder="Enter">
-    
-
-    <input type="button" value="Cancel">
-    <input type="submit" name="submit" value="Submit">
-                <\form> 
+   
+            <input type="submit" name="submit" value="Submit">
+            
+            <imput type="button" value="Reset">
+            <input type="button" value="cancel"> 
+             
+             
+            
 <script>
     $(document).ready(function () {
         $('#txtOrg').typeahead({
@@ -145,4 +137,4 @@ input[type=submit]:hover {
             }
         });
     });
-</script>
+

@@ -4,8 +4,8 @@
 
 
 define("DB_HOST", "localhost");
-define("DB_USERNAME", "Stuart");
-define("DB_PASSWORD", "maple1714");
+define("DB_USERNAME", "root");
+define("DB_PASSWORD", "");
 define("DATABASE", "GatorHealthDB");
 
 
@@ -16,5 +16,4 @@ define("DATABASE", "GatorHealthDB");
 
 //$con = mysqli_connect("127.0.0.1","root","pass","your_database");
 /* solution for fatal error from https://stackoverflow.com/questions/10615436/fatal-error-call-to-undefined-function-mysql-connect */
-
 ?>
