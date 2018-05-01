@@ -131,15 +131,15 @@ while($field = $results->fetch_assoc())
     #map {
         height: 1300px;
         resize: vertical;
-        width: 1300px;
+        width: 100%;
       position:absolute;
       text-align:center;
 margin-right: 15%;
-    margin-left: 2%;
+   /* margin-left: 2%;
   border-width:5px;
 border-style:solid;
 border-color:goldenrod;
-background: white;
+background: white;*/
    }
 body {margin:0;
     background:#ABAAD4;}
@@ -258,7 +258,7 @@ border-color:goldenrod;
 background: white;
     }
             .undernav{
-            padding-top: 200px;
+            padding-top: 50px;
             padding-bottom: 200px;
         }
 
@@ -284,9 +284,7 @@ background: white;
 </style>
 </head>
 <body onload = "locate()" class="undernav">
-<div class="mapbox">
  <div id="map"></div>
-</div>
 
 <div class="navbar" id="myNavbar">
       <a href="GatorHome.php" id="main"> GatorHealth </a>

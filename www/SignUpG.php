@@ -92,9 +92,10 @@ input[type=submit]:hover {
   <form action="Submissionform.php" method="post">
       
 	<div class="bgcolor">
-        <table>
-            <td>
-                <b class="demo-label">Student Organization</b></td><td> <input type="text" name="txtCountry" id="txtCountry" class="typeahead"/></td></table>
+       
+           
+                <b class="demo-label">Student Organization</b>
+        <br><input type="text" name="org_name" id="txtCountry" class="typeahead"/>
 	</div>
 <<<<<<< HEAD
        <label for="subject">Organization's Description:</label>

@@ -126,7 +126,7 @@ border-color:goldenrod;
 background: white;
     }
             .undernav{
-            padding-top: 200px;
+            padding-top: 50px;
             padding-bottom: 200px;
         }
 
@@ -209,8 +209,7 @@ margin-left: 10%;
 
 <div class="marginal-screen">
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
-  <button type="button" class="btn btn-primary dry">Non-Emergency Hotline</button>
+
     </div>
     <br>
     <div class="container">
@@ -220,9 +219,8 @@ margin-left: 10%;
 
         </div>
     </div>
-<br>
 
-    <div class="textarea" style="padding-top: 50px;">Welcome! Today is <p id="date"></p>
+    <div class="textarea" >Welcome! Today is <p id="date"></p>
         <p>GatorHealth is a platform that contains a collection of many health and wellness resources that can be found on and off San Francisco State University's campus.</p> 
         <br>
        
