@@ -146,9 +146,11 @@ body {margin:0;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: fixed;
+  position: static;
+    float: right;
   top: 0;
-  width: 100%;
+  width: 1250px;
+    height: 100px;
 }
 
 .navbar a {
@@ -156,9 +158,10 @@ body {margin:0;}
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 5px 40px;
+  padding: 30px 70px;
   text-decoration: none;
   font-size: 17px;
+        height: 80px;
 }
 
 .navbar a:hover {
@@ -273,7 +276,7 @@ background: white;
 </div>
 
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
           
   <a href="GatorMap.php" class="active">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>

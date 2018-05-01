@@ -30,8 +30,7 @@
     100%{background-position:0% 19%}
 }
 body {margin:0;
-    background: linear-gradient(300deg, #2c0074, #f3ae00);
-background-size: 400% 400%;
+    background:#FFF;;
 
 -webkit-animation: GatorColor 13s ease infinite;
 -moz-animation: GatorColor 13s ease infinite;
@@ -40,13 +39,13 @@ animation: GatorColor 13s ease infinite;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
- width: 1250px;
-      border: 2px inset azure ;
+  position: static;
+  width: 1250px;
+    height: 100px;
+       border: 2px inset gray ;
     border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
-        position: relative;
-    top: -65px;
 
   
 }
@@ -60,18 +59,19 @@ animation: GatorColor 13s ease infinite;}
     }.navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #000;
   text-align: center;
-  padding: 5px 40px;
+  padding: 30px 70px;
   text-decoration: none;
   font-size: 17px;
+        height: 80px;
 }
 
 .navbar a:hover {
-  color: white;
+  color: #000;
 }
 .navbar a.active {
-  color: white;
+  color: #000;
 }
 
 .navbar .icon {
@@ -213,16 +213,15 @@ background: white;
             .undernav{
             padding-bottom: 200px;
         }
+     #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;}
 </style>
 </head>
-<body>
-
-
-<br>
-<body class="undernav">
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php" class="active"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
+      <a href="GatorHome.php" class="active" id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -231,6 +230,12 @@ background: white;
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
     </div>
+<body>
+
+
+<br>
+<body class="undernav">
+
 <div class="marginal-screen">
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
