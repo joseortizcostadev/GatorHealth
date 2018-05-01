@@ -47,6 +47,7 @@ animation: GatorColor 13s ease infinite;}
     border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
+  
 }
     .navbox{
     margin: 30px;
@@ -65,7 +66,7 @@ animation: GatorColor 13s ease infinite;}
 
 .navbar a:hover {
   background-color: #ddd;
-  color: black;
+  color: white;
 }
 .navbar a.active {
   color: white;
