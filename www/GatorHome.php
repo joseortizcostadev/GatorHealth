@@ -40,19 +40,22 @@ animation: GatorColor 13s ease infinite;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
-  position: fixed;
-  top: 10px;
  width: 1250px;
       border: 2px inset azure ;
     border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
+        position: relative;
+    top: -65px;
+
   
 }
-    .navbox{
+    #navbox{
     margin: 30px;
      width: 300px;
     padding: 25px;
+        position: relative;
+
         
     }.navbar a {
   float: left;
@@ -65,7 +68,6 @@ animation: GatorColor 13s ease infinite;}
 }
 
 .navbar a:hover {
-  background-color: #ddd;
   color: white;
 }
 .navbar a.active {
@@ -86,7 +88,7 @@ animation: GatorColor 13s ease infinite;}
 
 @media screen and (max-width: 600px) {
   .navbar.responsive .icon {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom:0;
   }
@@ -209,7 +211,6 @@ border-color:goldenrod;
 background: white;
     }
             .undernav{
-            padding-top: 200px;
             padding-bottom: 200px;
         }
 </style>
@@ -219,7 +220,7 @@ background: white;
 
 <br>
 <body class="undernav">
-<div class="navbox">
+<div id="navbox">
 <div class="navbar" id="myNavbar">
       <a href="GatorHome.php" class="active"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
           
@@ -245,22 +246,22 @@ background: white;
     </div>
 <br>
 
-    <div class="textarea" style="padding-top: 100px;">Welcome! Today is <p id="date"></p>
+    <div class="textarea" style="padding-top: 50px;">Welcome! Today is <p id="date"></p>
         <p>GatorHealth is a platform that contains a collection of many health and wellness resources that can be found on and off San Francisco State University's campus.</p> 
         <br>
        
         <h4>Understanding Social Determinants of Health</h4>
-        
-        <p>"Social determinants of health are conditions in the environments in which people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks. Conditions (e.g., social, economic, and physical) in these various environments and settings (e.g., school, church, workplace, and neighborhood) have been referred to as “place.” In addition to the more material attributes of “place,” the patterns of social engagement and sense of security and well-being are also affected by where people live. Resources that enhance quality of life can have a significant influence on population health outcomes. Examples of these resources include safe and affordable housing, access to education, public safety, availability of healthy foods, local emergency/health services, and environments free of life-threatening toxins."</p>  
-        
+        <div style="padding: 10px;">
+        <i>"Social determinants of health are conditions in the environments in which people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks....Resources that enhance quality of life can have a significant influence on population health outcomes. Examples of these resources include safe and affordable housing, access to education, public safety, availability of healthy foods, local emergency/health services, and environments free of life-threatening toxins."</i>  
+        </div>
         <p>Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
     </div>
     <div id="poll" >
     <div>
     <img src="home/SDOH.png"alt="sdoh" class="panicindisco">
-        <img src="home/SDOH.png"alt="sdoh" style="width:400px;height:300px;" hspace="20" vspace="20">
+ 
         <div id="poll" >
-<h3>Do you feel that you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
+<h3>Do you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
 <form>
 Yes:
 <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
@@ -284,6 +285,7 @@ Yes:
     </div>
     
         </div>
+    </div>
 
 <br>
 <br>

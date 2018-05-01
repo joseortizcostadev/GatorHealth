@@ -7,26 +7,52 @@
   
  
 <style>
+@-webkit-keyframes GatorColor {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-moz-keyframes GatorColor {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-o-keyframes GatorColor {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@keyframes GatorColor { 
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+body {margin:0;
+    background: linear-gradient(300deg, #2c0074, #f3ae00);
+background-size: 400% 400%;
+
+-webkit-animation: GatorColor 13s ease infinite;
+-moz-animation: GatorColor 13s ease infinite;
+-o-animation: GatorColor 13s ease infinite;
+animation: GatorColor 13s ease infinite;}
 * {
   box-sizing: border-box;
 }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
+
 
 #myTable {
   border-collapse: collapse;
-  width: 100%;
+  width: 1000px;
   border: 1px solid #ddd;
   font-size: 18px;
+    margin-right: 25%;
+    margin-left: 13%;  
+        text-align: center;
+        border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
 }
 
 #myTable th, #myTable td {
@@ -42,17 +68,27 @@
   background-color: #f1f1f1;
 }
     
-body {margin:0;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
-  background-color: #2b0080;  
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: relative;
+  width: 1250px;
+    top: -3761px;
+       border: 2px inset azure ;
+    border-radius: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
+
 }
 
-.navbar a {
+    #navbox{
+    margin: 30px;
+     width: 300px;
+    padding: 25px;
+        position: relative;
+
+        
+    }.navbar a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -63,11 +99,9 @@ body {margin:0;}
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  color: white;
 }
 .navbar a.active {
-  background-color: #1e0059;
   color: white;
 }
 
@@ -161,19 +195,43 @@ background: white;
             padding-top: 200px;
             padding-bottom: 200px;
         }
+            input[type=text] {
+position: relative;
+  top: 50%;
+  left: 40%;
+                width: 250px;
+            margin-bottom: 50px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.jpg');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+            width: 100%;
+        }
+
 >>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 </style>
 </head>
 
 <body class="undernav">
 
-<h2>Over the Counter Medications availiable at the Student Health Services Center</h2>
+
 
 <input type="text" id="myInput" onkeyup="tableFunction()" placeholder="Search for medicine.." title="Type in a name">
-
+<div class="marginal-screen">
 <table id="myTable">
   <tr class="header">
-    <th style="width:60%;">Name</th>
+    <th style="width:60%;">Over the Counter Medications availiable at the Student Health Services Center</th>
     <th style="width:40%;">Price</th>
   </tr>
   <tr>
@@ -433,7 +491,8 @@ background: white;
     <td>$4.00</td>
   </tr>  
 </table>
-
+    </div>
+    <div id="navbox">
 <div class="navbar" id="myNavbar">
       <a href="GatorHome.php"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
           
@@ -443,6 +502,7 @@ background: white;
   <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+    </div>
 <script>
 
 function tableFunction() {
