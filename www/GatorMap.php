@@ -129,28 +129,27 @@ while($field = $results->fetch_assoc())
  
 <style>
     #map {
-        height: 1000px;
+        height: 1300px;
         resize: vertical;
-        width: 1000px;
+        width: 1300px;
       position:absolute;
       text-align:center;
 margin-right: 15%;
-    margin-left: 13%;
+    margin-left: 2%;
   border-width:5px;
 border-style:solid;
 border-color:goldenrod;
 background: white;
    }
-body {margin:0;}
+body {margin:0;
+    background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: static;
-    float: right;
+  position: fixed;
   top: 0;
-  width: 1250px;
-    height: 100px;
+  width: 100%;
 }
 
 .navbar a {
@@ -158,10 +157,9 @@ body {margin:0;}
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 30px 70px;
+  padding: 8px 40px;
   text-decoration: none;
   font-size: 17px;
-        height: 80px;
 }
 
 .navbar a:hover {
@@ -242,14 +240,14 @@ br {
   opacity: 1;
   right: 0;
 }
-<<<<<<< HEAD
+
 .img-fluid{ 
 max-width: 8%; }
     .gatorpic{
         width: 8%;
         height: 8%;
     }
-=======
+
     .marginal-screen{
     margin-right: 25%;
     margin-left: 25%;  
@@ -263,11 +261,26 @@ background: white;
             padding-top: 200px;
             padding-bottom: 200px;
         }
+
+        .space{
+    margin: 50px;
+        
+}
+    table{
+                  position: relative;
+  top: 50%;
+  left: 20%;
+          margin: 10px;
+    }
+    #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+    font-size: 20px;}
         .mapbox{
             padding-bottom: 200px;
             margin-bottom: 25%;
         }
->>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 </style>
 </head>
 <body onload = "locate()" class="undernav">
