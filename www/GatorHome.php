@@ -9,22 +9,22 @@
 <style>
 
 
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes GatorColor {
     0%{background-position:0% 19%}
     50%{background-position:100% 82%}
     100%{background-position:0% 19%}
 }
-@-moz-keyframes AnimationName {
+@-moz-keyframes GatorColor {
     0%{background-position:0% 19%}
     50%{background-position:100% 82%}
     100%{background-position:0% 19%}
 }
-@-o-keyframes AnimationName {
+@-o-keyframes GatorColor {
     0%{background-position:0% 19%}
     50%{background-position:100% 82%}
     100%{background-position:0% 19%}
 }
-@keyframes AnimationName { 
+@keyframes GatorColor { 
     0%{background-position:0% 19%}
     50%{background-position:100% 82%}
     100%{background-position:0% 19%}
@@ -33,10 +33,10 @@ body {margin:0;
     background: linear-gradient(300deg, #2c0074, #f3ae00);
 background-size: 400% 400%;
 
--webkit-animation: AnimationName 13s ease infinite;
--moz-animation: AnimationName 13s ease infinite;
--o-animation: AnimationName 13s ease infinite;
-animation: AnimationName 13s ease infinite;}
+-webkit-animation: GatorColor 13s ease infinite;
+-moz-animation: GatorColor 13s ease infinite;
+-o-animation: GatorColor 13s ease infinite;
+animation: GatorColor 13s ease infinite;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
