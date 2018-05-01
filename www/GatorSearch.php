@@ -56,7 +56,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
             overflow: hidden;
             background-color: #2b0080;
             position: fixed;
-            bottom: 0;
+            top: 0;
             width: 100%;
         }
 
@@ -132,6 +132,13 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
             padding-left: 10px;
             margin-top: 10px;
         }
+        .img-fluid{
+  border: 1px solid #f00;
+    float: right;
+    z-index: 2;
+ width: 100px;
+    height: 100%
+}
     </style>
 </head>
 <body>
@@ -202,6 +209,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 </div>
 
 <div class="navbar" id="myNavbar">
+        <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
     <a href="GatorHome.php">Home</a>
     <a href="GatorMap.php">Map</a>
     <a href="GatorPharmacy.html">Pharmacy</a>

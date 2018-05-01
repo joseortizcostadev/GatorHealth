@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="jQuery.min.js"></script>
@@ -13,7 +14,7 @@ body {margin:0;}
   overflow: hidden;
   background-color: #2b0080;  
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
 }
 
@@ -24,7 +25,7 @@ body {margin:0;}
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .navbar a:hover {
@@ -61,8 +62,11 @@ body {margin:0;}
     text-align: left;
     }
 .img-fluid{
-    width: 100%;
-    height: auto;
+  border: 1px solid #f00;
+    float: right;
+    z-index: 2;
+ width: 100px;
+    height: 100%
 }
     #wrapper {
   width: 100%;
@@ -99,9 +103,7 @@ margin-left: 10%;
 </style>
 </head>
 <body>
-<div class="text-center">
-<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
-</div>
+
 
 <br>
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
@@ -118,19 +120,17 @@ margin-left: 10%;
     </div>
 <br>
 
-    <div class="textarea">Welcome! Today is <p id="date"></p>
+    <div class="textarea" style="padding-top: 100px;">Welcome! Today is <p id="date"></p>
         <p>GatorHealth is a platform that contains a collection of many health and wellness resources that can be found on and off San Francisco State University's campus.</p> 
         <br>
-        <h4>Understanding Social Determinants of Health</h4>
-        
-        <p>"Social determinants of health are conditions in the environments in which people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks. Conditions (e.g., social, economic, and physical) in these various environments and settings (e.g., school, church, workplace, and neighborhood) have been referred to as “place.” In addition to the more material attributes of “place,” the patterns of social engagement and sense of security and well-being are also affected by where people live. Resources that enhance quality of life can have a significant influence on population health outcomes. Examples of these resources include safe and affordable housing, access to education, public safety, availability of healthy foods, local emergency/health services, and environments free of life-threatening toxins."</p>  
+       
         
         <p style="padding-bottom: 60px;">Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
 
         
     </div>
     <img src="home/SDOH.png"alt="sdoh" style="width:400px;height:300px;" hspace="20" vspace="20">
-    <div id="poll" style="float: right; width: 400px; height: 200px; padding: 10px;padding-bottom: 100px;">
+    <div id="poll" style="float: right; width: 400px; height: 200px; padding: 10px;padding-top: 100px;">
 <h3>Do you feel you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
 <form style="float: right; width: 400px; height: 200px; padding: 10px;padding-bottom: 100px;">
 Yes:
@@ -140,7 +140,7 @@ Yes:
 </form>
 </div>
 
-    
+    <div style="padding-top: 100px;">
     <a href="https://www.facebook.com/sanfranciscostate/" target="_blank">
         <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>
     <a href="https://www.instagram.com/sanfranciscostate/?hl=en" target="_blank"> 
@@ -149,9 +149,11 @@ Yes:
     <a href="https://www.youtube.com/user/sanfranciscostate" target="_blank">
         <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
 
-
+    </div>
 
 <div class="navbar" id="myNavbar">
+    <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
+
   <a href="GatorHome.php" class="active">Home</a>
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>

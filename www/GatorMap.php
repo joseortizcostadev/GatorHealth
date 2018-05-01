@@ -120,7 +120,7 @@ body {
   overflow: hidden;
   background-color: #2b0080;  
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
 }
 
@@ -155,11 +155,12 @@ body {
     display: block;
   }
 }
-    .img-fluid{
-    width: 100%;
-    height: 90px;
-    position:absolute;
-    
+.img-fluid{
+  border: 1px solid #f00;
+    float: right;
+    z-index: 2;
+ width: 100px;
+    height: 100%
 }
     #wrapper {
   width: 100%;
@@ -196,6 +197,7 @@ body {
 
 
 <div class="navbar" id="myNavbar">
+        <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
   <a href="GatorHome.php">Home</a>
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
