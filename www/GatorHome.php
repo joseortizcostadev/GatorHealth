@@ -7,17 +7,53 @@
   
  
 <style>
-body {margin:0;}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+body {margin:0;
+    background: linear-gradient(300deg, #2c0074, #f3ae00);
+background-size: 400% 400%;
+
+-webkit-animation: AnimationName 13s ease infinite;
+-moz-animation: AnimationName 13s ease infinite;
+-o-animation: AnimationName 13s ease infinite;
+animation: AnimationName 13s ease infinite;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
-  background-color: #2b0080;  
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 10px;
+ width: 1250px;
+      border: 2px inset azure ;
+    border-radius: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
-
-.navbar a {
+    .navbox{
+    margin: 30px;
+     width: 300px;
+    padding: 25px;
+        
+    }.navbar a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -32,7 +68,6 @@ body {margin:0;}
   color: black;
 }
 .navbar a.active {
-  background-color: #1e0059;
   color: white;
 }
 
@@ -182,7 +217,8 @@ background: white;
 
 
 <br>
-<body style="background:#ABAAD4;" class="undernav">
+<body class="undernav">
+<div class="navbox">
 <div class="navbar" id="myNavbar">
       <a href="GatorHome.php" class="active"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
           
@@ -192,6 +228,7 @@ background: white;
   <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+    </div>
 <div class="marginal-screen">
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
