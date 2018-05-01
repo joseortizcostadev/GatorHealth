@@ -71,16 +71,16 @@ background: white;
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
-  position: relative;
+  position: static;
   width: 1250px;
-    top: -3761px;
+    height: 100px;
        border: 2px inset azure ;
     border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
 
+  
 }
-
     #navbox{
     margin: 30px;
      width: 300px;
@@ -93,10 +93,10 @@ background: white;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 5px 40px;
+  padding: 30px 70px;
   text-decoration: none;
   font-size: 17px;
-}
+        height: 80px;}
 
 .navbar a:hover {
   color: white;
@@ -192,7 +192,6 @@ border-color:goldenrod;
 background: white;
     }
             .undernav{
-            padding-top: 200px;
             padding-bottom: 200px;
         }
             input[type=text] {
@@ -216,13 +215,27 @@ position: relative;
         }
 
         input[type=text]:focus {
-            width: 100%;
+            width: 300px;
         }
+     #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;}
 
 >>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 </style>
 </head>
-
+    <div id="navbox">
+<div class="navbar" id="myNavbar">
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
+          
+  <a href="GatorMap.php">Map</a>
+  <a href="GatorPharmacy.html" class="active">Pharmacy</a>
+  <a href="GatorResources.html" >Resources</a>
+  <a href="GatorSearch.php">Search</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+    </div>
 <body class="undernav">
 
 
@@ -492,17 +505,7 @@ position: relative;
   </tr>  
 </table>
     </div>
-    <div id="navbox">
-<div class="navbar" id="myNavbar">
-      <a href="GatorHome.php"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
-          
-  <a href="GatorMap.php">Map</a>
-  <a href="GatorPharmacy.html" class="active">Pharmacy</a>
-  <a href="GatorResources.html" >Resources</a>
-  <a href="GatorSearch.php">Search</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
-    </div>
+
 <script>
 
 function tableFunction() {

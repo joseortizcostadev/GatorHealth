@@ -7,7 +7,8 @@
   
  
 <style>
-body {margin:0;}
+body {margin:0;
+    background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
@@ -106,6 +107,7 @@ br {
   right: 0;
 }
 
+
  
     
     #buttons th {
@@ -119,6 +121,7 @@ br {
         text-align: center;
     }
     
+
 
 .img-fluid{ 
 max-width: 8%; }
@@ -142,9 +145,35 @@ background: white;
             padding-bottom: 200px;
         }
 
+        .space{
+    margin: 50px;
+        
+}
+    table{
+                  position: relative;
+  top: 50%;
+  left: 20%;
+          margin: 10px;
+    }
+    #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;}
+
 </style>
 </head>
-<body style="background:#ABAAD4;" class="undernav">
+<div class="navbar" id="myNavbar">
+      <a id="main" href="GatorHome.php">GatorHealth </a>
+          
+  <a href="GatorMap.php">Map</a>
+  <a href="GatorPharmacy.html">Pharmacy</a>
+  <a href="GatorResources.html" class="active">Resources</a>
+  <a href="GatorSearch.php">Search</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<body  class="undernav">
+
+
 
 
 
@@ -153,7 +182,9 @@ background: white;
     <table id="buttons">
   
        <p>Welcome to the GatorHealth Resources Page where we have displayed a vast collection on Health and Wellness resources that can be found on and off campus!</p>
-    
+
+<div>
+  
       <th colspan="3"> <header> <h3> Official SFSU Organizations </h3> </header> </th> 
         <tr> 
         <th> <a href="GatorServicesCost.html" class="button"style="vertical-align:middle"><span>Student Health Center</span></a> </th>
@@ -170,7 +201,6 @@ background: white;
     
 
 <div class="marginal-screen">
- 
 
 
       <th colspan="3"> <header> <h3> Student Organizations </h3> </header> </th> </tr>  
@@ -192,17 +222,12 @@ background: white;
 
   
 
+    
+   
+
 </div>
-<br>  
-<div class="navbar" id="myNavbar">
-      <a href="GatorHome.php"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
-          
-  <a href="GatorMap.php">Map</a>
-  <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html" class="active">Resources</a>
-  <a href="GatorSearch.php">Search</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+
+
 
 <script>
 function myFunction() {
