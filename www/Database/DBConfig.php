@@ -7,7 +7,7 @@ define("DB_HOST", "localhost");
 <<<<<<< HEAD
 define("DB_USERNAME", "root");
 define("DB_PASSWORD", "");
-define("DATABASE", "GatorHealthDB");
+define("DATABASE", "searchResults");
 =======
 define("DB_USERNAME", "Stuart");
 define("DB_PASSWORD", "maple1714");
