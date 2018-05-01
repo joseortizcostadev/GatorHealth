@@ -3,7 +3,7 @@
 	$search_param = "{$keyword}%";
 	$conn =new mysqli('localhost', 'root', '' , 'searchResults');
 
-	$sql = $conn->prepare("SELECT * FROM SubmissionForm WHERE org_name LIKE ?");
+	$sql = $conn->prepare("SELECT * FROM submission_form WHERE org_name LIKE ?");
 	$sql->bind_param("s",$search_param);			
 	$sql->execute();
 	$result = $sql->get_result();
