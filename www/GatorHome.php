@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="jQuery.min.js"></script>
-          <link rel="stylesheet" href="css/bootstrap.min.css">
-          <script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+ 
 <style>
 body {margin:0;}
-
+.w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
@@ -23,16 +22,15 @@ body {margin:0;}
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 5px 40px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .navbar a.active {
   background-color: #1e0059;
   color: white;
@@ -60,14 +58,70 @@ body {margin:0;}
     float: none;
     display: block;
     text-align: left;
-    }
-.img-fluid{
-  border: 1px solid #f00;
-    float: right;
-    z-index: 2;
- width: 100px;
-    height: 100%
+  }
+
 }
+
+br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
+}
+.button{
+    display: inline-block;
+  border-radius: 4px;
+  background-color: goldenrod;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+<<<<<<< HEAD
+.img-fluid{ 
+max-width: 8%; }
+    .gatorpic{
+        width: 8%;
+        height: 8%;
+    }
+=======
+    .marginal-screen{
+    margin-right: 25%;
+    margin-left: 25%;  
+        text-align: center;
+        border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
+    }
     #wrapper {
   width: 100%;
   display: flex;
@@ -106,6 +160,7 @@ margin-left: 10%;
         position: relative;
         margin-left: auto;
         margin-right: auto;
+        z-index: 1;
     }
     
     .marginal-screen{
@@ -117,21 +172,27 @@ border-style:solid;
 border-color:goldenrod;
 background: white;
     }
-    
+            .undernav{
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
 </style>
 </head>
-<<<<<<< HEAD
 <body>
 
 
 <br>
-=======
-<body style="background:#ABAAD4;">
-<div class="text-center">
-<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
+<body style="background:#ABAAD4;" class="undernav">
+<div class="navbar" id="myNavbar">
+      <a href="GatorHome.php" class="active"> <img src="gatorRon.png"  alt="Responsive image" class="gatorpic">GatorHealth </a>
+          
+  <a href="GatorMap.php">Map</a>
+  <a href="GatorPharmacy.html">Pharmacy</a>
+  <a href="GatorResources.html" >Resources</a>
+  <a href="GatorSearch.php">Search</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <div class="marginal-screen">
->>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 <div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary dry">Emergency Hotline</button>
   <button type="button" class="btn btn-primary dry">Non-Emergency Hotline</button>
@@ -148,27 +209,20 @@ background: white;
 
     <div class="textarea" style="padding-top: 100px;">Welcome! Today is <p id="date"></p>
         <p>GatorHealth is a platform that contains a collection of many health and wellness resources that can be found on and off San Francisco State University's campus.</p> 
-<<<<<<< HEAD
         <br>
        
-=======
         <h4>Understanding Social Determinants of Health</h4>
         
         <p>"Social determinants of health are conditions in the environments in which people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks. Conditions (e.g., social, economic, and physical) in these various environments and settings (e.g., school, church, workplace, and neighborhood) have been referred to as “place.” In addition to the more material attributes of “place,” the patterns of social engagement and sense of security and well-being are also affected by where people live. Resources that enhance quality of life can have a significant influence on population health outcomes. Examples of these resources include safe and affordable housing, access to education, public safety, availability of healthy foods, local emergency/health services, and environments free of life-threatening toxins."</p>  
->>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
         
         <p>Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
     </div>
-<<<<<<< HEAD
-    <img src="home/SDOH.png"alt="sdoh" style="width:400px;height:300px;" hspace="20" vspace="20">
-    <div id="poll" style="float: right; width: 400px; height: 200px; padding: 10px;padding-top: 100px;">
-=======
+    <div id="poll" >
     <div>
     <img src="home/SDOH.png"alt="sdoh" class="panicindisco">
-    </div>
-    <div id="poll" >
->>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
-<h3>Do you feel you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
+        <img src="home/SDOH.png"alt="sdoh" style="width:400px;height:300px;" hspace="20" vspace="20">
+        <div id="poll" >
+<h3>Do you feel that you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
 <form>
 Yes:
 <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
@@ -176,43 +230,28 @@ Yes:
 <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 </form>
 </div>
-<<<<<<< HEAD
+    </div>
+
 
     <div style="padding-top: 100px;">
-=======
-   <br>
-   </div>
-    <div>
->>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
+  
     <a href="https://www.facebook.com/sanfranciscostate/" target="_blank">
         <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px;"></a>
     <a href="https://www.instagram.com/sanfranciscostate/?hl=en" target="_blank"> 
         <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px;"></a>
     <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px;"></a>
     <a href="https://www.youtube.com/user/sanfranciscostate" target="_blank">
-<<<<<<< HEAD
-        <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px; float: right;" hspace="10"></a>
+        <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px;"></a>
 
     </div>
-=======
-        <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px;"></a>
+    
         </div>
 
 <br>
 <br>
 <br>
->>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 
-<div class="navbar" id="myNavbar">
-    <img src="sfsubanner.png" class="img-fluid" alt="Responsive image">    
 
-  <a href="GatorHome.php" class="active">Home</a>
-  <a href="GatorMap.php">Map</a>
-  <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html">Resources</a>
-  <a href="GatorSearch.php">Search</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
 
 <script>
     src="js/bootstrap.min.js"
