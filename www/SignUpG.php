@@ -52,9 +52,19 @@ input[type=submit]:hover {
     background-color:  #989898;
     padding: 20px;
 }
+#back{
+        float: right;
+        background-color:gold;
+        color: white;
+
+    }
 </style>
+
 </head>
 <body>
+<form action="GatorHPW.html">
+    <input type="submit" id="back" value="Go Back" />
+</form>
 
 <center><h2>Welcome to Gator Health!</h2></center>
     <center><h3>Please fill out the required fields to registrate your organization</h3></center>

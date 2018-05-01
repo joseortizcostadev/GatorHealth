@@ -124,24 +124,33 @@ while($field = $results->fetch_assoc())
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="jQuery.min.js"></script>
-          <link rel="stylesheet" href="css/bootstrap.min.css">
-          <script src="js/bootstrap.min.js"></script>
-          <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+ 
 <style>
-body {
-    margin:0;
-    min-height: 100%;
-    background: grey;
-    }
-
+    #map {
+        height: 1000px;
+        resize: vertical;
+        width: 1000px;
+      position:absolute;
+      text-align:center;
+margin-right: 15%;
+    margin-left: 13%;
+  border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
+   }
+body {margin:0;}
+.w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position: static;
+    float: right;
+  top: 0;
+  width: 1250px;
+    height: 100px;
 }
 
 .navbar a {
@@ -149,16 +158,16 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 30px 70px;
   text-decoration: none;
   font-size: 17px;
+        height: 80px;
 }
 
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .navbar a.active {
   background-color: #1e0059;
   color: white;
@@ -175,18 +184,6 @@ body {
     display: block;
   }
 }
-    .img-fluid{
-    width: 100%;
-    height: 90px;
-    position:absolute;
-    
-}
-    #wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 @media screen and (max-width: 600px) {
   .navbar.responsive .icon {
@@ -201,25 +198,89 @@ body {
   }
 
 }
-    #map {
-        height: 94%;
-        resize: vertical;
-        width: 100%;
-      position:absolute;
-      text-align:center;
-       }
+
+br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
+}
+.button{
+    display: inline-block;
+  border-radius: 4px;
+  background-color: goldenrod;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+<<<<<<< HEAD
+.img-fluid{ 
+max-width: 8%; }
+    .gatorpic{
+        width: 8%;
+        height: 8%;
+    }
+=======
+    .marginal-screen{
+    margin-right: 25%;
+    margin-left: 25%;  
+        text-align: center;
+        border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
+    }
+            .undernav{
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+        .mapbox{
+            padding-bottom: 200px;
+            margin-bottom: 25%;
+        }
+>>>>>>> e26bea3abc824ae8da33c36209e43a4cefd3b367
 </style>
 </head>
-<body onload = "locate()">
-
+<body onload = "locate()" class="undernav">
+<div class="mapbox">
  <div id="map"></div>
-
+</div>
 
 <div class="navbar" id="myNavbar">
-  <a href="GatorHome.php">Home</a>
-  <a href="GatorMap.php">Map</a>
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
+          
+  <a href="GatorMap.php" class="active">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html">Resources</a>
+  <a href="GatorResources.html" >Resources</a>
   <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>

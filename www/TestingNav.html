@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+ br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
+}
+.button{
+    display: inline-block;
+  border-radius: 4px;
+  background-color: goldenrod;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.img-fluid{
+  border: 1px solid #f00;
+    float: right;
+    z-index: 2;
+ width: 100px;
+    height: 100%
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="GatorHome.php">GatorHealth</a>
+    </div>
+    <ul class="nav navbar-nav">
+          <img src="sfsu-logo-2.png" class="img-fluid" alt="Responsive image">    
+        <li> <a href="GatorMap.php">Map</a> </li>
+        <li> <a href="GatorPharmacy.html">Pharmacy</a> </li>
+        <li> <a href="GatorResources.html" class="active">Resources</a> </li>
+        <li> <a href="GatorSearch.php">Search</a> </li>
+        <li> <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a> </li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Inverted Navbar</h3>
+  <p>An inverted navbar is black instead of gray.</p>
+</div>
+
+    <p>Welcome to the GatorHealth Resources Page where we have displayed a vast collection on Health and Wellness resources that can be found on and off campus!</p>
+<div>
+    
+    <a href="GatorServicesCost.html" class="button"style="vertical-align:middle"><span>Student Health Center</span></a>
+    <a href="GatorDietetics.html" class="button"style="vertical-align:middle"><span>Dietetics/Nutrition</span></a>
+    <a href="GatorHolistic.html" class="button"style="vertical-align:middle"><span>Holistic Health</span></a>
+    <a href="GatorMashouf.html" class="button"style="vertical-align:middle"><span>Mashouf Wellness</span></a>
+    <a href="GatorVeteran.html" class="button"style="vertical-align:middle"><span>Veteran Resources</span></a>
+    <a href="GatorAccess.html" class="button"style="vertical-align:middle"><span>Disability Program</span></a>
+    <a href="GatorMental.html" class="button"style="vertical-align:middle"><span>Counseling and Mental Services</span></a>
+    <a href="GatorHPW.html" class="button"style="vertical-align:middle"><span>Health Promotion and Wellness</span></a>
+    <a href="GatorQTRC.html" class="button"style="vertical-align:middle"><span>Queer and Trans Resource Center</span></a>
+    <a href="GatorEROS.html" class="button"style="vertical-align:middle"><span>Educational Referral Organization for Sexuality</span></a>
+    <a href="Clinica'S.html" class="button"style="vertical-align:middle"><span>Clinica Martin-Baro</span></a>
+    <a href="Clinica'S.html" class="button"style="vertical-align:middle"><span>Active Minds</span></a>
+
+</div>
+    
+<script>
+function myFunction() {
+    var x = document.getElementById("myNavbar");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
+    
+}
+</script>
+</body>
+</html>
+
