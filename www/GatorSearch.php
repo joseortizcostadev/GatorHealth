@@ -82,6 +82,7 @@ position: relative;
   left: 40%;
                 width: 250px;
             margin-bottom: 50px;
+            margin-top: 10px;
             box-sizing: border-box;
             border: 2px solid #ccc;
             border-radius: 4px;
@@ -107,8 +108,7 @@ body {margin:0;
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: fixed;
-  top: 0;
+  position: static;
   width: 100%;
 }
 
@@ -218,7 +218,6 @@ border-color:goldenrod;
 background: white;
     }
             .undernav{
-            padding-top: 200px;
             padding-bottom: 200px;
         }
 

@@ -7,13 +7,13 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
-body {margin:0;}
-
+body {margin:0;
+    background:#ABAAD4;}
+.w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: fixed;
-  bottom: 0;
+  position: static;
   width: 100%;
 }
 
@@ -22,7 +22,7 @@ body {margin:0;}
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px 40px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -31,7 +31,6 @@ body {margin:0;}
   background-color: #ddd;
   color: black;
 }
-
 .navbar a.active {
   background-color: #1e0059;
   color: white;
@@ -67,57 +66,78 @@ br {
   margin:2.5em 0;/* FF for instance */
   line-height:5em;/* chrome for instance */
 }
-/* Style the tab */
-div.tab {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #2b0080;
-    width: 20%;
-    height: 300px;
-    margin-bottom: 300px;}
-
-/* Style the buttons inside the tab */
-div.tab button {
-    display: block;
-    background-color: inherit;
-    color: white;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
+.button{
+    display: inline-block;
+  border-radius: 4px;
+  background-color: goldenrod;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #ddd;
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-/* Create an active/current "tab button" class */
-div.tab button.active {
-    background-color: #1e0059;
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-/* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
-height: auto;
-    margin-bottom: 300px;}
-#back{
-        float: right;
-        background-color:gold;
-        color: white;
+.button:hover span {
+  padding-right: 25px;
+}
 
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.img-fluid{ 
+max-width: 8%; }
+    .gatorpic{
+        width: 8%;
+        height: 8%;
     }
-/*.img-fluid {
-    width: 100%;
-    height: 90px;*/
+
+    .marginal-screen{
+    margin-right: 10%;
+    margin-left: 10%;  
+        text-align: center;
+        border-width:5px;
+border-style:solid;
+border-color:goldenrod;
+background: white;
+        padding: 10px;
+    }
+            .undernav{
+            padding-bottom: 200px;
+        }
+
+        .space{
+    margin: 50px;
+        
 }
+
+    #main{background-image: url('gatorRon.png');
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+    font-size: 20px;}
+   
     #wrapper {
   width: 100%;
   display: flex;
@@ -130,19 +150,7 @@ height: auto;
         background-color: #2b0080;
         color: white;
     }
-    .user {
-  display: inline-flex;
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
 
-.one {
-  background-image:url(BLANK_Profile-Picture.jpg);
-}
 .center-block {  
   display: block;  
   margin-right: auto;
@@ -152,55 +160,48 @@ margin-left: 10%;
     display: block;
     margin: auto;
     width: 85%;
-    height: 100%;
-    border: 10px solid goldenrod;
-    padding: 5px;
-    text-align: center;
-    background: white;
+    height: 150px;
+    border: 10px solid gold;
+    padding: 10px;
+    text-align: center
 }   
-    .message{
-        display: inline-block;
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        left: 50%;
-        top: 30%;
-    }
-    .profile{
-        display: inline-block;
-        position: absolute;
-        left: 50%;
-        top: 40%;
-    }
     .center{
         margin: auto;
     }
-.marginal-screen{
-    margin-right: 25%;
-    margin-left: 25%;  
-        text-align: center;
-        border-width:5px;
-border-style:solid;
-border-color:goldenrod;
-background: white;
+    .icons{ bottom: 10;}
+    
+    .panicindisco{
+        width:400px;
+        height:300px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
     }
     
+   
 </style>
 </head>
-<body style="background:#ABAAD4;">
-<img src="sfsubanner.png" class="img-fluid" alt="Responsive image">
-<!--
-<form action="GatorResources.html">
-    <input type="submit" id="back" value="Go Back" />
-</form>
+<div id="navbox">
+<div class="navbar" id="myNavbar">
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
+          
+  <a href="GatorMap.php">Map</a>
+  <a href="GatorPharmacy.html">Pharmacy</a>
+  <a href="GatorResources.html" >Resources</a>
+  <a href="GatorSearch.php">Search</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+    </div>
 
---> 
-    
-<div class="truecenter-block">
+
+<body class="undernav">
+<br>
+<div class="marginal-screen">
    <table class="center">
    <tr>
        <td>   <a href="http://sfstate.orgsync.com/org/vets/home" target="_blank">
-     <img src="veterans/sfsuvets.png"alt="sfsuvets"  hspace="20" vspace="20"></a>
+     <img src="veterans/sfsuvets.png"alt="sfsuvets"   style="object-fit: contain"></a>
           <h3>Mission Statement</h3>
           <p>
            V.E.T.S.@SFSU exists to provide military veterans, their families, and our community of concern with the advocacy, resources, and fellowship to support successful transitions into and through the academic rigors of San Francisco State University.</p>
@@ -265,14 +266,7 @@ Burke Hall 153 and 155
    <br>
 
 
-<div class="navbar" id="myNavbar">
-  <a href="GatorHome.php" class="active">Home</a>
-  <a href="GatorMap.php">Map</a>
-  <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html">Resources</a>
-  <a href="GatorSearch.php">Search</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+
 
 <script>
 src="js/bootstrap.min.js"

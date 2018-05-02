@@ -1,14 +1,15 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  
- 
+<script src="jQuery.min.js"></script>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <script src="js/bootstrap.min.js"></script>
 <style>
-
-
 body {margin:0;
     background:#ABAAD4;}
 .w3-btn {width:150px;}
@@ -116,7 +117,7 @@ max-width: 8%; }
     }
 
     .marginal-screen{
-  margin-right: 10%;
+margin-right: 10%;
     margin-left: 10%;  
         text-align: center;
         border-width:5px;
@@ -124,6 +125,7 @@ border-style:solid;
 border-color:goldenrod;
 background: white;
         padding: 10px;
+    
     }
             .undernav{
             padding-bottom: 200px;
@@ -133,12 +135,7 @@ background: white;
     margin: 50px;
         
 }
-    table{
-                  position: relative;
-  top: 50%;
-  left: 20%;
-          margin: 10px;
-    }
+
     #main{background-image: url('gatorRon.png');
             background-position: left;
             background-size: contain;
@@ -191,7 +188,7 @@ margin-left: 10%;
 </head>
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php" class="active" id="main"> GatorHealth </a>
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -205,67 +202,66 @@ margin-left: 10%;
 <body class="undernav">
 <br>
 <div class="marginal-screen">
-<div id="wrapper" class="btn-group" role="group" aria-label="Basic example">
-
-    </div>
-    <br>
-    <div class="container">
-  <div class="row">
-    <div class="col-sm-4 user one center-block" rotate="90">
-    </div>
-
-        </div>
-    </div>
-
-    <div class="textarea" >Welcome! Today is <p id="date"></p>
-        <p>GatorHealth is a platform that contains a collection of many health and wellness resources that can be found on and off San Francisco State University's campus.</p> 
-        <br>
-       
-        <h4>Understanding Social Determinants of Health</h4>
-        <div style="padding: 10px;">
-        <i>"Social determinants of health are conditions in the environments in which people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks....Resources that enhance quality of life can have a significant influence on population health outcomes. Examples of these resources include safe and affordable housing, access to education, public safety, availability of healthy foods, local emergency/health services, and environments free of life-threatening toxins."</i>  
-        </div>
-        <p>Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
-    </div>
-    <div id="poll" >
-    <div>
-    <img src="home/SDOH.png"alt="sdoh" class="panicindisco">
+   <table class="center">
+   <tr>
+       <td>
+          <h2>Active Minds </h2><br>
+      
+    <p>Active Minds at SF State is a program of Active Minds, Inc. that exists as a student-run mental health awareness and suicide prevention, education, and advocacy organization on the college campus. The group is designed to utilize peer outreach to increase student's awareness of mental health issues and symptoms of mental illness, provide information about avaliable resources, encourage students to seek help as soon as help is needed, and to serve as liaison between students and the mental health community. By promoting awareness and education, the group aims to remove the stigma that surrounds mental illness and create an open environment for discussion of mental health issues. Active Minds is committed to providing programming and outreach services to underserved and underrepresented campus communities such as culturally diverse, LGBTQ, students with disabilites, first generation college students, low income, international students, veterans, student leaders, and so on.
+</p>
  
-        <div id="poll" >
-<h3>Do you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
-<form>
-Yes:
-<input type="radio" name="vote" value="0" onclick="getVote(this.value)">
-<br>No:
-<input type="radio" name="vote" value="1" onclick="getVote(this.value)">
-</form>
-</div>
-    </div>
-
-
-    <div style="padding-top: 100px;">
+      <img src="gator.jpg" alt="MBC" style="width: 500px;">
+           
+           
+       </td>
+   </tr>
   
-    <a href="https://www.facebook.com/sanfranciscostate/" target="_blank">
-        <img class = "icons" src="icons/facebook.png"alt="facebook" style="width:50px;height:50px; top: 100 px;"></a>
-    <a href="https://www.instagram.com/sanfranciscostate/?hl=en" target="_blank"> 
-        <img class = "icons" src="icons/insta.png"alt="instagram" style="width:50px;height:50px; top: 100 px;"></a>
-    <a href="https://twitter.com/SFSU?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img class = "icons" src="icons/twitter.png"alt="twitter" style="width:50px;height:50px; top: 100 px;"></a>
-    <a href="https://www.youtube.com/user/sanfranciscostate" target="_blank">
-        <img class = "icons" src="icons/youtube.png"alt="youtube"style="width:50px;height:50px; top: 100 px;"></a>
+   <tr>
+       <td>
+<p><strong>Address:</strong>Village at Centennial Square
 
-    </div>
+750 Font Blvd., Building A, Room 1
+San Francisco, CA 94132
+</p><br>
     
-        </div>
-    </div>
+    <strong><p2>If you have more questions,</p2></strong>
+    Email:  custodio@sfsu.edu or sfstateactiveminds@gmail.com 
+    
+    <strong><p2>Meetings are held Mondays from 3pm-4pm.</p2> </strong>
+    
 
-<br>
-<br>
-<br>
+        <h4 class="panel-title">
+          Active Members
+        </h4>
+      <p>To be considered an active member, a member must both attend at least three meetings and assist in the planning of at least one event per semester.  </p>
+        <h4 class="panel-title">
+          Participants
+        </h4>
+   <p>Anyone registered, but not an active member is considered an Active Minds Participant and will be kept on the listserve to be notified via email of upcoming events.</p>
+  
+        
+    
+  
+        
+        <a href="http://wellness.sfsu.edu/active-minds" target="_blank">Click here for more information about Active Minds!</a>
+
+           
+           
+       </td>
+   </tr>
+   </table>
+
+</div>
+       <br>
+   <br>
+   <br>
+
+
 
 
 
 <script>
-    src="js/bootstrap.min.js"
+src="js/bootstrap.min.js"
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
@@ -274,25 +270,11 @@ function myFunction() {
         x.className = "navbar";
     }
 }
-document.getElementById("date").innerHTML = Date();
-
-function getVote(int) {
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else {  // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (this.readyState==4 && this.status==200) {
-      document.getElementById("poll").innerHTML=this.responseText;
-    }
-  }
-  xmlhttp.open("GET","GatorPoll.php?vote="+int,true);
-  xmlhttp.send();
-}
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
+

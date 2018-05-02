@@ -147,8 +147,7 @@ body {margin:0;
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: fixed;
-  top: 0;
+  position: static;
   width: 100%;
 }
 
@@ -258,7 +257,6 @@ border-color:goldenrod;
 background: white;
     }
             .undernav{
-            padding-top: 50px;
             padding-bottom: 200px;
         }
 
@@ -283,9 +281,6 @@ background: white;
         }
 </style>
 </head>
-<body onload = "locate()" class="undernav">
- <div id="map"></div>
-
 <div class="navbar" id="myNavbar">
       <a href="GatorHome.php" id="main"> GatorHealth </a>
           
@@ -295,6 +290,10 @@ background: white;
   <a href="GatorSearch.php">Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+<body onload = "locate()" class="undernav">
+ <div id="map"></div>
+
+
 <script>
             var glblmap = null;
             var glblmarker = null;
