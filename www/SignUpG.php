@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <?php
 /* Uncomment the next three lines to check errors only */
@@ -18,11 +17,6 @@ $data = new DBData(); // creates an object of class DBData
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="typeahead.js"></script>
 	<style>
-<<<<<<< HEAD
-=======
-    
-    
->>>>>>> b7d5ad93a8c31abc0c168bc65ece3a36b904f622
 	
 input[type=text], select, textarea {
     width: 100%;
@@ -284,28 +278,17 @@ margin-left: 10%;
        
            
                 <b class="demo-label">Student Organization</b>
-        
-        <br><input type="text" name="org_name" id="txtCountrystyle="height:100px class="typeahead"/>
+        <br><input type="text" name="org_name" id="txtCountry" class="typeahead"/>
 	</div>
 
-<<<<<<< HEAD
       <label for="subject">Organization Description</label>
-=======
-       <label for="subject">Organization's Discription:</label>
->>>>>>> b7d5ad93a8c31abc0c168bc65ece3a36b904f622
     <textarea id="subject" name="org_description" placeholder="250 words limit" style="height:100px"></textarea>
  <h4>Please check all that apply to your organization</h4>
       <input  name="check_list[]" id="check_list" type="checkbox" value="Mental Health"><label for="lname">Mental Health</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Primary Care"><label for="lname">Primary Care</label>
-<<<<<<< HEAD
       <input  name="check_list[]" id="check_list" type="checkbox" value="Food Resources"><label for="lname">Food Resources</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Vaccinations"><label for="lname">Vaccinations</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Holistic Health"><label for="lname">Holistic Health</label>
-=======
-      <input  name="check_list[]" id="check_list" type="checkbox" value="Food Resouces"><label for="lname">Food Resouces</label>
-      <input   name="check_list[]" id="check_list" type="checkbox" value="Vaccinations"><label for="lname">Vaccinations</label>
-      <input   name="check_list[]" id="check_list" type="checkbox" value="Holitic Health"><label for="lname">Holitic Health</label>
->>>>>>> b7d5ad93a8c31abc0c168bc65ece3a36b904f622
       <input   name="check_list[]" id="check_list" type="checkbox" value="Free"><label for="lname">Free</label>
       <input    name="check_list[]" id="check_list"type="checkbox" value="On campus"><label for="lname">On campus</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Off campus"><label for="lname">Off campus</label>
@@ -314,11 +297,7 @@ margin-left: 10%;
 
       <div>
 
-<<<<<<< HEAD
             <label for="Place">Organization Location</label>
-=======
-            <label for="Place">Organizations Location</label>
->>>>>>> b7d5ad93a8c31abc0c168bc65ece3a36b904f622
 
             <select id="Place" name="or_location">
 
