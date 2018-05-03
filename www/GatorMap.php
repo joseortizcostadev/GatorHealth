@@ -198,7 +198,7 @@ body {margin:0;
 
 br {
   margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
+  line-height:2.0em;/* chrome for instance */
 }
 .button{
     display: inline-block;
