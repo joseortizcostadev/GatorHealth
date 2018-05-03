@@ -133,12 +133,7 @@ background: white;
     margin: 50px;
         
 }
-    table{
-                  position: relative;
-  top: 50%;
-  left: 20%;
-          margin: 10px;
-    }
+
     #main{background-image: url('gatorRon.png');
             background-position: left;
             background-size: contain;
@@ -175,7 +170,8 @@ margin-left: 10%;
     .center{
         margin: auto;
     }
-    .icons{ bottom: 10;}
+    .icons{ bottom: 10;
+    position:static;}
     
     .panicindisco{
         width:400px;
@@ -185,6 +181,13 @@ margin-left: 10%;
         margin-right: auto;
         z-index: 1;
     }
+    #poll{position:static
+        ;
+    margin:1%;
+    text-align:center;
+    margin-left: auto;
+        margin-right: auto;
+        z-index: 1;}
     
    
 </style>
@@ -218,7 +221,7 @@ margin-left: 10%;
     </div>
 
     <div class="textarea" >Welcome! Today is <p id="date"></p>
-        <p>GatorHealth is a platform that contains a collection of many health and wellness resources that can be found on and off San Francisco State University's campus.</p> 
+        <p>GatorHealth promotes the information of many health and wellness resources that are offered by San Francisco State University.</p> 
         <br>
        
         <h4>Understanding Social Determinants of Health</h4>
@@ -227,20 +230,18 @@ margin-left: 10%;
         </div>
         <p>Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
     </div>
-    <div id="poll" >
     <div>
     <img src="home/SDOH.png"alt="sdoh" class="panicindisco">
- 
+        </div>
         <div id="poll" >
 <h3>Do you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>
-<form>
+<form id="poll">
 Yes:
 <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
 <br>No:
 <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 </form>
 </div>
-    </div>
 
 
     <div style="padding-top: 100px;">
@@ -255,12 +256,7 @@ Yes:
 
     </div>
     
-        </div>
-    </div>
 
-<br>
-<br>
-<br>
 
 
 
@@ -293,6 +289,6 @@ function getVote(int) {
 }
 
 </script>
-
+    </div>
 </body>
 </html>

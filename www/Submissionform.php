@@ -11,7 +11,7 @@ $error_status = 0;
 $local_homepage = "GatorHome.php";
 $server_homepage = "";
 $submission_form_page = $_SERVER['DOCUMENT_ROOT'] . '/www/SignUpG.php';
-$validation_page = "http://localhost:8080/GatorHealth/www/email_validation.php";
+$validation_page = "http://localhost/GatorHealth/www/email_validation.php";
 
 if (isset($_POST['submit']) && $_POST['submit'] != null)
 {
@@ -20,11 +20,11 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
     
     $org_name = $_POST["org_name"]; // edit
     $org_description = $_POST["org_description"]; // edit
-    $p_checkbox = $_POST["check_list"]; // working
+    $p_checkbox = $_POST["p_checkbox"]; // working
     $or_location = $_POST["or_location"]; // edit
     $r_number = $_POST ["r_number"]; // edit
     $o_hours = $_POST["o_hours"]; // edit
-    $s_byName = $_POST["s_byName"]; //edit
+    $s_by = $_POST["s_by"]; //edit
 
     // join values from checkbox
     $orgs_selected = $p_checkbox[0];
@@ -41,7 +41,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
     
     $headers = implode("\r\n", $headers);
     */
-    $url = $validation_page . "?email=" . $s_byName;
+    $url = $validation_page . "?email=" . $s_by;
     $subject = "GatorHeath confirmation email, "; // edit
     $message = "GatorHealth would like to thank you for submitting your organization, please Clink on the link to confirm your organizatations participation in GatorHealth" . $url . " Thank you!"; // edit
     
@@ -55,7 +55,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
         $database = new DBData();
         $table = "email_validation"; // edit. change according to the name you choose in db for your table
         $fields = array("email", "timestamp", "status"); // remember to create id in table and set to auto increment
-        $values = array($s_byName, $timestamp, 0);
+        $values = array($s_by, $timestamp, 0);
 
         // insert validation url data.
         if ($database->insert($table, $fields, $values))
@@ -63,7 +63,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
             // insert in database submission form values
             $table = "submission_form";
             $fields = array("org_name", "org_description", "r_number", "o_hours", "s_by", "p_checkbox", "or_location"); // edit. fields same as table fields
-            $values = array($org_name, $org_description, $r_number, $o_hours, $s_byName,  $orgs_selected, $or_location); // edit accordenly to the fields above
+            $values = array($org_name, $org_description, $r_number, $o_hours, $s_by,  $p_checkbox, $or_location); // edit accordenly to the fields above
 
             if ($database->insert($table, $fields, $values)) { //
                 // data was inserted redirect to any page you need
@@ -93,4 +93,4 @@ if  ($error_status == 0) // everything went as expected then redirect to home pa
 else{
     header("location: SignUpG.php" . "?error=" . $error_status);
 }
-
+?>

@@ -34,3 +34,4 @@ if ($error_status == 0)
     echo "<h1> Email Successfully Validated </h1>";
 else
     echo "<h1> Email not Validated </h1>";
+?>
