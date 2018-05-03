@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <?php
 /* Uncomment the next three lines to check errors only */
@@ -280,22 +279,21 @@ margin-left: 10%;
        
            
                 <b class="demo-label">Student Organization</b>
-        
-        <br><input type="text" name="org_name" id="txtCountrystyle="height:100px class="typeahead"/>
+        <br><input type="text" name="org_name" id="txtCountry" class="typeahead"/>
 	</div>
 
 
-
        <label for="subject">Organization's Discription:</label>
-
+       
     <textarea id="subject" name="org_description" placeholder="250 words limit" style="height:100px"></textarea>
  <h4>Please check all that apply to your organization</h4>
       <input  name="check_list[]" id="check_list" type="checkbox" value="Mental Health"><label for="lname">Mental Health</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Primary Care"><label for="lname">Primary Care</label>
 
-      <input  name="check_list[]" id="check_list" type="checkbox" value="Food Resouces"><label for="lname">Food Resouces</label>
+
+      <input  name="check_list[]" id="check_list" type="checkbox" value="Food Resources"><label for="lname">Food Resources</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Vaccinations"><label for="lname">Vaccinations</label>
-      <input   name="check_list[]" id="check_list" type="checkbox" value="Holitic Health"><label for="lname">Holitic Health</label>
+      <input   name="check_list[]" id="check_list" type="checkbox" value="Holistic Health"><label for="lname">Holistic Health</label>
 
       <input   name="check_list[]" id="check_list" type="checkbox" value="Free"><label for="lname">Free</label>
       <input    name="check_list[]" id="check_list"type="checkbox" value="On campus"><label for="lname">On campus</label>
@@ -307,7 +305,10 @@ margin-left: 10%;
 
 
 
-            <label for="Place">Organizations Location</label>
+
+
+            <label for="Place">Organization Location</label>
+
 
             <select id="Place" name="or_location">
 
