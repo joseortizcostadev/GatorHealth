@@ -7,14 +7,33 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
+        .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+    margin-right: auto;
+    }
+    
 body {margin:0;
-    background:#ABAAD4;}
+    background:#ABAAD4;
+    
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box}
+
+    
+    
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: static;
+  position: fixed;
   width: 100%;
+    
+}
+  br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
 }
 
 .navbar a {
@@ -62,10 +81,6 @@ body {margin:0;
 
 }
 
-br {
-  margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
-}
 .button{
     display: inline-block;
   border-radius: 4px;
@@ -185,7 +200,7 @@ margin-left: 10%;
 </head>
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php"  id="main"> GatorHealth </a>
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -216,7 +231,7 @@ Stop by and join us for a hot cup of tea and snacks...</p>
        <td>
          <h3>Services</h3>
          <p>Come find out more about the Holistic Health Network and the Holistic Health Program, at San Francisco State University. Gain access to a library of books, films and audio-files at the Holistic Health Community/Learning Center, located in HSS 329.</p>  
-        <img src="holistichealth/learningcenter.png"alt="learningcenter" style="width:350px;height:300px; position: relative; top: 10px;">
+        <img class="img-responsive"src="holistichealth/learningcenter.png"alt="learningcenter" >
         
            
        </td>

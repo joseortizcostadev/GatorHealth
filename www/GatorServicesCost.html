@@ -5,24 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+    margin-right: auto;
+    }
 /* Style the tab */
 div.tab {
     float: left;
-    border: 1px solid #ccc;
     background-color: #2b0080;
-    width: 20%;
+    width: 100%;
     height: 100%;
-    margin-bottom: 300px;}
+    }
 
 /* Style the buttons inside the tab */
 div.tab button {
     display: block;
     background-color: inherit;
     color: white;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
+    width: 100;
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
@@ -39,13 +42,7 @@ div.tab button.active {
 }
 
 /* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
-height: auto;
-    margin-bottom: 300px;}
+
 
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;}
@@ -53,7 +50,6 @@ body {font-family: "Lato", sans-serif;}
 /* Style the tab */
 .tab {
     float: left;
-    border: 1px solid #ccc;
     background-color: #f1f1f1;
     width: 30%;
     height: 300px;
@@ -89,7 +85,7 @@ body {font-family: "Lato", sans-serif;}
     float: left;
     padding: 0px 12px;
     border: 1px solid #ccc;
-    width: 70%;
+    width: 100%;
    /* border-left: none;*/
     height: 100%;
     padding-bottom: 20px;
@@ -116,8 +112,9 @@ body {margin:0;
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: static;
+  position: fixed;
   width: 100%;
+    
 }
 
 .navbar a {
@@ -128,6 +125,7 @@ body {margin:0;
   padding: 8px 40px;
   text-decoration: none;
   font-size: 17px;
+    font-family: "Lato", sans-serif;
 }
 
 .navbar a:hover {
@@ -161,13 +159,14 @@ body {margin:0;
     float: none;
     display: block;
     text-align: left;
+      
   }
 
 }
 
 br {
   margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
+  line-height:2.5em;/* chrome for instance */
 }
 .button{
     display: inline-block;
@@ -282,8 +281,40 @@ margin-left: 10%;
         margin-right: auto;
         z-index: 1;
     }
-    
-   
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 </style>
 </head>
 <div id="navbox">
@@ -297,25 +328,45 @@ margin-left: 10%;
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
     </div>
-
+<br>
 
 <body class="undernav">
-
-
-
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
-  <button class="tablinks" onclick="openCity(event, 'Medical Care')">Medical Care</button>
-  <button class="tablinks" onclick="openCity(event, 'Laboratory')">Laboratory</button>
-  <button class="tablinks" onclick="openCity(event, 'X Ray')">X Ray</button>
-  <button class="tablinks" onclick="openCity(event, 'Nutrition')">Nutrition</button>
-  <button class="tablinks" onclick="openCity(event, 'Vaccinations and Immunizations')">Vaccinations and Immunizations</button>
-  <button class="tablinks" onclick="openCity(event, 'Mental Health Services')">Mental Health Services</button>
-  <button class="tablinks" onclick="openCity(event, 'Rehabilitation Services')">Rehabilitation Services</button>
- <button class="tablinks" onclick="openCity(event, 'Gynecological and Reproductive Health')">Gynecological and Reproductive Health</button>   
- <button class="tablinks" onclick="openCity(event,'FamilyPACT')">FamilyPACT</button> 
- <button class="tablinks" onclick="openCity(event,'Health Insurance')">Health Insurance</button> 
+<div id="mySidenav" class="sidenav">
+  <div class="tab">
+  <button  onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
+  <button  onclick="openCity(event, 'Medical Care')">Medical Care</button>
+  <button  onclick="openCity(event, 'Laboratory')">Laboratory</button>
+  <button onclick="openCity(event, 'X Ray')">X Ray</button>
+  <button  onclick="openCity(event, 'Nutrition')">Nutrition</button>
+  <button  onclick="openCity(event, 'Vaccinations and Immunizations')">Vaccinations and Immunizations</button>
+  <button  onclick="openCity(event, 'Mental Health Services')">Mental Health Services</button>
+  <button  onclick="openCity(event, 'Rehabilitation Services')">Rehabilitation Services</button>
+ <button  onclick="openCity(event, 'Gynecological and Reproductive Health')">Gynecological and Reproductive Health</button>   
+ <button  onclick="openCity(event,'FamilyPACT')">FamilyPACT</button> 
+ <button onclick="openCity(event,'Health Insurance')">Health Insurance</button> 
 </div>
+</div>
+
+<div>
+  <span style="font-size:30px;cursor:pointer; color: black;" onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+    
+</script>
+
+
+
+<div onclick="closeNav()">
 
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
@@ -392,7 +443,7 @@ You may experience longer wait times on the phone during these hours.</p>
           
            <h4>Weekdays (except Wednesdays)</h4>
 
-<p>8:10am – 4:45pm<p></p>
+<p>8:10am – 4:45pm<p>
            Extremely Urgent Services
     4:45pm – 5:00pm</p>
 
@@ -401,8 +452,6 @@ You may experience longer wait times on the phone during these hours.</p>
 <p>10:00am – 4:45pm
 <p>Extremely Urgent Services
 8:10am – 10:00am and 4:45pm – 5:00pm</p>
-
-</p>
         
            <a href="https://idp.sfsu.edu/idp/profile/SAML2/Redirect/SSO?execution=e1s1" target="_blank">Click here to log in and schedule an appointment online from your myHealth account</a>       
        </td>
@@ -417,7 +466,6 @@ You may experience longer wait times on the phone during these hours.</p>
 
 
 
-</p>
            
            
        </td>
@@ -434,6 +482,7 @@ You may experience longer wait times on the phone during these hours.</p>
 </div>
 
 <div id="Medical Care" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Medical Care</h3>
       <p>Medical Care services includes meeting with a healthcare provider to talk about your health issues or concerns. These services are covered by the Student Health Fee ($157 per semester) and includes:</p>
     
@@ -460,8 +509,10 @@ You may experience longer wait times on the phone during these hours.</p>
 <p>Vaccinations and Immunizations</p>
 
 </div>
+</div>
 
 <div id="Laboratory" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Laboratory</h3>
   <p>All laboratory tests done at Student Health Services are provided at cost to registered students. Our laboratory can also process outside provider requests for a fee. Check with the laboratory staff for a current price list for laboratory tests. You can view your lab results by logging into myHealth. </p>
 
@@ -616,8 +667,10 @@ Stool Test - Occult Blood
 Provider performed microscopy</p> 
 
 </div>
+</div>
 
 <div id="X Ray" class="tabcontent">
+ <div class="marginal-screen">
   <h3>X Ray</h3>
   <p>X-Rays performed at Student Health Services as part of a treatment plan are provided at no charge to registered students.</p>
     <br>
@@ -675,8 +728,10 @@ X-Ray is closed each summer from late June to early September. Exact dates of cl
       Fax: (415) 563-0468</p>
 
 </div>
+    </div>
     
 <div id="Nutrition" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Nutrition</h3>
       <p>Our Registered Dietitian Nutritionist, Lauren Muckley, is available for free, private appointments. Lauren practices the Intuitive Eating philosophy with patients, which focuses on consistent eating practices rather than weight. This model emphasizes:
 
@@ -731,8 +786,10 @@ Follow up appointments last 20 minutes
 To make an appointment, login to myHealth and click on "Appointments" in the left side menu.</p>
 
 </div>
+</div>
     
 <div id="Vaccinations and Immunizations" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Vaccinations and Immunizations</h3>
           <p>Alert: Student Health now has flu vaccine.
 
@@ -829,10 +886,12 @@ Student Health Services gives vaccines to students and can check their immunizat
 </table>
 
 </div>
+</div>
     
 <div id="Mental Health Services" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Mental Health Services</h3>
-              <img src="shs/meditate.png" alt="meditate" style="width:400px;height:400px;">
+              <img class="img-responsive" src="shs/meditate.png" alt="meditate">
      <p>University life can be stressful for many reasons, and it is not uncommon for students to experience emotional problems during this period of time. Many disturbances in emotional health, including depression, anxiety, self-destructive or suicidal thoughts, have a physical component. And some physical symptoms, (e.g. sleep or appetite disturbance, chest pain, stomach upset) can be caused by emotional distress.
 
  
@@ -841,8 +900,10 @@ If you have any concerns related to your mental health, an evaluation by a medic
             
 
 </div>
+</div>
     
 <div id="Rehabilitation Services" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Rehabilitation Services</h3>
  <p>A number of rehabilitation services are available to all students by referral from a physician. The services are designed to serve the needs of students active in recreational sports, musicians, dancers, theatre artists, and BECA majors. Any musculoskeletal condition which interferes with, or is the result of these activities warrants a referral.
 
@@ -864,8 +925,10 @@ If you have any concerns related to your mental health, an evaluation by a medic
 <p>On a case by case basis, orthopedic injures will be referred to local orthopedic surgeons who sub-specialize in sports injuries.</p>
 
     </div>
+</div>
     
 <div id="Gynecological and Reproductive Health" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Gynecological and Reproductive Health</h3>
   <p>All registered female-bodied students may access the following gynecological and reproductive health services at SHS. These services are provided by SHS physicians (MD), nurse practitioners (NP), registered nurses (RN) and clinical or medical assistants.
 
@@ -927,21 +990,26 @@ To sign up for Family PACT, make a medical appointment with an SHS provider for 
 
  </p>
 </div>
+</div>
     
 <div id="FamilyPACT" class="tabcontent">
+ <div class="marginal-screen">
   <h3>FamilyPACT</h3>
   <p>The Family Planning, Access, Care, Treatment (Family PACT) is a federally funded program that helps people avoid getting pregnant or causing a pregnancy when they are not ready.  You must be a California resident and meet eligibility criteria. All Family PACT information is confidential and program enrollment is completely voluntary. Students are free to withdraw from the program at any time or to refuse any service. Eligible students will receive a Health Access Program (HAP) card when they enroll in the program. The card can be used at any provider that offers Family PACT in California.
 
 To sign up for Family PACT, make a medical appointment with an SHS provider for family planning services.  At your appointment, your SHS provider will discuss whether enrolling in Family PACT is a good option for you.  If you are eligible for Family PACT you may be able to receive free testing, diagnosis, and treatment of sexually transmitted infections (STIs) and vaginal infections as well as free birth control methods.</p>
 </div>
+</div>
 <div id="Health Insurance" class="tabcontent">
+ <div class="marginal-screen">
   <h3>Health Insurance</h3>
   <p>All international students (F-1 and J-1 visas) and all students living in University housing are required to have health insurance. Please visit the Office of International Program for more information.
 
 If you are not an international student, you can refer to the flowchart below to see what option might be right for you. You can also refer to the Domestic Health Insurance page for further information and contact information.</p>
-      <img src="Health_Insurance_Flowchart.jpg" alt="MBC" style="width: 700px;">
+      <img class="img-responsive" src="Health_Insurance_Flowchart.jpg" alt="MBC">
 </div>
-
+</div>
+</div>
 
 <script>
 function myFunction() {

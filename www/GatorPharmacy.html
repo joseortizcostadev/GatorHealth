@@ -149,7 +149,7 @@ max-width: 8%; }
         height: 8%;
     }
 
-    /*.marginal-screen{
+    .marginal-screen{
     margin-right: 25%;
     margin-left: 25%;  
         text-align: center;
@@ -157,7 +157,7 @@ max-width: 8%; }
 border-style:solid;
 border-color:goldenrod;
 background: white;
-    }*/
+    }
             .undernav{
             padding-bottom: 200px;
         }
@@ -166,11 +166,20 @@ background: white;
     margin: 50px;
         
 }
+
+
+  #middlecol table {
+      max-width: 75%;
+    width: 100%;
+      align-self: center;
+  }
+    
     table{
                   position: relative;
   top: 50%;
   left: 20%;
-          margin: 10px;
+          margin: auto;
+                display: block;
     }
     #main{background-image: url('gatorRon.png');
             background-position: left;
@@ -179,8 +188,10 @@ background: white;
     font-size: 20px;}
             input[type=text] {
 position: relative;
+                
   top: 50%;
-  left: 40%;
+  margin: auto;
+                display: block;
                 width: 250px;
             margin-bottom: 50px;
                             margin-top: 10px;
@@ -217,12 +228,14 @@ position: relative;
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
     </div>
+    
 <body class="undernav">
 
 
 
+
+<div id="middlecol">
 <input type="text" id="myInput" onkeyup="tableFunction()" placeholder="Search for medicine.." title="Type in a name">
-<div class="marginal-screen">
 <table id="myTable">
   <tr class="header">
     <th style="width:60%;">Over the Counter Medications availiable at the Student Health Services Center</th>

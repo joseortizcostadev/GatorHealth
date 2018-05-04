@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="jQuery.min.js"></script>
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+        .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+    margin-right: auto;
+    }
+    
 body {margin:0;
-    background:#ABAAD4;}
+    background:#ABAAD4;
+    
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box}
+
+    
+    
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: static;
+  position: fixed;
   width: 100%;
+    
+}
+ br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
 }
 
 .navbar a {
@@ -66,10 +81,6 @@ body {margin:0;
 
 }
 
-br {
-  margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
-}
 .button{
     display: inline-block;
   border-radius: 4px;
@@ -128,7 +139,6 @@ background: white;
         padding: 10px;
     
     }
-    
             .undernav{
             padding-bottom: 200px;
         }
@@ -171,7 +181,9 @@ margin-left: 10%;
     padding: 10px;
     text-align: center
 }   
-
+    .center{
+        margin: auto;
+    }
     .icons{ bottom: 10;}
     
     .panicindisco{
@@ -188,7 +200,7 @@ margin-left: 10%;
 </head>
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php"  id="main"> GatorHealth </a>
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -205,7 +217,7 @@ margin-left: 10%;
    <table class="center">
    <tr>
               <td>
-            <img src="CMB%20header.jpg" alt="MBC" style="object-fit: contain">
+            <img class="img-responsive" src="CMB%20header.jpg" alt="MBC" style="object-fit: contain">
 
       <h2>Clinica's Martin Baro Mission </h2><br>
       
@@ -216,7 +228,7 @@ margin-left: 10%;
 
     <p>La misión de la Clínica Martín-Baró es proporcionar una opción preferencial para los pobres en el cuidado de la salud. Nos esforzamos por promover el bienestar y atender las necesidades de atención médica de la comunidad de habla hispana desatendida y económicamente desfavorecida del Distrito de la Misión de San Francisco. Brindamos acceso a atención de salud gratuita, psicoterapia y educación para la salud en español y de una manera culturalmente sensible.</p>
  
-      <img src="download.jpg" alt="MBC" style="width:300px;height:400px;">
+      <img class="img-responsive" src="download.jpg" alt="MBC" style="width:300px;height:400px;">
            
        </td>
    </tr>

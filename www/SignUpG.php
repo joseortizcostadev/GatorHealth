@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <?php
 /* Uncomment the next three lines to check errors only */
@@ -17,7 +18,6 @@ $data = new DBData(); // creates an object of class DBData
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="typeahead.js"></script>
 	<style>
-
 	
 input[type=text], select, textarea {
     width: 100%;
@@ -50,8 +50,8 @@ input[type=submit]:hover {
         background-color:gold;
         color: white;
     }
-    
-        
+      
+}
         /*End of Type Ahead*/
 body {margin:0;
     background:#ABAAD4;
@@ -282,19 +282,14 @@ margin-left: 10%;
         <br><input type="text" name="org_name" id="txtCountry" class="typeahead"/>
 	</div>
 
-
-       <label for="subject">Organization's Discription:</label>
-       
+      <label for="subject">Organization Description</label>
     <textarea id="subject" name="org_description" placeholder="250 words limit" style="height:100px"></textarea>
  <h4>Please check all that apply to your organization</h4>
       <input  name="check_list[]" id="check_list" type="checkbox" value="Mental Health"><label for="lname">Mental Health</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Primary Care"><label for="lname">Primary Care</label>
-
-
       <input  name="check_list[]" id="check_list" type="checkbox" value="Food Resources"><label for="lname">Food Resources</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Vaccinations"><label for="lname">Vaccinations</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Holistic Health"><label for="lname">Holistic Health</label>
-
       <input   name="check_list[]" id="check_list" type="checkbox" value="Free"><label for="lname">Free</label>
       <input    name="check_list[]" id="check_list"type="checkbox" value="On campus"><label for="lname">On campus</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Off campus"><label for="lname">Off campus</label>
@@ -303,12 +298,7 @@ margin-left: 10%;
 
       <div>
 
-
-
-
-
             <label for="Place">Organization Location</label>
-
 
             <select id="Place" name="or_location">
 
@@ -320,6 +310,15 @@ margin-left: 10%;
             <option value="Cesar Chavez">Cesar Chavez</option>
             <option value="Burk Hall">Burk Hall</option>
             <option value="Ethnic Studies">Ethnic Studies</option>
+            
+            <option value="Science Building">Science Building</option>
+            <option value="Business Building">Business Building</option>
+            <option value="HSS Building">HSS Building</option>
+            <option value="Administration Building">Administration Building</option>
+            <option value="J. Paul Lenoard Library">J. Paul Leonard Library</option>
+            <option value="Creative Arts Building">Creative Arts Building</option>
+            <option value="Student Health Center">Student Health Center</option>
+            <option value="Student Services Building">Student Services Building</option>
             </select>
                 
                 <label for="fname">Room</label>

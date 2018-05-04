@@ -75,7 +75,7 @@ while($field = $results->fetch_assoc())
         $f[$deku6] =  array('hyper' => $field['hyperlink'],'name' => $field['r_name']);
             $deku6++;
 }
-    else if ($field['location'] == "Admission Building"){
+    else if ($field['location'] == "Administration Building"){
        $g[$deku7] =  array('hyper' => $field['hyperlink'],'name' => $field['r_name']);
             $deku7++;
 }
@@ -360,7 +360,7 @@ background: white;
 
         {
           coords:{lat: 37.72355, lng: -122.47924},
-          content:'<img src="ethnic_psych.jpg"> <h1>Psychology Building</h1><?php
+          content:'<img src="ethnic_psych.jpg"> <h1>Ethnic Studies and Psychology Building</h1><?php
             if (!empty($a)){
                 $tempo1= 0;
             while ($tempo1 < count($a) ){

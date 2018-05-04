@@ -3,20 +3,123 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  
- 
 <style>
 
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+    margin-right: auto;
+    }
+/* Style the tab */
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #2b0080;
+    width: 20%;
+    height: 100%;
+    margin-bottom: 300px;}
 
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #1e0059;
+}
+
+/* Style the tab content */
+
+
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 80%;
+   /* border-left: none;*/
+    height: 100%;
+    padding-bottom: 20px;
+    }
+.img-fluid {
+    width: 100%;
+    height: 90px;
+}
+    #wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+    
+    th
+    {
+        text-align: left
+    }
 body {margin:0;
     background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: static;
+  position: fixed;
   width: 100%;
+    
 }
 
 .navbar a {
@@ -27,6 +130,7 @@ body {margin:0;
   padding: 8px 40px;
   text-decoration: none;
   font-size: 17px;
+    font-family: "Lato", sans-serif;
 }
 
 .navbar a:hover {
@@ -60,6 +164,7 @@ body {margin:0;
     float: none;
     display: block;
     text-align: left;
+      
   }
 
 }
@@ -116,7 +221,7 @@ max-width: 8%; }
     }
 
     .marginal-screen{
-  margin-right: 10%;
+margin-right: 10%;
     margin-left: 10%;  
         text-align: center;
         border-width:5px;
@@ -124,6 +229,8 @@ border-style:solid;
 border-color:goldenrod;
 background: white;
         padding: 10px;
+    
+    
     }
             .undernav{
             padding-bottom: 200px;
@@ -133,7 +240,7 @@ background: white;
     margin: 50px;
         
 }
-
+   
     #main{background-image: url('gatorRon.png');
             background-position: left;
             background-size: contain;
@@ -167,11 +274,9 @@ margin-left: 10%;
     padding: 10px;
     text-align: center
 }   
-    .center{
-        margin: auto;
-    }
-    .icons{ bottom: 10;
-    position:static;}
+
+
+    .icons{ bottom: 10;}
     
     .panicindisco{
         width:400px;
@@ -181,20 +286,13 @@ margin-left: 10%;
         margin-right: auto;
         z-index: 1;
     }
-    #poll{position:static
-        ;
-    margin:1%;
-    text-align:center;
-    margin-left: auto;
-        margin-right: auto;
-        z-index: 1;}
     
    
 </style>
 </head>
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php" class="active" id="main"> GatorHealth </a>
+      <a href="GatorHome.php"  id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -203,7 +301,7 @@ margin-left: 10%;
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
     </div>
-
+<br>
 
 <body class="undernav">
 <br>
@@ -231,7 +329,7 @@ margin-left: 10%;
         <p>Click <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">here</a> to go to find out more about SDOH.</p>
     </div>
     <div>
-    <img src="home/SDOH.png"alt="sdoh" class="panicindisco">
+    <img class="img-responsive" src="home/SDOH.png"alt="sdoh">
         </div>
         <div id="poll" >
 <h3>Do you have access to enough resources on San Francisco State University to support your health and wellbeing?</h3>

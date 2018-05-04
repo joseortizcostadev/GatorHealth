@@ -18,7 +18,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-16">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -30,6 +30,11 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
+        .rock {
+      align-self: center;
+            margin: auto;
+                display: block;
+  }
       .trending {
             border-radius: 10px;
             padding: 15px;
@@ -225,6 +230,7 @@ background: white;
     margin: 50px;
         
 }
+        
     table{
                   position: relative;
   top: 50%;
@@ -257,7 +263,7 @@ background: white;
 <head>
          
 <body class="undernav">
-
+<div class="rock">
 <div class="ui-widget">
     <form method="post">
   
@@ -334,7 +340,7 @@ background: white;
   </tr>
 </table>
  
-
+</div>
 
 
 <script>

@@ -7,6 +7,14 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
+        .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+    margin-right: auto;
+    }
+    
 body {margin:0;
     background:#ABAAD4;
     
@@ -15,13 +23,17 @@ body {margin:0;
 
     
     
-    }
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: static;
+  position: fixed;
   width: 100%;
+    
+}
+ br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
 }
 
 .navbar a {
@@ -69,10 +81,6 @@ body {margin:0;
 
 }
 
-br {
-  margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
-}
 .button{
     display: inline-block;
   border-radius: 4px;
@@ -192,7 +200,7 @@ margin-left: 10%;
 </head>
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php"  id="main"> GatorHealth </a>
+      <a href="GatorHome.php" id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -201,7 +209,6 @@ margin-left: 10%;
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
     </div>
-
 
 <body class="undernav">
 <br>
@@ -220,14 +227,15 @@ margin-left: 10%;
        <td>
          <h3>Dietetic Sub-Committees</h3>
           <p>
-         <img src="dietetics/associations.png"alt="associations" style="width:200px;height:300px;" align="middle" hspace="55" vspace="60">
+         <img class="img-responsive" src="dietetics/associations.png"alt="associations" >
     <br>
-    <img src="dietetics/subcommittees.png"alt="subcommittees" style="width:300px;height:400px;" align="middle" hspace="55" vspace="60"> 
-     <img src="dietetics/farmersmarket.png"alt="farmersmarket" style="width:300px;height:200px;" align="middle">
+    <img class="img-responsive" src="dietetics/subcommittees.png"alt="subcommittees" > 
     <br>
-     <img src="dietetics/cookingclass.png"alt="cookingclasses" style="width:300px;height:300px;" align="middle" hspace="55" vspace="60">
-     <img src="dietetics/foodpantry.png"alt="foodpantry" style="width:300px;height:200px;" align="middle">
-     <img src="dietetics/unplug.png"alt="unplug" style="width:300px;height:300px;" align="middle"hspace="55" vspace="60">
+     <img class="img-responsive" src="dietetics/farmersmarket.png"alt="farmersmarket"  align="middle">
+    <br>
+     <img class="img-responsive" src="dietetics/cookingclass.png"alt="cookingclasses"  ><br>
+     <img class="img-responsive" src="dietetics/foodpantry.png"alt="foodpantry"  align="middle"><br>
+     <img class="img-responsive" src="dietetics/unplug.png"alt="unplug"  align="middle">
         
            
        </td>
