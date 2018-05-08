@@ -7,15 +7,51 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
-body {margin:0;
-    background:#ABAAD4;
-    
-    font-family: "Lato", sans-serif;
-    box-sizing: border-box}
 
-    
-    
-    }
+/* Style the tab */
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #2b0080;
+    width: 20%;
+    height: 300px;
+    margin-bottom: 300px;}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #1e0059;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+height: auto;
+    margin-bottom: 300px;}
+
+body {margin:0;
+    background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
@@ -129,7 +165,6 @@ border-style:solid;
 border-color:goldenrod;
 background: white;
         padding: 10px;
-    
     }
             .undernav{
             padding-bottom: 200px;
@@ -239,10 +274,10 @@ margin-left: 10%;
 
 8:30am to 5:00pm office open 
 <p>
-<b>Phone:</b>(415) 338-2472 
+<b>Phone:</b><a href="4153382472 ">(415)338-2472 </a><br>  
 </p>
 <p>
-<b>Video Phone:</b> (415) 335-7210
+<b>Video Phone:</b> <a href="415335-7210">(415) 335-7210</a><br>
 </p> 
 <p>
 <b>Fax:</b> (415) 338-1041 

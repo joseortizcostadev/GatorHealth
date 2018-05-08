@@ -7,33 +7,14 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
-        .img-responsive {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        margin-left: auto;
-    margin-right: auto;
-    }
-    
 body {margin:0;
-    background:#ABAAD4;
-    
-    font-family: "Lato", sans-serif;
-    box-sizing: border-box}
-
-    
-    
+    background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: fixed;
+  position: static;
   width: 100%;
-    
-}
-  br {
-  margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
 }
 
 .navbar a {
@@ -81,6 +62,10 @@ body {margin:0;
 
 }
 
+br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
+}
 .button{
     display: inline-block;
   border-radius: 4px;
@@ -200,7 +185,7 @@ margin-left: 10%;
 </head>
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php" id="main"> GatorHealth </a>
+      <a href="GatorHome.php"  id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -231,7 +216,7 @@ Stop by and join us for a hot cup of tea and snacks...</p>
        <td>
          <h3>Services</h3>
          <p>Come find out more about the Holistic Health Network and the Holistic Health Program, at San Francisco State University. Gain access to a library of books, films and audio-files at the Holistic Health Community/Learning Center, located in HSS 329.</p>  
-        <img class="img-responsive"src="holistichealth/learningcenter.png"alt="learningcenter" >
+        <img src="holistichealth/learningcenter.png"alt="learningcenter" style="width:350px;height:300px; position: relative; top: 10px;">
         
            
        </td>
@@ -240,10 +225,14 @@ Stop by and join us for a hot cup of tea and snacks...</p>
        <td>
          <h3>Contact & Location</h3>
           <p>
-<b>Contact:</b> (415) 338-6416 <br>
+              
+              
+              <b>Contact:</b><a href="4153386416">(415) 933-1198</a><br>
 <b>Email:</b> holistichealthnetwork.sfsu@gmail.com<br>
-<b>Website:</b>http://online.sfsu.edu/hhnet/<br>
-HSS 329
+              <b>Website:</b>
+    <a href="http://online.sfsu.edu/hhnet/" target="_blank">http://online.sfsu.edu/hhnet/</a><br>  
+             
+<b>Room:</b>HSS 329
 
 
 

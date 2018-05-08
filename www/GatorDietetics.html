@@ -7,33 +7,14 @@
           <link rel="stylesheet" href="css/bootstrap.min.css">
           <script src="js/bootstrap.min.js"></script>
 <style>
-        .img-responsive {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        margin-left: auto;
-    margin-right: auto;
-    }
-    
 body {margin:0;
-    background:#ABAAD4;
-    
-    font-family: "Lato", sans-serif;
-    box-sizing: border-box}
-
-    
-    
+    background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: fixed;
+  position: static;
   width: 100%;
-    
-}
- br {
-  margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
 }
 
 .navbar a {
@@ -81,6 +62,10 @@ body {margin:0;
 
 }
 
+br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:5em;/* chrome for instance */
+}
 .button{
     display: inline-block;
   border-radius: 4px;
@@ -194,13 +179,36 @@ margin-left: 10%;
         margin-right: auto;
         z-index: 1;
     }
+ /* Picture alignement  */
+    
+ * {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}   
+    
+    
+    
+    
+    
     
    
 </style>
 </head>
 <div id="navbox">
 <div class="navbar" id="myNavbar">
-      <a href="GatorHome.php" id="main"> GatorHealth </a>
+      <a href="GatorHome.php"  id="main"> GatorHealth </a>
           
   <a href="GatorMap.php">Map</a>
   <a href="GatorPharmacy.html">Pharmacy</a>
@@ -209,6 +217,7 @@ margin-left: 10%;
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
     </div>
+
 
 <body class="undernav">
 <br>
@@ -226,16 +235,40 @@ margin-left: 10%;
    <tr>
        <td>
          <h3>Dietetic Sub-Committees</h3>
-          <p>
-         <img class="img-responsive" src="dietetics/associations.png"alt="associations" >
-    <br>
-    <img class="img-responsive" src="dietetics/subcommittees.png"alt="subcommittees" > 
-    <br>
-     <img class="img-responsive" src="dietetics/farmersmarket.png"alt="farmersmarket"  align="middle">
-    <br>
-     <img class="img-responsive" src="dietetics/cookingclass.png"alt="cookingclasses"  ><br>
-     <img class="img-responsive" src="dietetics/foodpantry.png"alt="foodpantry"  align="middle"><br>
-     <img class="img-responsive" src="dietetics/unplug.png"alt="unplug"  align="middle">
+
+              
+       <body>
+
+<div class="row">
+  <div class="column">
+    <img src="dietetics/subcommittees.png" alt="subcommittees" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="dietetics/farmersmarket.png" alt="farmersmarket" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="dietetics/cookingclass.png" alt="cookingclasses" style="width:100%">
+      
+    <div class="column">
+    <img src="dietetics/associations.png" alt="associations" style="width:100%">
+ 
+      <div class="column">
+    <img src="dietetics/foodpantry.png" alt="foodpantry" style="width:100%"> 
+        
+        
+
+     <img src="dietetics/unplug.png"alt="unplug" style="width:300px;height:300px;" align="middle"hspace="55" vspace="60"> 
+      
+      
+      
+      
+      </div>
+  </div>
+</div>
+
+</body>       
+              
+              
         
            
        </td>
@@ -245,7 +278,11 @@ margin-left: 10%;
          <h3>Contact Information</h3>
           <p>
 <b>Email:</b> sda.sfstate@gmail.com<br>
-<b>Website:</b>http://www.sfsu-sda.com<br>
+<b>Website:</b>
+               
+<a href="http://www.sfsu-sda.com" target="_blank">http://www.sfsu-sda.com</a><br>      
+              
+
 
  <a href="https://orgsync.com/14883/chapter" target="_blank">
         <img class = "icons" src="icons/orgsync.png"alt="orgsync" style="width:50px;height:50px; top: 100 px; float: right; " hspace="10"></a>

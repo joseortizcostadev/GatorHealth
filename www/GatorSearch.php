@@ -44,10 +44,6 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 border-style:solid;
 border-color:goldenrod;
 background: white;
-          position: relative;
-  top: 50%;
-  left: 40%;
-          margin: 10px;
         }
 
         .trending .trends {
@@ -66,19 +62,10 @@ background: white;
 border-style:solid;
 border-color:goldenrod;
 background: white;
-          position: relative;
-  top: 50%;
-  left: 30%;
-          margin: 5px;}
-        .resultsbox{
-            padding-bottom: 20px;
-            padding-top: 20px;
-        }
+          margin: auto;}
 
         .results .end {
             color: #000;
-            padding-left: 10px;
-            margin-top: 10px;
         }
 
         input[type=text] {
@@ -231,12 +218,6 @@ background: white;
         
 }
         
-    table{
-                  position: relative;
-  top: 50%;
-  left: -5%;
-          margin: 10px;
-    }
     #main{background-image: url('gatorRon.png');
             background-position: left;
             background-size: contain;
@@ -260,11 +241,9 @@ background: white;
 </div>
     </div> 
 </head>
-<head>
          
-<body class="undernav">
-<div class="rock">
-<div class="ui-widget">
+<body>
+<div>
     <form method="post">
   
     <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="  Search..">
@@ -274,7 +253,7 @@ background: white;
     </div>
     <table>
   <tr>
-    <td> <div class="resultsbox">
+    <td>
     
     <div class="results">
         <font size="6" style="color:#000;">Results</font>
@@ -320,7 +299,6 @@ background: white;
         ?>
         </div>
     </div>
-    </div></td>
       <td></td>
     <td><div class="trending">
     <font size="5" style="color: #000;">Trending</font>
@@ -340,8 +318,6 @@ background: white;
   </tr>
 </table>
  
-</div>
-
 
 <script>
     function myFunction() {
