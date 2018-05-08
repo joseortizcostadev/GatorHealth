@@ -246,7 +246,8 @@ background: white;
 <div>
     <form method="post">
   
-    <input type="text" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="  Search..">
+    <input type="text" onclick="showhide()" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="  Search..">
+
 
   
 </form>
@@ -255,7 +256,7 @@ background: white;
   <tr>
     <td>
     
-    <div class="results">
+    <div id="results" class="results">
         <font size="6" style="color:#000;">Results</font>
         <div class="end">
          <?php
@@ -304,7 +305,7 @@ background: white;
     <font size="5" style="color: #000;">Trending</font>
     <div class="trends">
 
-        <?$trends = "SELECT category FROM hot ORDER BY count DESC LIMIT 9";
+        <?php $trends = "SELECT category FROM hot ORDER BY count DESC LIMIT 9";
     $results = $data->select($trends);
         if ($results->num_rows > 0){
             while($row = $results->fetch_assoc()){
@@ -328,16 +329,21 @@ background: white;
             x.className = "navbar";
         }
     }
-   $(function() {
-        var availableTags = <?php include('Suggest.php'); ?>;
-        $("#category").autocomplete({
-            source: availableTags,
-            autoFocus:true,
-            select: function( event, ui ) { 
-        window.location.href = ui.item.value;
+
+    function showhide()
+    {
+        var results_block = document.getElementById("newpost");
+        var search_value = document.getElementById("category");
+        if (search_value == "")
+        {
+            results_block.style.display = "none";
+        }
+        else {
+            results_block.style.display = "block";
+        }
     }
-        });
-    });
+
+    
 
 </script>
     
