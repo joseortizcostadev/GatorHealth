@@ -333,7 +333,7 @@ margin-left: 10%;
 
  
                 <label for="lname">Please include your email</label>
-                <input type="text"  name="s_byName" placeholder="Enter">
+                <input type="text"  name="s_by" placeholder="Enter">
 
             <input type="submit" name="submit" value="Submit">
          

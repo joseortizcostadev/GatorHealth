@@ -20,7 +20,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
     
     $org_name = $_POST["org_name"]; // edit
     $org_description = $_POST["org_description"]; // edit
-    $p_checkbox = $_POST["p_checkbox"]; // working
+    $p_checkbox = $_POST["check_list"]; // working
     $or_location = $_POST["or_location"]; // edit
     $r_number = $_POST ["r_number"]; // edit
     $o_hours = $_POST["o_hours"]; // edit
@@ -63,7 +63,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
             // insert in database submission form values
             $table = "submission_form";
             $fields = array("org_name", "org_description", "r_number", "o_hours", "s_by", "p_checkbox", "or_location"); // edit. fields same as table fields
-            $values = array($org_name, $org_description, $r_number, $o_hours, $s_by,  $p_checkbox, $or_location); // edit accordenly to the fields above
+            $values = array($org_name, $org_description, $r_number, $o_hours, $s_by,  $orgs_selected, $or_location); // edit accordenly to the fields above
 
             if ($database->insert($table, $fields, $values)) { //
                 // data was inserted redirect to any page you need
@@ -88,7 +88,7 @@ else {
 
 if  ($error_status == 0) // everything went as expected then redirect to home page
 {
-    header("location: GatorHome.php" . "?error=" . $error_status);
+    header("location: GatorHome.php");
 }
 else{
     header("location: SignUpG.php" . "?error=" . $error_status);
