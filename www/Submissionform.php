@@ -35,7 +35,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
     }
     
     // checks if any field is empty.
-    $field_empty = (empty($org_name) || empty($org_description) || empty($p_checkbox) || empty($or_location) || empty($r_number) || empty($o_hours) || empty($s_by) )
+    $field_empty = (empty($org_name) || empty($org_description) || empty($p_checkbox) || empty($or_location) || empty($r_number) || empty($o_hours) || empty($s_by) );
      
     if (!$field_empty)
     {
