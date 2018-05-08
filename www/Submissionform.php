@@ -25,7 +25,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
     $r_number = $_POST ["r_number"]; // edit
     $o_hours = $_POST["o_hours"]; // edit
     $s_by = $_POST["s_by"]; //edit
-
+    
     // join values from checkbox
     $orgs_selected = $p_checkbox[0];
     foreach ($p_checkbox as $organization) {
@@ -33,14 +33,18 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
             $orgs_selected .= ", " . $organization;
         }
     }
-    /*
-    $headers = array("From: from@example.com",
-        "Reply-To: replyto@example.com",
-        "X-Mailer: PHP/" . PHP_VERSION
-    );
     
-    $headers = implode("\r\n", $headers);
-    */
+    // checks if any field is empty.
+    $field_empty = (empty($org_name) || empty($org_description) || empty($p_checkbox) || empty($or_location) || empty($r_number) || empty($o_hours) || empty($s_by) )
+     
+    if (!$field_empty)
+    {
+        header("Location: SignUpG.php?error=4");
+        exit();
+            
+    }
+        
+    
     $url = $validation_page . "?email=" . $s_by;
     $subject = "GatorHeath confirmation email, "; // edit
     $message = "GatorHealth would like to thank you for submitting your organization, please Clink on the link to confirm your organizatations participation in GatorHealth" . $url . " Thank you!"; // edit
