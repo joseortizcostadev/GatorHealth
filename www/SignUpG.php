@@ -13,7 +13,7 @@ $data = new DBData(); // creates an object of class DBData
 <html>
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-s cale=1">
    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="typeahead.js"></script>
@@ -268,7 +268,7 @@ margin-left: 10%;
 <div class="marginal-screen">
 
 <center><h2>Welcome to Gator Health!</h2></center>
-    <center><h3>Please fill out the required fields to register your organization</h3><h5>After successfully submitted, you will be redirected back to the home page.</h5></center>
+    <center><h3>Please fill out the required fields to register your organization</h3><center><font color="red">All fields are required</font></center><h5>After successfully submitted, you will be redirected back to the home page.</h5></center>
 
 
 
