@@ -1,6 +1,56 @@
 
 <!DOCTYPE html>
 <?php
+session_start();
+if (isset($_SESSION['form_data'])) {
+    $data = $_SESSION['form_data']; // takes back all the form data from the server
+    session_destroy();
+}
+
+$org_name = (empty($data) ? "" : $data[0]);
+$org_description = (empty($data) ? "" : $data[1]);
+//$p_checkbox = (empty($data) ? "" : $data[2]);
+//$or_location = (empty($data) ? "" : $data[3]);
+$r_number = (empty($data) ? "" : $data[4]);
+$o_hour = (empty($data) ? "" : $data[5]);
+$s_by = (empty($data) ? "" : $data[6]);
+
+if (isset($_GET['error']))
+{
+    /* general error  */
+
+    $error = $_GET['error'];
+    if ($error == "1")
+    {
+        // data failed to be inserted in database
+    }
+    else if ($error == "2")
+    {
+        // email not sent
+    }
+    else if ($error == "3")
+    {
+        // form was submitted without clicking on submit button.
+    }
+    /* validation errors */
+    else if ($error == "4")
+    {
+        // There is at least one empty field
+    }
+    else if ($error == "5")
+    {
+        // description length is greater than 250 words
+    }
+    else if ($error == "6")
+    {
+        // hours field not validated (not implemented yet)
+    }
+    else if ($error == "7")
+    {
+        // email validation failed.
+    }
+}
+
 /* Uncomment the next three lines to check errors only */
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
@@ -279,11 +329,11 @@ margin-left: 10%;
        
            
                 <b class="demo-label">Student Organization</b>
-        <br><input type="text" name="org_name" id="txtCountry" class="typeahead"/>
+        <br><input type="text" name="org_name" id="txtCountry" value='<?php echo $org_name; ?>' class="typeahead"/>
 	</div>
 
       <label for="subject">Organization Description</label>
-    <textarea id="subject" name="org_description" placeholder="250 words limit" style="height:100px"></textarea>
+    <textarea id="subject" name="org_description" placeholder="250 words limit"  style="height:100px"><?php echo $org_description; ?></textarea>
  <h4>Please check all that apply to your organization</h4>
       <input  name="check_list[]" id="check_list" type="checkbox" value="Mental Health"><label for="lname">Mental Health</label>
       <input   name="check_list[]" id="check_list" type="checkbox" value="Primary Care"><label for="lname">Primary Care</label>
@@ -323,17 +373,17 @@ margin-left: 10%;
                 
                 <label for="fname">Room</label>
         
-                <input type="text" id="fname" name="r_number" placeholder="Enter">
+                <input type="text" id="fname" name="r_number" value='<?php echo $r_number; ?>' placeholder="Enter">
  
                 <label for="lname">Open Hours</label>
                 
                 
                 
-                <input type="text" id="lname" name="o_hours" placeholder="Enter">
+                <input type="text" id="lname" name="o_hours" value='<?php echo $o_hours; ?>' placeholder="Enter">
 
  
                 <label for="lname">Please include your email</label>
-                <input type="text"  name="s_by" placeholder="Enter">
+                <input type="text"  name="s_by" placeholder="Enter" value='<?php echo $s_by; ?>'>
 
             <input type="submit" name="submit" value="Submit">
          

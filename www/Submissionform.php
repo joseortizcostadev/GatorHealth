@@ -2,7 +2,7 @@
 /*
    This file takes the submission form
  */
-
+session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -36,12 +36,19 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
     
     // checks if any field is empty.
     $field_empty = (empty($org_name) || empty($org_description) || empty($p_checkbox) || empty($or_location) || empty($r_number) || empty($o_hours) || empty($s_by) );
-     
-    if (!$field_empty)
-    {
-        header("Location: SignUpG.php?error=4");
+    $validation_errors = 0;
+    if ($field_empty)
+        $validation_errors = 4; // a field is empty
+    if (strlen($org_description) > 250)
+        $validation_errors = 5; // description is more than 250 chars
+    /* here goes the code for error 6 which corresponds to the hours field validation */
+    if (!filter_var($s_by, FILTER_VALIDATE_EMAIL))
+        $validation_errors = 7; // email is not validated
+    if ($validation_errors > 0) {
+        $form_data = array($org_name, $org_description, $p_checkbox, $or_location, $r_number, $o_hours, $s_by);
+        $_SESSION['form_data'] = $form_data;
+        header("Location: SignUpG.php?error=" . $validation_errors); // error 4 some field is empty
         exit();
-            
     }
         
     
@@ -87,7 +94,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != null)
 
 }
 else {
-    $error_status = 3;
+    $error_status = 3; // form was not submitted
 }
 
 if  ($error_status == 0) // everything went as expected then redirect to home page
