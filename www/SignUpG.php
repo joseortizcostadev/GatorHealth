@@ -268,7 +268,7 @@ margin-left: 10%;
 <div class="marginal-screen">
 
 <center><h2>Welcome to Gator Health!</h2></center>
-    <center><h3>Please fill out the required fields to register your organization</h3><center><font color="red">All fields are required</font></center><h5>After successfully submitted, you will be redirected back to the home page.</h5></center>
+    <center><h3>Please fill out the required fields to register your organization</h3><center><font color="red">All fields are required*</font></center><h5>After successfully submitted, you will be redirected back to the home page.</h5></center>
 
 
 
