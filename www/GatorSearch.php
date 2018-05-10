@@ -18,8 +18,9 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-16">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<meta charset="utf-16">
+<meta charset="utf-8">-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <link rel="stylesheet" href="css/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -44,6 +45,7 @@ if (isset($_POST['query']) && $_POST['query'] != null && $_POST['query'] != "")
 border-style:solid;
 border-color:goldenrod;
 background: white;
+          
         }
 
         .trending .trends {
@@ -64,14 +66,25 @@ border-color:goldenrod;
 background: white;
           margin: auto;}
 
-        .results .end {
+      .end {
             color: #000;
-        }
+            border-radius: 10px;
+            padding: 15px;
+        width: 600px;
+        border-radius: 10px;
+            padding: 15px;
+          text-align: center;
+        border-width:5px;
 
-        input[type=text] {
-position: relative;
+          margin: auto;
+        }
+        .searchbox{position: relative;
   top: 50%;
   left: 40%;
+            display: flex;
+    width: 75%;}
+        input[type=text] {
+
                 width: 250px;
             margin-bottom: 50px;
             margin-top: 10px;
@@ -130,7 +143,7 @@ body {margin:0;
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
   .navbar a.icon {
-    float: right;
+    float: left;
     display: block;
   }
 }
@@ -149,10 +162,7 @@ body {margin:0;
 
 }
 
-br {
-  margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
-}
+
 .button{
     display: inline-block;
   border-radius: 4px;
@@ -226,7 +236,12 @@ background: white;
         td {
     padding-right: 50px;
 }
-         
+
+
+#category {
+    flex-grow: 2;
+}   
+       
 
 </style>
      <div id="navbox">
@@ -243,23 +258,40 @@ background: white;
 </head>
          
 <body>
-<div>
+<div class="searchbox">
     <form method="post">
   
-    <input type="text" onclick="showhide()" id="category" name="query" value='<?php echo $search_val; ?>' placeholder="  Search..">
-
+    <input type="text"  id="category" name="query" value='<?php echo $search_val; ?>' placeholder="  Search..">
+     <button type="submit" >Search</button>  
+  
 
   
 </form>
     </div>
-    <table>
+    <table class="center">
   <tr>
     <td>
     
-    <div id="results" class="results">
-        <font size="6" style="color:#000;">Results</font>
-        <div class="end">
-         <?php
+    <div id="results"  >
+        <div class="results" >
+         <?php if (empty($_POST['query'])) { ?>
+            <script>
+                document.getElementById('results').style.display = 'none';
+               // document.getElementById('rs').style.display = 'none';
+            </script>
+        <?php } else { ?>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+             $(document).ready(function(){
+    $("button").click(function(){
+        document.getElementById('results').show(1000);
+    });
+});
+
+            </script>
+              <?php } ?>
+
+        <?php
         /**
          * This PHP script is in charge of populating the results div when a string in the search bar matches a text
          * in the database.
@@ -274,6 +306,9 @@ background: white;
                 while ($attribute = $fields->fetch_assoc())
                 {
                     // show results in trending div
+                    
+                    echo '<h1>Results</h1>';
+
                     $category = $attribute['category'];
                     $true_category = mysqli_real_escape_string($data->get_connection(), $category);
                     $text = $attribute['text'];
@@ -294,18 +329,25 @@ background: white;
 
                 }
             }
- 
+ else{
+    echo '<h1>No Results</h1>'; 
+      echo '<p>Disclaimer: Our searchbar is populated with data from our database. Please try again. Thanks for testing!</p>';
+ }
         }
         
         ?>
         </div>
+        <style>     table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }</style>
     </div>
       <td></td>
     <td><div class="trending">
     <font size="5" style="color: #000;">Trending</font>
     <div class="trends">
 
-        <?php $trends = "SELECT category FROM hot ORDER BY count DESC LIMIT 9";
+        <?$trends = "SELECT category FROM hot ORDER BY count DESC LIMIT 9";
     $results = $data->select($trends);
         if ($results->num_rows > 0){
             while($row = $results->fetch_assoc()){
@@ -330,20 +372,9 @@ background: white;
         }
     }
 
-    function showhide()
-    {
-        var results_block = document.getElementById("newpost");
-        var search_value = document.getElementById("category");
-        if (search_value == "")
-        {
-            results_block.style.display = "none";
-        }
-        else {
-            results_block.style.display = "block";
-        }
-    }
 
-    
+
+
 
 </script>
     

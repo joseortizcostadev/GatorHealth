@@ -11,8 +11,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+    
+        .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+    margin-right: auto;
+    }
+    
 body {margin:0;
-    background:#ABAAD4;}
+    background:#ABAAD4;
+    
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box}
+    
+    
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
@@ -20,7 +34,10 @@ body {margin:0;
   position: static;
   width: 100%;
 }
-
+ br {
+  margin:2.5em 0;/* FF for instance */
+  line-height:2.5em;/* chrome for instance */
+}
 .navbar a {
   float: left;
   display: block;
@@ -30,7 +47,6 @@ body {margin:0;
   text-decoration: none;
   font-size: 17px;
 }
-
 .navbar a:hover {
   background-color: #ddd;
   color: black;
@@ -39,11 +55,9 @@ body {margin:0;
   background-color: #1e0059;
   color: white;
 }
-
 .navbar .icon {
   display: none;
 }
-
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
   .navbar a.icon {
@@ -51,7 +65,6 @@ body {margin:0;
     display: block;
   }
 }
-
 @media screen and (max-width: 600px) {
   .navbar.responsive .icon {
     position: absolute;
@@ -63,12 +76,6 @@ body {margin:0;
     display: block;
     text-align: left;
   }
-
-}
-
-br {
-  margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
 }
 .button{
     display: inline-block;
@@ -84,14 +91,12 @@ br {
   cursor: pointer;
   margin: 5px;
 }
-
 .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-
 .button span:after {
   content: '\00bb';
   position: absolute;
@@ -100,23 +105,19 @@ br {
   right: -20px;
   transition: 0.5s;
 }
-
 .button:hover span {
   padding-right: 25px;
 }
-
 .button:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 .img-fluid{ 
 max-width: 8%; }
     .gatorpic{
         width: 8%;
         height: 8%;
     }
-
     .marginal-screen{
 margin-right: 10%;
     margin-left: 10%;  
@@ -127,17 +128,14 @@ border-color:goldenrod;
 background: white;
         padding: 10px;
     
-    }
-    
+    } 
             .undernav{
             padding-bottom: 200px;
         }
-
         .space{
     margin: 50px;
         
 }
-
     #main{background-image: url('gatorRon.png');
             background-position: left;
             background-size: contain;
@@ -156,7 +154,6 @@ background: white;
         background-color: #2b0080;
         color: white;
     }
-
 .center-block {  
   display: block;  
   margin-right: auto;
@@ -171,7 +168,9 @@ margin-left: 10%;
     padding: 10px;
     text-align: center
 }   
-
+    .center{
+        margin: auto;
+    }
     .icons{ bottom: 10;}
     
     .panicindisco{
@@ -205,7 +204,7 @@ margin-left: 10%;
    <table class="center">
    <tr>
               <td>
-            <img src="CMB%20header.jpg" alt="MBC" style="object-fit: contain">
+            <img class="img-responsive" src="CMB%20header.jpg" alt="MBC" style="object-fit: contain">
 
       <h2>Clinica's Martin Baro Mission </h2><br>
       
@@ -216,7 +215,7 @@ margin-left: 10%;
 
     <p>La misión de la Clínica Martín-Baró es proporcionar una opción preferencial para los pobres en el cuidado de la salud. Nos esforzamos por promover el bienestar y atender las necesidades de atención médica de la comunidad de habla hispana desatendida y económicamente desfavorecida del Distrito de la Misión de San Francisco. Brindamos acceso a atención de salud gratuita, psicoterapia y educación para la salud en español y de una manera culturalmente sensible.</p>
  
-      <img src="download.jpg" alt="MBC" style="width:300px;height:400px;">
+      <img class="img-responsive" src="download.jpg" alt="MBC" style="width:300px;height:400px;">
            
        </td>
    </tr>
@@ -276,7 +275,6 @@ margin-left: 10%;
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Primary Care</a>
         </h4>
       </div>
@@ -294,7 +292,6 @@ margin-left: 10%;
     <div class="panel panel-default"> 
       <div class="panel-heading">
         <h4 class="panel-title">
-
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Dental Care</a>
         </h4>
       </div>
@@ -351,11 +348,3 @@ function myFunction() {
     
 </body>
 </html>
-
-
-
- 
-
-
-    
-

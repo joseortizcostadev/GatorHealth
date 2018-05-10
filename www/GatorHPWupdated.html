@@ -13,7 +13,7 @@ div.tab {
     float: left;
     border: 1px solid #ccc;
     background-color: #2b0080;
-    width: 20%;
+    width: 100%;
     height: 100%;
     margin-bottom: 300px;}
 
@@ -92,7 +92,7 @@ body {font-family: "Lato", sans-serif;}
     float: left;
     padding: 0px 12px;
     border: 1px solid #ccc;
-    width: 70%;
+    width: 100%;
    /* border-left: none;*/
     height: 100%;
     padding-bottom: 20px;}
@@ -107,7 +107,12 @@ body {font-family: "Lato", sans-serif;}
   justify-content: center;
 }
     }
-    body {margin:0;
+    
+    th
+    {
+        text-align: left
+    }
+body {margin:0;
     background:#ABAAD4;}
 .w3-btn {width:150px;}
 .navbar {
@@ -125,6 +130,7 @@ body {font-family: "Lato", sans-serif;}
   padding: 8px 40px;
   text-decoration: none;
   font-size: 17px;
+    font-family: "Lato", sans-serif;
 }
 
 .navbar a:hover {
@@ -164,7 +170,7 @@ body {font-family: "Lato", sans-serif;}
 
 br {
   margin:2.5em 0;/* FF for instance */
-  line-height:5em;/* chrome for instance */
+  line-height:2.5em;/* chrome for instance */
 }
 .button{
     display: inline-block;
@@ -277,8 +283,36 @@ margin-left: 10%;
         margin-right: auto;
         z-index: 1;
     }
-    
-   
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 </style>
 </head>
 <div id="navbox">
@@ -295,20 +329,41 @@ margin-left: 10%;
 
 
 <body class="undernav">
-<br>
 
 
-<div class="tab">
+<body>
+
+<div id="mySidenav" class="sidenav">
+ <div class="tab">
+  
   <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
   <button class="tablinks" onclick="openTab(event, 'Therapy Animals')">Therapy Animals</button>
   <button class="tablinks" onclick="openTab(event, 'Sexual Assault Awareness Month')">Sexual Assault Awareness Month</button>
   <button class="tablinks" onclick="openTab(event, 'Mental Health Awareness Month')">Mental Health Awareness Month</button>
- 
-
+  <button class="tablinks" onclick="openTab(event, 'Turn Up Initiative')">Turn Up Initiative</button>
 
 </div>
+</div>
+
+<div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<div onclick="closeNav()">
 
 <div id="Home" class="tabcontent">
+  <h3>Home</h3>
+    <p>For life-threatening emergencies:</p>
 
     <div class="marginal-screen">
    <table class="center">
@@ -351,27 +406,45 @@ San Francisco, CA 94132
 </div>
     
 <div id="Therapy Animals" class="tabcontent">
- <h3>Therapy Animals</h3>
+
+    <div class="marginal-screen">
+    <h3>Therapy Animals</h3>
       <p>Our Therapy Animal program aims to build community through stress relief activities, and raise awareness of mental health and wellness resources on campus. Studies show animals can help relieve anxiety, and just petting a dog or cat can lower your blood pressure. We hope you will come out to pet one of our visiting therapy animals! See our website or social media for an updated schedule!</p>
+    </div>
     
     
 </div>
 
 <div id="Sexual Assault Awareness Month" class="tabcontent">
+    <div class="marginal-screen">
   <h3>Sexual Assault Awareness Month</h3>
   <p>In observance of Sexual Assault Awareness Month (SAAM), Health Promotion & Wellness is collaborating with various campus partners to host an array of interactive visibility, awareness, and educational events throughout April. </p>
-
+    </div>
+    
 </div>
 
 <div id="Mental Health Awareness Month" class="tabcontent">
-   <h3>Mental Health Awareness Month</h3>
+   <div class="marginal-screen">
+    <h3>Mental Health Awareness Month</h3>
   <p>In observance of mental health awareness month (MHAM), Health Promotion & Wellness is collaborating with various campus partners to host an array of interactive visibility, awareness, and educational events during the first two weeks of May. Make a pledge to fight against any stigma at any of the events! </p>
+    </div>
+</div>
 
+<div id="Turn Up Initiative" class="tabcontent">
+   <div class="marginal-screen">
+    <h3>Turn Up Initiative</h3>
+  <p>The Turn Up! Initiative was created to encourage healthy decision-making around partying and drinking using a harm-reduction model. This initiative includes interactive workshops and outreach tabling, substance-free social events, and educational material inventory for your classes, groups, organizations, or to share with your friends, family, or loved ones. For more information on how you can get involved in the Turn Up! Initiative, contact ehops@sfsu.edu. </p>
+
+    
+  <a href="https://wellness.sfsu.edu/howdoyouturnup">Click here to take our Turn Up quiz!</a>  
+        
+    </div>
+    
 </div>
 
 
 
-
+    </div>
 
 
 
