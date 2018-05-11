@@ -125,11 +125,12 @@ while($field = $results->fetch_assoc())
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
  
 <style>
     #map {
-        height: 1300px;
+        height: 95vh;
         resize: vertical;
         width: 100%;
       position:absolute;
@@ -142,12 +143,15 @@ border-color:goldenrod;
 background: white;*/
    }
 body {margin:0;
-    background:#ABAAD4;}
+    background:#ABAAD4;
+    
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box}
 .w3-btn {width:150px;}
 .navbar {
   overflow: hidden;
   background-color: #2b0080;  
-  position: static;
+  position: relative;
   width: 100%;
 }
 
@@ -284,10 +288,10 @@ background: white;
 <div class="navbar" id="myNavbar">
       <a href="GatorHome.php" id="main"> GatorHealth </a>
           
-  <a href="GatorMap.php" class="active">Map</a>
-  <a href="GatorPharmacy.html">Pharmacy</a>
-  <a href="GatorResources.html" >Resources</a>
-  <a href="GatorSearch.php">Search</a>
+<a href="GatorMap.php"><i class="fa fa-compass"></i> Map</a>
+  <a href="GatorPharmacy.html" class="active"><i class="fa fa-medkit"></i> Pharmacy</a>
+  <a href="GatorResources.html" ><i class="fa fa-book"></i> Resources</a>
+  <a href="GatorSearch.php"><i class="fa fa-search"></i> Search</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <body onload = "locate()" class="undernav">
